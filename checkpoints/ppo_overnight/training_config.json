@@ -1,0 +1,14 @@
+{
+  "algorithm": "ppo",
+  "device": "cpu",
+  "num_envs": 256,
+  "backend": "tensor",
+  "eval_interval": 100000,
+  "eval_games": 30,
+  "stall_patience": 5,
+  "lr": 0.0003,
+  "rollout_steps": 128,
+  "batch_size": 64,
+  "n_epochs": 4,
+  "entropy_coef": 0.01
+}

@@ -1,0 +1,21 @@
+=== Monitored Training: MAPPO ===
+Backend: tensor | Envs: 256 | Device: cpu | Curriculum: random
+Eval every 100K steps | 30 games | Patience: 5
+Effective rollout steps: 128 (32K env steps/rollout)
+
+Step   131K | vs Random: 57% | vs Heuristic: 0% | ploss: -0.0201 | vloss: 0.6024 | entropy: 3.132 | stage: random | ^ improving
+Step   262K | vs Random: 80% | vs Heuristic: 0% | ploss: -0.0086 | vloss: 0.3916 | entropy: 3.275 | stage: random | ^ improving
+  CURRICULUM: curriculum advanced random -> mixed (random WR=80%)
+Step   393K | vs Random: 73% | vs Heuristic: 0% | ploss: 0.0011 | vloss: 0.2137 | entropy: 3.341 | stage: mixed | - plateau
+Step   524K | vs Random: 90% | vs Heuristic: 0% | ploss: -0.0040 | vloss: 0.1287 | entropy: 3.410 | stage: mixed | ^ improving
+Step   655K | vs Random: 93% | vs Heuristic: 3% | ploss: 0.0025 | vloss: 0.0978 | entropy: 3.490 | stage: mixed | ^ improving
+Step   786K | vs Random: 97% | vs Heuristic: 0% | ploss: 0.0024 | vloss: 0.0701 | entropy: 3.571 | stage: mixed | ^ improving
+Step   917K | vs Random: 97% | vs Heuristic: 0% | ploss: 0.0023 | vloss: 0.0723 | entropy: 3.647 | stage: mixed | - plateau
+Step   1.0M | vs Random: 97% | vs Heuristic: 0% | ploss: 0.0143 | vloss: 0.0589 | entropy: 3.722 | stage: mixed | - plateau
+Step   1.2M | vs Random: 93% | vs Heuristic: 0% | ploss: -0.0043 | vloss: 0.0835 | entropy: 3.795 | stage: mixed | - plateau
+Step   1.3M | vs Random: 90% | vs Heuristic: 3% | ploss: 0.0102 | vloss: 0.0635 | entropy: 3.866 | stage: mixed | ~ stalling
+Step   1.4M | vs Random: 97% | vs Heuristic: 0% | ploss: -0.0009 | vloss: 0.0526 | entropy: 3.965 | stage: mixed | !! stalled
+  INTERVENTION: increased entropy_coef 0.0100 -> 0.0500
+Step   1.6M | vs Random: 97% | vs Heuristic: 0% | ploss: 0.0050 | vloss: 0.0632 | entropy: 4.470 | stage: mixed | - plateau
+Step   1.7M | vs Random: 97% | vs Heuristic: 0% | ploss: -0.0072 | vloss: 0.0833 | entropy: 4.907 | stage: mixed | - plateau
+ixed | - plateau

@@ -1,0 +1,6 @@
+step,win_rate_vs_random,win_rate_vs_heuristic,policy_loss,value_loss,entropy,avg_steps_vs_random,avg_steps_vs_heuristic,curriculum_stage,lr,entropy_coef,rollout_steps,stall_counter
+98304,0.5,0.0,-0.020664,0.102646,3.092915,3.5,4.3,random,0.0003,0.01,128,0
+196608,0.4,0.0,-0.012446,0.074823,3.213633,3.8,6.1,random,0.0003,0.01,128,1
+294912,0.7,0.0,-0.00588,0.063772,3.25389,4.5,6.5,random,0.0003,0.01,128,0
+393216,0.8,0.0,-0.003569,0.057045,3.258222,4.7,7.8,random,0.0003,0.01,128,0
+491520,0.6,0.0,-0.002576,0.053482,3.246443,4.8,6.5,mixed,0.0003,0.01,128,1

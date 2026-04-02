@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "knockout"
+version = "0.2.0"
+description = "3v3 penguin physics knockout game with RL training (Pymunk + PettingZoo)"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.26",
+    "pymunk>=6.6",
+    "gymnasium>=0.29",
+    "pettingzoo>=1.24",
+    "torch>=2.2",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+viz = ["pygame>=2.5"]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+    "mypy>=1.10",
+]
+
+[project.scripts]
+knockout-train = "knockout.training.ppo:main"
+knockout-watch = "knockout.visualization.game_viewer:main"
+knockout-benchmark = "knockout.training.evaluation:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/knockout"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = false
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: marks tests as slow",
+    "integration: marks integration tests",
+    "physics: marks physics validation tests",
+]
