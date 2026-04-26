@@ -1,14 +1,14 @@
 # Knockout
 
 > **Status: work in progress.** Public preview of an audit pass. The core engine, environment,
-> agents, training pipelines, and 472-test pytest suite are all in place and functional. The
-> evaluation harness in `eval/` is partially shipped (`eval/lineup.py`, `eval/manual_checks.md`,
-> `eval/DEBUG_LOG.md` are complete; `eval/smoke.py`, `eval/pairwise_smoke.py`,
-> `eval/render_smoke.py`, `eval/mini_tournament.py`, `eval/full_tournament.py`,
-> the unified `scripts/play.py --opponent` interface, and `scripts/watch.py` are queued for
-> the next pass). See [WIP_STATUS.md](WIP_STATUS.md) for what's done, what's queued, and the
-> intended cadence. The current preliminary entry points are `scripts/play_llm.py` and
-> `scripts/watch_game_visual.py`; the new unified ones land in the next polish pass.
+> agents, training pipelines, and 472-test pytest suite are in place and functional. The
+> evaluation harness in `eval/` ships `lineup.py`, `smoke.py`, `mini_tournament.py`,
+> `full_tournament.py`, `manual_checks.md`, and `DEBUG_LOG.md`. `scripts/play.py` is rewired
+> to use the lineup via `--opponent NAME`. Still queued for the next pass:
+> `eval/pairwise_smoke.py`, `eval/render_smoke.py`, `scripts/watch.py`, and the deletion of
+> superseded scripts. The harness's first run already surfaced three real findings (action-space
+> spec mismatches in `random` and `mappo`; policy collapse in the `self_play` final checkpoint).
+> See [WIP_STATUS.md](WIP_STATUS.md) for the full done/queued/known-broken breakdown.
 
 Knockout is a 3v3 penguin physics game (think GamePigeon Knockout): two teams launch penguins
 across a square ice sheet that shrinks every five rounds, and the team with at least one penguin
