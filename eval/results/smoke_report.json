@@ -1,0 +1,300 @@
+{
+  "schema": "smoke_report.v1",
+  "generated_at": "2026-04-26T22:40:12Z",
+  "config": {
+    "steps": 100,
+    "seed": 42,
+    "bot_filter": null
+  },
+  "results": {
+    "random": {
+      "bot": "random",
+      "display_name": "Random",
+      "bot_type": "scripted",
+      "is_llm": false,
+      "steps_collected": 100,
+      "assertions": {
+        "finite": true,
+        "angle_variance": true,
+        "power_variance": true,
+        "angle_in_range": true,
+        "power_in_range": false,
+        "non_degenerate_magnitude": true
+      },
+      "metrics": {
+        "angle": {
+          "mean": 194.01246643066406,
+          "std": 94.8197250366211,
+          "min": 7.532680034637451,
+          "max": 353.8580627441406
+        },
+        "power": {
+          "mean": 231.35289001464844,
+          "std": 148.09092712402344,
+          "min": 1.543380618095398,
+          "max": 488.39605712890625
+        },
+        "magnitude": {
+          "mean": 324.1007995605469,
+          "std": 130.5579833984375,
+          "min": 17.74822998046875,
+          "max": 546.326171875
+        }
+      },
+      "verdict": false
+    },
+    "heuristic": {
+      "bot": "heuristic",
+      "display_name": "Heuristic",
+      "bot_type": "scripted",
+      "is_llm": false,
+      "steps_collected": 100,
+      "assertions": {
+        "finite": true,
+        "angle_variance": true,
+        "power_variance": true,
+        "angle_in_range": true,
+        "power_in_range": true,
+        "non_degenerate_magnitude": true
+      },
+      "metrics": {
+        "angle": {
+          "mean": 160.22962951660156,
+          "std": 137.1561737060547,
+          "min": 0.0,
+          "max": 355.2363586425781
+        },
+        "power": {
+          "mean": 267.17218017578125,
+          "std": 109.86046600341797,
+          "min": 100.0,
+          "max": 400.0
+        },
+        "magnitude": {
+          "mean": 341.3508605957031,
+          "std": 106.84204864501953,
+          "min": 104.58387756347656,
+          "max": 534.969970703125
+        }
+      },
+      "verdict": true
+    },
+    "ppo": {
+      "bot": "ppo",
+      "display_name": "PPO",
+      "bot_type": "ppo",
+      "is_llm": false,
+      "steps_collected": 100,
+      "assertions": {
+        "finite": true,
+        "angle_variance": true,
+        "power_variance": true,
+        "angle_in_range": true,
+        "power_in_range": true,
+        "non_degenerate_magnitude": true
+      },
+      "metrics": {
+        "angle": {
+          "mean": 180.84881591796875,
+          "std": 122.38735961914062,
+          "min": 1.3844056129455566,
+          "max": 359.87664794921875
+        },
+        "power": {
+          "mean": 125.06295776367188,
+          "std": 83.44893646240234,
+          "min": 9.450587272644043,
+          "max": 348.8908386230469
+        },
+        "magnitude": {
+          "mean": 239.3450927734375,
+          "std": 114.03218078613281,
+          "min": 13.375553131103516,
+          "max": 474.014892578125
+        }
+      },
+      "verdict": true
+    },
+    "mappo": {
+      "bot": "mappo",
+      "display_name": "MAPPO",
+      "bot_type": "mappo",
+      "is_llm": false,
+      "steps_collected": 100,
+      "assertions": {
+        "finite": true,
+        "angle_variance": true,
+        "power_variance": true,
+        "angle_in_range": true,
+        "power_in_range": false,
+        "non_degenerate_magnitude": true
+      },
+      "metrics": {
+        "angle": {
+          "mean": 211.9300537109375,
+          "std": 106.98278045654297,
+          "min": 2.709994077682495,
+          "max": 359.5879211425781
+        },
+        "power": {
+          "mean": 150.1214599609375,
+          "std": 114.5440673828125,
+          "min": 10.040156364440918,
+          "max": 447.0762939453125
+        },
+        "magnitude": {
+          "mean": 280.6107482910156,
+          "std": 115.21310424804688,
+          "min": 11.502130508422852,
+          "max": 563.94677734375
+        }
+      },
+      "verdict": false
+    },
+    "self_play": {
+      "bot": "self_play",
+      "display_name": "Self-Play (v4)",
+      "bot_type": "ppo",
+      "is_llm": false,
+      "steps_collected": 100,
+      "assertions": {
+        "finite": true,
+        "angle_variance": true,
+        "power_variance": false,
+        "angle_in_range": true,
+        "power_in_range": true,
+        "non_degenerate_magnitude": true
+      },
+      "metrics": {
+        "angle": {
+          "mean": 108.21299743652344,
+          "std": 161.15650939941406,
+          "min": 0.0,
+          "max": 360.0
+        },
+        "power": {
+          "mean": 0.4060285985469818,
+          "std": 1.7748019695281982,
+          "min": 5.947410045337165e-06,
+          "max": 15.961530685424805
+        },
+        "magnitude": {
+          "mean": 108.50997161865234,
+          "std": 160.9669952392578,
+          "min": 6.697498520225054e-06,
+          "max": 360.0206604003906
+        }
+      },
+      "verdict": false
+    },
+    "contrastive": {
+      "bot": "contrastive",
+      "display_name": "Contrastive Reward",
+      "bot_type": "ppo",
+      "is_llm": false,
+      "steps_collected": 100,
+      "assertions": {
+        "finite": true,
+        "angle_variance": true,
+        "power_variance": true,
+        "angle_in_range": true,
+        "power_in_range": true,
+        "non_degenerate_magnitude": true
+      },
+      "metrics": {
+        "angle": {
+          "mean": 206.6947021484375,
+          "std": 126.42538452148438,
+          "min": 0.017647402361035347,
+          "max": 359.8016662597656
+        },
+        "power": {
+          "mean": 65.33854675292969,
+          "std": 47.86117172241211,
+          "min": 9.496295928955078,
+          "max": 268.9201354980469
+        },
+        "magnitude": {
+          "mean": 231.19871520996094,
+          "std": 108.68780517578125,
+          "min": 29.26251792907715,
+          "max": 432.192626953125
+        }
+      },
+      "verdict": true
+    },
+    "attention_reward": {
+      "bot": "attention_reward",
+      "display_name": "Attention-Reward",
+      "bot_type": "ppo",
+      "is_llm": false,
+      "steps_collected": 100,
+      "assertions": {
+        "finite": true,
+        "angle_variance": true,
+        "power_variance": true,
+        "angle_in_range": true,
+        "power_in_range": true,
+        "non_degenerate_magnitude": true
+      },
+      "metrics": {
+        "angle": {
+          "mean": 221.33651733398438,
+          "std": 149.66004943847656,
+          "min": 8.217473077820614e-05,
+          "max": 359.9990234375
+        },
+        "power": {
+          "mean": 127.9864273071289,
+          "std": 142.9443817138672,
+          "min": 0.004859196487814188,
+          "max": 397.8205871582031
+        },
+        "magnitude": {
+          "mean": 295.16900634765625,
+          "std": 145.17877197265625,
+          "min": 0.00892320554703474,
+          "max": 534.9373779296875
+        }
+      },
+      "verdict": true
+    },
+    "llm_cli_v2": {
+      "bot": "llm_cli_v2",
+      "display_name": "LLM-Reward (Claude)",
+      "bot_type": "ppo",
+      "is_llm": false,
+      "steps_collected": 100,
+      "assertions": {
+        "finite": true,
+        "angle_variance": true,
+        "power_variance": true,
+        "angle_in_range": true,
+        "power_in_range": true,
+        "non_degenerate_magnitude": true
+      },
+      "metrics": {
+        "angle": {
+          "mean": 134.06825256347656,
+          "std": 86.80728149414062,
+          "min": 8.680662155151367,
+          "max": 338.4031677246094
+        },
+        "power": {
+          "mean": 137.0286407470703,
+          "std": 77.92650604248047,
+          "min": 10.7517728805542,
+          "max": 337.4162292480469
+        },
+        "magnitude": {
+          "mean": 207.69070434570312,
+          "std": 84.99275970458984,
+          "min": 40.93320846557617,
+          "max": 397.9508361816406
+        }
+      },
+      "verdict": true
+    }
+  },
+  "overall_pass": false
+}
