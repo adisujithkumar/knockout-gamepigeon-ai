@@ -1,0 +1,67 @@
+2026-04-06 21:09:54,651 [INFO] __main__: LLM Reward Discovery (Claude CLI backend)
+2026-04-06 21:09:54,651 [INFO] __main__:   model=claude-sonnet-4-20250514, device=cpu, num_envs=16
+2026-04-06 21:09:54,651 [INFO] __main__:   iterations=3, steps_per_iter=200000
+2026-04-06 21:09:54,651 [INFO] __main__:   collection_episodes=200
+2026-04-06 21:09:54,652 [INFO] __main__:   output_dir=runs/llm_cli_v2
+2026-04-06 21:09:54,653 [INFO] __main__: ============================================================
+2026-04-06 21:09:54,654 [INFO] __main__: === Iteration 0 / 2 ===
+2026-04-06 21:09:54,654 [INFO] __main__: ============================================================
+2026-04-06 21:09:54,654 [INFO] __main__: Collecting 200 episodes for statistics...
+2026-04-06 21:10:00,707 [INFO] knockout.reward.contrastive:   ... collected 52/200 episodes so far
+2026-04-06 21:10:06,009 [INFO] knockout.reward.contrastive:   ... collected 105/200 episodes so far
+2026-04-06 21:10:11,254 [INFO] knockout.reward.contrastive:   ... collected 157/200 episodes so far
+2026-04-06 21:10:15,986 [INFO] __main__: Stats: 200 episodes, 416 win-steps, 480 loss-steps, win_rate=46.4%
+2026-04-06 21:10:15,991 [INFO] __main__: Prompt saved (11441 chars)
+2026-04-06 21:10:15,991 [INFO] __main__: Calling claude CLI (model=claude-sonnet-4-20250514, timeout=180s)...
+2026-04-06 21:10:50,619 [INFO] __main__: Claude CLI returned in 34.6s (exit code 0)
+2026-04-06 21:10:50,624 [INFO] __main__: Reward function validated successfully
+2026-04-06 21:10:50,628 [INFO] __main__: Training PPO for 200000 steps with shaped reward...
+2026-04-06 21:11:49,893 [INFO] __main__:   rollout 1/32  policy_loss=0.0017  value_loss=22.5496
+2026-04-06 21:17:44,564 [INFO] __main__:   rollout 10/32  policy_loss=-0.0027  value_loss=18.3346
+2026-04-06 21:25:00,400 [INFO] __main__:   rollout 20/32  policy_loss=-0.0022  value_loss=7.6748
+2026-04-06 21:31:51,699 [INFO] __main__:   rollout 30/32  policy_loss=-0.0060  value_loss=3.2124
+2026-04-06 21:42:43,268 [INFO] __main__: Checkpoint saved: runs/llm_cli_v2/iteration_000/agent_checkpoint.pt
+2026-04-06 21:42:43,274 [INFO] __main__: Iteration 0 complete in 1968.6s. Win rate before training: 46.4%
+2026-04-06 21:42:43,278 [INFO] __main__: ============================================================
+2026-04-06 21:42:43,281 [INFO] __main__: === Iteration 1 / 2 ===
+2026-04-06 21:42:43,284 [INFO] __main__: ============================================================
+2026-04-06 21:42:43,285 [INFO] __main__: Collecting 200 episodes for statistics...
+2026-04-06 21:42:54,422 [INFO] knockout.reward.contrastive:   ... collected 55/200 episodes so far
+2026-04-06 21:43:04,107 [INFO] knockout.reward.contrastive:   ... collected 108/200 episodes so far
+2026-04-06 21:43:14,375 [INFO] knockout.reward.contrastive:   ... collected 170/200 episodes so far
+2026-04-06 21:43:21,679 [INFO] __main__: Stats: 200 episodes, 0 win-steps, 273 loss-steps, win_rate=0.0%
+2026-04-06 21:43:21,697 [INFO] __main__: Prompt saved (10762 chars)
+2026-04-06 21:43:21,698 [INFO] __main__: Calling claude CLI (model=claude-sonnet-4-20250514, timeout=180s)...
+2026-04-06 21:44:17,831 [INFO] __main__: Claude CLI returned in 56.1s (exit code 0)
+2026-04-06 21:44:17,840 [INFO] __main__: Reward function validated successfully
+2026-04-06 21:44:17,846 [INFO] __main__: Training PPO for 200000 steps with shaped reward...
+2026-04-06 21:47:24,399 [INFO] __main__:   rollout 1/32  policy_loss=0.0009  value_loss=91.6855
+2026-04-06 21:53:30,220 [INFO] __main__:   rollout 10/32  policy_loss=-0.0000  value_loss=211.6570
+2026-04-06 21:59:40,695 [INFO] __main__:   rollout 20/32  policy_loss=0.0018  value_loss=390.3374
+2026-04-06 22:05:47,640 [INFO] __main__:   rollout 30/32  policy_loss=0.0050  value_loss=435.1404
+2026-04-06 22:07:04,759 [INFO] __main__: Checkpoint saved: runs/llm_cli_v2/iteration_001/agent_checkpoint.pt
+2026-04-06 22:07:04,763 [INFO] __main__: Iteration 1 complete in 1461.5s. Win rate before training: 0.0%
+2026-04-06 22:07:04,765 [INFO] __main__: ============================================================
+2026-04-06 22:07:04,766 [INFO] __main__: === Iteration 2 / 2 ===
+2026-04-06 22:07:04,766 [INFO] __main__: ============================================================
+2026-04-06 22:07:04,766 [INFO] __main__: Collecting 200 episodes for statistics...
+2026-04-06 22:07:11,479 [INFO] knockout.reward.contrastive:   ... collected 50/200 episodes so far
+2026-04-06 22:07:16,595 [INFO] knockout.reward.contrastive:   ... collected 101/200 episodes so far
+2026-04-06 22:07:23,174 [INFO] knockout.reward.contrastive:   ... collected 151/200 episodes so far
+2026-04-06 22:07:28,414 [INFO] __main__: Stats: 200 episodes, 955 win-steps, 171 loss-steps, win_rate=84.8%
+2026-04-06 22:07:28,420 [INFO] __main__: Prompt saved (12635 chars)
+2026-04-06 22:07:28,420 [INFO] __main__: Calling claude CLI (model=claude-sonnet-4-20250514, timeout=180s)...
+2026-04-06 22:08:16,999 [INFO] __main__: Claude CLI returned in 48.6s (exit code 0)
+2026-04-06 22:08:17,014 [INFO] __main__: Reward function validated successfully
+2026-04-06 22:08:17,018 [INFO] __main__: Training PPO for 200000 steps with shaped reward...
+2026-04-06 22:08:54,779 [INFO] __main__:   rollout 1/32  policy_loss=0.0016  value_loss=227.3469
+2026-04-06 22:14:29,778 [INFO] __main__:   rollout 10/32  policy_loss=0.0024  value_loss=515.4804
+2026-04-06 22:20:29,764 [INFO] __main__:   rollout 20/32  policy_loss=0.0007  value_loss=518.3849
+2026-04-06 22:25:54,763 [INFO] __main__:   rollout 30/32  policy_loss=0.0027  value_loss=658.6341
+2026-04-06 22:27:06,803 [INFO] __main__: Checkpoint saved: runs/llm_cli_v2/iteration_002/agent_checkpoint.pt
+2026-04-06 22:27:06,810 [INFO] __main__: Iteration 2 complete in 1202.0s. Win rate before training: 84.8%
+2026-04-06 22:27:06,814 [INFO] __main__: Summary saved to runs/llm_cli_v2/summary.json
+2026-04-06 22:27:06,820 [INFO] __main__: Done. 3 iterations completed.
+2026-04-06 22:27:06,821 [INFO] __main__:   iter 0: win_rate=46.4%, elapsed=1968.6s
+2026-04-06 22:27:06,821 [INFO] __main__:   iter 1: win_rate=0.0%, elapsed=1461.5s
+2026-04-06 22:27:06,822 [INFO] __main__:   iter 2: win_rate=84.8%, elapsed=1202.0s

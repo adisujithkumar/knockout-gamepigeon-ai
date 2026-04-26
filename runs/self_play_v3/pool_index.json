@@ -1,0 +1,27 @@
+[
+  {
+    "path": "runs/self_play_v3/pool/pool_step_0000000.pt",
+    "elo": 977.8724975093497,
+    "step": 0
+  },
+  {
+    "path": "runs/self_play_v3/pool/pool_step_0196608.pt",
+    "elo": 973.0500464837244,
+    "step": 196608
+  },
+  {
+    "path": "runs/self_play_v3/pool/pool_step_0393216.pt",
+    "elo": 994.092340566899,
+    "step": 393216
+  },
+  {
+    "path": "runs/self_play_v3/pool/pool_step_0589824.pt",
+    "elo": 977.3999228915632,
+    "step": 589824
+  },
+  {
+    "path": "runs/self_play_v3/pool/pool_step_0638976.pt",
+    "elo": 988.0436102033573,
+    "step": 638976
+  }
+]

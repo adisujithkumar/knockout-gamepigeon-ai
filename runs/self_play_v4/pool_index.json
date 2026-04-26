@@ -1,0 +1,102 @@
+[
+  {
+    "path": "runs/self_play_v4/pool/pool_step_1376256.pt",
+    "elo": 976.3189972374156,
+    "step": 1376256
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_2162688.pt",
+    "elo": 991.1933096643274,
+    "step": 2162688
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_2555904.pt",
+    "elo": 983.327307540551,
+    "step": 2555904
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_2752512.pt",
+    "elo": 992.2776574174353,
+    "step": 2752512
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_2949120.pt",
+    "elo": 986.4658417615219,
+    "step": 2949120
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_3145728.pt",
+    "elo": 984.517290108371,
+    "step": 3145728
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_3342336.pt",
+    "elo": 989.97540260881,
+    "step": 3342336
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_3538944.pt",
+    "elo": 997.2220935042408,
+    "step": 3538944
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_3735552.pt",
+    "elo": 1028.0351823975475,
+    "step": 3735552
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_3932160.pt",
+    "elo": 1037.9147424439407,
+    "step": 3932160
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_4128768.pt",
+    "elo": 1000.3948764239702,
+    "step": 4128768
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_4325376.pt",
+    "elo": 994.992405260065,
+    "step": 4325376
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_4521984.pt",
+    "elo": 1423.1986228431867,
+    "step": 4521984
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_4718592.pt",
+    "elo": 997.7244880986415,
+    "step": 4718592
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_4915200.pt",
+    "elo": 997.5971521292477,
+    "step": 4915200
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_5111808.pt",
+    "elo": 997.7336920739668,
+    "step": 5111808
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_5308416.pt",
+    "elo": 1433.4047316779097,
+    "step": 5308416
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_5505024.pt",
+    "elo": 997.6440494113137,
+    "step": 5505024
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_5701632.pt",
+    "elo": 997.7057227700477,
+    "step": 5701632
+  },
+  {
+    "path": "runs/self_play_v4/pool/pool_step_5898240.pt",
+    "elo": 1449.438276663862,
+    "step": 5898240
+  }
+]

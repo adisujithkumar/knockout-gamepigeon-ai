@@ -1,0 +1,44 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+*credentials*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environment
+.venv/
+venv/
+
+# Large model weights (Qwen 2GB; lineup-relevant .pt files are tracked)
+*.gguf
+models/.cache/
+models/qwen2.5-3b-instruct-q4_k_m.gguf
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Build artifacts
+dist/
+build/
+*.egg
+
+# Coverage
+.coverage
+htmlcov/
+coverage.xml

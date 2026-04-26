@@ -1,0 +1,20 @@
+[
+  {
+    "iteration": 0,
+    "win_rate": 0.4550898203592814,
+    "avg_episode_length": 4.469061876247505,
+    "policy_loss": -0.004159999490528541
+  },
+  {
+    "iteration": 1,
+    "win_rate": 0.44970414201183434,
+    "avg_episode_length": 4.4714003944773175,
+    "policy_loss": -0.007290647116474517
+  },
+  {
+    "iteration": 2,
+    "win_rate": 0.4231536926147705,
+    "avg_episode_length": 4.514970059880239,
+    "policy_loss": -0.007500099064801577
+  }
+]

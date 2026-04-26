@@ -1,0 +1,49 @@
+Looking at the results, the previous reward function failed catastrophically - 0% win rate with episodes ending in just 1.4 rounds. The agent is getting eliminated almost immediately, suggesting it's being knocked out of bounds very quickly.
+
+## Key Issues with Previous Function:
+1. Too many negative reward components (enemy elimination bonus was consistently negative)
+2. Didn't prioritize basic survival enough  
+3. Complex weighting that may have confused learning
+
+## Analysis:
+The extremely short episodes (1.4 rounds) indicate agents are getting pushed out of bounds rapidly. The `distance_to_edge` feature (range [-1.0, 1.0]) is critical - negative values likely mean the agent is very close to elimination.
+
+## Improved Strategy:
+Focus on fundamentals: survival and positioning safety first, then team advantage.
+
+```python
+def reward(obs: torch.Tensor) -> torch.Tensor:
+    # Core survival metrics
+    ego_alive = obs[:, 8]                    # ego_agent.alive
+    ego_dist_to_edge = obs[:, 5]             # ego_agent.distance_to_edge
+    
+    # Team status
+    ego_team_alive = obs[:, 86]              # global.ego_team_alive_count  
+    opp_team_alive = obs[:, 87]              # global.opponent_team_alive_count
+    
+    # Allies status
+    ally1_alive = obs[:, 22]                 # ally_0.alive
+    ally2_alive = obs[:, 36]                 # ally_1.alive
+    
+    # Primary reward: Stay alive and safe
+    survival_reward = ego_alive * 3.0
+    safety_reward = ego_dist_to_edge * 4.0  # Can be negative - heavily penalize edge proximity
+    
+    # Secondary reward: Team advantage  
+    team_advantage = (ego_team_alive - opp_team_alive) * 2.0
+    
+    # Tertiary reward: Ally preservation
+    ally_bonus = (ally1_alive + ally2_alive) * 0.5
+    
+    # Small timestep reward to encourage longer episodes
+    timestep = obs[:, 88]  # global.timestep
+    duration_bonus = timestep * 0.2
+    
+    return survival_reward + safety_reward + team_advantage + ally_bonus + duration_bonus
+```
+
+This simplified design prioritizes:
+1. **Safety first**: Heavy penalty for being near edges (safety_reward)
+2. **Survival**: High reward for staying alive 
+3. **Team performance**: Moderate reward for team advantage
+4. **Longer episodes**: Small bonus to encourage learning beyond immediate elimination

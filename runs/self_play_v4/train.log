@@ -1,0 +1,551 @@
+2026-04-06 21:03:30,486 [INFO] __main__: Device: cuda, num_envs: 32
+2026-04-06 21:04:05,600 [INFO] __main__: Loaded starting checkpoint: runs/self_play_v3/final_agent.pt
+2026-04-06 21:04:05,734 [INFO] __main__: Starting self-play training: 30 iterations, 16 rollouts/iter (12288 steps/rollout, ~196608 steps/iter)
+2026-04-06 21:04:05,735 [INFO] __main__: === Iteration 1/30  |  ELO: 1000  |  Pool: 1 ===
+2026-04-06 21:04:05,817 [INFO] __main__: Opponent: pool_step_0 (elo=1000) [random_ratio=50%]
+2026-04-06 21:08:20,229 [INFO] __main__:   rollout 3/16: win_rate=0.87 (666/769), policy_loss=-0.0045
+2026-04-06 21:10:05,567 [INFO] __main__:   rollout 6/16: win_rate=0.90 (1364/1522), policy_loss=-0.0049
+2026-04-06 21:11:51,841 [INFO] __main__:   rollout 9/16: win_rate=0.91 (2077/2293), policy_loss=-0.0038
+2026-04-06 21:13:36,650 [INFO] __main__:   rollout 12/16: win_rate=0.91 (2794/3063), policy_loss=-0.0043
+2026-04-06 21:15:21,589 [INFO] __main__:   rollout 15/16: win_rate=0.92 (3504/3820), policy_loss=-0.0049
+2026-04-06 21:15:58,082 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-06 21:16:02,009 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-06 21:16:09,881 [INFO] __main__:   vs pool_step_0: 94% (47/50) -> learner_elo=1014
+2026-04-06 21:16:18,564 [INFO] __main__:   vs pool_step_196608: 86% (43/50) -> learner_elo=1025
+2026-04-06 21:16:18,572 [INFO] __main__: Iteration 1 complete in 732.8s: ELO=1025, vs_random=100%, vs_pool=90%, features=0, episodes=4060
+2026-04-06 21:16:18,572 [INFO] __main__: === Iteration 2/30  |  ELO: 1025  |  Pool: 2 ===
+2026-04-06 21:16:18,589 [INFO] __main__: Opponent: pool_step_196608 (elo=989) [random_ratio=50%]
+2026-04-06 21:18:09,660 [INFO] __main__:   rollout 3/16: win_rate=0.84 (471/562), policy_loss=-0.0036
+2026-04-06 21:20:03,456 [INFO] __main__:   rollout 6/16: win_rate=0.84 (934/1112), policy_loss=-0.0049
+2026-04-06 21:22:06,558 [INFO] __main__:   rollout 9/16: win_rate=0.83 (1374/1653), policy_loss=-0.0047
+2026-04-06 21:23:54,340 [INFO] __main__:   rollout 12/16: win_rate=0.84 (1868/2231), policy_loss=-0.0052
+2026-04-06 21:25:47,936 [INFO] __main__:   rollout 15/16: win_rate=0.84 (2347/2790), policy_loss=-0.0044
+2026-04-06 21:26:27,003 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-06 21:26:29,951 [INFO] __main__:   vs random: 98% (49/50)
+2026-04-06 21:26:38,141 [INFO] __main__:   vs pool_step_0: 98% (49/50) -> learner_elo=1039
+2026-04-06 21:26:48,757 [INFO] __main__:   vs pool_step_196608: 94% (47/50) -> learner_elo=1050
+2026-04-06 21:26:59,181 [INFO] __main__:   vs pool_step_393216: 88% (44/50) -> learner_elo=1060
+2026-04-06 21:26:59,188 [INFO] __main__: Iteration 2 complete in 640.6s: ELO=1060, vs_random=98%, vs_pool=93%, features=0, episodes=2997
+2026-04-06 21:26:59,190 [INFO] __main__: === Iteration 3/30  |  ELO: 1060  |  Pool: 3 ===
+2026-04-06 21:26:59,190 [INFO] __main__: Opponent: random
+2026-04-06 21:29:00,425 [INFO] __main__:   rollout 3/16: win_rate=0.99 (1987/1997), policy_loss=-0.0052
+2026-04-06 21:31:02,290 [INFO] __main__:   rollout 6/16: win_rate=0.99 (3935/3956), policy_loss=-0.0058
+2026-04-06 21:36:05,447 [INFO] __main__:   rollout 9/16: win_rate=1.00 (5918/5943), policy_loss=-0.0044
+2026-04-06 21:43:42,355 [INFO] __main__:   rollout 12/16: win_rate=1.00 (7876/7912), policy_loss=-0.0043
+2026-04-06 21:46:57,618 [INFO] __main__:   rollout 15/16: win_rate=0.99 (9842/9901), policy_loss=-0.0045
+2026-04-06 21:47:54,149 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-06 21:47:58,252 [INFO] __main__:   vs random: 98% (49/50)
+2026-04-06 21:48:07,493 [INFO] __main__:   vs pool_step_0: 94% (47/50) -> learner_elo=1070
+2026-04-06 21:48:20,909 [INFO] __main__:   vs pool_step_393216: 82% (41/50) -> learner_elo=1077
+2026-04-06 21:48:29,384 [INFO] __main__:   vs pool_step_589824: 88% (44/50) -> learner_elo=1086
+2026-04-06 21:48:39,993 [INFO] __main__:   vs pool_step_196608: 84% (42/50) -> learner_elo=1092
+2026-04-06 21:48:39,999 [INFO] __main__: Iteration 3 complete in 1300.8s: ELO=1092, vs_random=98%, vs_pool=87%, features=0, episodes=10588
+2026-04-06 21:48:40,000 [INFO] __main__: === Iteration 4/30  |  ELO: 1092  |  Pool: 4 ===
+2026-04-06 21:48:40,016 [INFO] __main__: Opponent: pool_step_589824 (elo=991) [random_ratio=48%]
+2026-04-06 21:50:30,361 [INFO] __main__:   rollout 3/16: win_rate=0.84 (552/656), policy_loss=-0.0041
+2026-04-06 21:52:15,805 [INFO] __main__:   rollout 6/16: win_rate=0.86 (1067/1244), policy_loss=-0.0049
+2026-04-06 21:53:57,746 [INFO] __main__:   rollout 9/16: win_rate=0.87 (1577/1813), policy_loss=-0.0050
+2026-04-06 21:55:36,131 [INFO] __main__:   rollout 12/16: win_rate=0.88 (2065/2356), policy_loss=-0.0048
+2026-04-06 21:57:21,953 [INFO] __main__:   rollout 15/16: win_rate=0.88 (2528/2860), policy_loss=-0.0053
+2026-04-06 21:58:02,002 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-06 21:58:06,401 [INFO] __main__:   vs random: 98% (49/50)
+2026-04-06 21:58:23,611 [INFO] __main__:   vs pool_step_786432: 78% (39/50) -> learner_elo=1096
+2026-04-06 21:58:33,898 [INFO] __main__:   vs pool_step_196608: 94% (47/50) -> learner_elo=1105
+2026-04-06 21:58:46,823 [INFO] __main__:   vs pool_step_393216: 86% (43/50) -> learner_elo=1111
+2026-04-06 21:58:55,316 [INFO] __main__:   vs pool_step_589824: 96% (48/50) -> learner_elo=1121
+2026-04-06 21:59:02,823 [INFO] __main__:   vs pool_step_0: 96% (48/50) -> learner_elo=1128
+2026-04-06 21:59:02,830 [INFO] __main__: Iteration 4 complete in 622.8s: ELO=1128, vs_random=98%, vs_pool=90%, features=0, episodes=3024
+2026-04-06 21:59:02,831 [INFO] __main__: === Iteration 5/30  |  ELO: 1128  |  Pool: 5 ===
+2026-04-06 21:59:02,845 [INFO] __main__: Opponent: pool_step_0 (elo=954) [random_ratio=44%]
+2026-04-06 22:00:42,006 [INFO] __main__:   rollout 3/16: win_rate=0.96 (657/686), policy_loss=-0.0036
+2026-04-06 22:02:26,112 [INFO] __main__:   rollout 6/16: win_rate=0.97 (1316/1363), policy_loss=-0.0032
+2026-04-06 22:04:06,439 [INFO] __main__:   rollout 9/16: win_rate=0.97 (2004/2056), policy_loss=-0.0033
+2026-04-06 22:06:05,152 [INFO] __main__:   rollout 12/16: win_rate=0.98 (2690/2751), policy_loss=-0.0034
+2026-04-06 22:07:50,620 [INFO] __main__:   rollout 15/16: win_rate=0.98 (3386/3457), policy_loss=-0.0040
+2026-04-06 22:08:20,801 [INFO] __main__: Running contrastive analysis on recent self-play...
+2026-04-06 22:08:27,648 [INFO] knockout.reward.contrastive:   ... collected 128/500 episodes so far
+2026-04-06 22:08:34,173 [INFO] knockout.reward.contrastive:   ... collected 261/500 episodes so far
+2026-04-06 22:08:40,402 [INFO] knockout.reward.contrastive:   ... collected 394/500 episodes so far
+2026-04-06 22:08:45,721 [INFO] __main__: No new significant features found.
+2026-04-06 22:08:45,731 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-06 22:08:48,611 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-06 22:09:03,607 [INFO] __main__:   vs pool_step_393216: 94% (47/50) -> learner_elo=1136
+2026-04-06 22:09:10,914 [INFO] __main__:   vs pool_step_589824: 98% (49/50) -> learner_elo=1145
+2026-04-06 22:09:19,622 [INFO] __main__:   vs pool_step_196608: 100% (50/50) -> learner_elo=1153
+2026-04-06 22:09:32,237 [INFO] __main__:   vs pool_step_786432: 98% (49/50) -> learner_elo=1162
+2026-04-06 22:09:43,491 [INFO] __main__:   vs pool_step_983040: 98% (49/50) -> learner_elo=1170
+2026-04-06 22:09:43,499 [INFO] __main__: Iteration 5 complete in 640.7s: ELO=1170, vs_random=100%, vs_pool=98%, features=0, episodes=3683
+2026-04-06 22:09:43,499 [INFO] __main__: === Iteration 6/30  |  ELO: 1170  |  Pool: 6 ===
+2026-04-06 22:09:43,513 [INFO] __main__: Opponent: pool_step_983040 (elo=992) [random_ratio=40%]
+2026-04-06 22:11:15,518 [INFO] __main__:   rollout 3/16: win_rate=0.96 (278/289), policy_loss=-0.0039
+2026-04-06 22:12:51,560 [INFO] __main__:   rollout 6/16: win_rate=0.96 (577/600), policy_loss=-0.0034
+2026-04-06 22:14:20,782 [INFO] __main__:   rollout 9/16: win_rate=0.96 (881/919), policy_loss=-0.0019
+2026-04-06 22:15:52,338 [INFO] __main__:   rollout 12/16: win_rate=0.95 (1148/1211), policy_loss=-0.0027
+2026-04-06 22:17:27,589 [INFO] __main__:   rollout 15/16: win_rate=0.94 (1452/1540), policy_loss=-0.0042
+2026-04-06 22:18:03,238 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-06 22:18:06,710 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-06 22:18:19,425 [INFO] __main__:   vs pool_step_786432: 94% (47/50) -> learner_elo=1176
+2026-04-06 22:18:29,288 [INFO] __main__:   vs pool_step_589824: 98% (49/50) -> learner_elo=1183
+2026-04-06 22:18:40,233 [INFO] __main__:   vs pool_step_393216: 96% (48/50) -> learner_elo=1189
+2026-04-06 22:18:51,103 [INFO] __main__:   vs pool_step_1179648: 98% (49/50) -> learner_elo=1197
+2026-04-06 22:18:58,212 [INFO] __main__:   vs pool_step_0: 100% (50/50) -> learner_elo=1203
+2026-04-06 22:18:58,219 [INFO] __main__: Iteration 6 complete in 554.7s: ELO=1203, vs_random=100%, vs_pool=97%, features=0, episodes=1657
+2026-04-06 22:18:58,220 [INFO] __main__: === Iteration 7/30  |  ELO: 1203  |  Pool: 7 ===
+2026-04-06 22:18:58,236 [INFO] __main__: Opponent: pool_step_1179648 (elo=993) [random_ratio=36%]
+2026-04-06 22:20:23,350 [INFO] __main__:   rollout 3/16: win_rate=0.93 (232/249), policy_loss=-0.0045
+2026-04-06 22:21:45,456 [INFO] __main__:   rollout 6/16: win_rate=0.92 (500/546), policy_loss=-0.0034
+2026-04-06 22:23:05,974 [INFO] __main__:   rollout 9/16: win_rate=0.92 (787/858), policy_loss=-0.0030
+2026-04-06 22:24:26,885 [INFO] __main__:   rollout 12/16: win_rate=0.92 (1019/1108), policy_loss=-0.0047
+2026-04-06 22:25:40,488 [INFO] __main__:   rollout 15/16: win_rate=0.92 (1219/1326), policy_loss=-0.0034
+2026-04-06 22:26:06,918 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-06 22:26:10,242 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-06 22:26:22,035 [INFO] __main__:   vs pool_step_1179648: 92% (46/50) -> learner_elo=1208
+2026-04-06 22:26:33,226 [INFO] __main__:   vs pool_step_196608: 94% (47/50) -> learner_elo=1212
+2026-04-06 22:26:44,549 [INFO] __main__:   vs pool_step_1376256: 90% (45/50) -> learner_elo=1216
+2026-04-06 22:26:50,896 [INFO] __main__:   vs pool_step_589824: 92% (46/50) -> learner_elo=1220
+2026-04-06 22:27:03,031 [INFO] __main__:   vs pool_step_393216: 96% (48/50) -> learner_elo=1224
+2026-04-06 22:27:03,037 [INFO] __main__: Iteration 7 complete in 484.8s: ELO=1224, vs_random=100%, vs_pool=93%, features=0, episodes=1399
+2026-04-06 22:27:03,037 [INFO] __main__: === Iteration 8/30  |  ELO: 1224  |  Pool: 8 ===
+2026-04-06 22:27:03,060 [INFO] __main__: Opponent: pool_step_983040 (elo=992) [random_ratio=32%]
+2026-04-06 22:28:15,236 [INFO] __main__:   rollout 3/16: win_rate=0.91 (194/213), policy_loss=-0.0040
+2026-04-06 22:29:25,649 [INFO] __main__:   rollout 6/16: win_rate=0.90 (395/439), policy_loss=-0.0038
+2026-04-06 22:30:32,940 [INFO] __main__:   rollout 9/16: win_rate=0.88 (577/652), policy_loss=-0.0054
+2026-04-06 22:31:50,945 [INFO] __main__:   rollout 12/16: win_rate=0.88 (768/876), policy_loss=-0.0043
+2026-04-06 22:33:07,307 [INFO] __main__:   rollout 15/16: win_rate=0.88 (990/1121), policy_loss=-0.0054
+2026-04-06 22:33:33,584 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-06 22:33:36,647 [INFO] __main__:   vs random: 98% (49/50)
+2026-04-06 22:33:42,393 [INFO] __main__:   vs pool_step_589824: 92% (46/50) -> learner_elo=1228
+2026-04-06 22:34:04,741 [INFO] __main__:   vs pool_step_1179648: 84% (42/50) -> learner_elo=1229
+2026-04-06 22:34:17,037 [INFO] __main__:   vs pool_step_786432: 80% (40/50) -> learner_elo=1229
+2026-04-06 22:34:30,154 [INFO] __main__:   vs pool_step_983040: 90% (45/50) -> learner_elo=1232
+2026-04-06 22:34:52,857 [INFO] __main__:   vs pool_step_1376256: 80% (40/50) -> learner_elo=1232
+2026-04-06 22:34:52,863 [INFO] __main__: Iteration 8 complete in 469.8s: ELO=1232, vs_random=98%, vs_pool=85%, features=0, episodes=1184
+2026-04-06 22:34:52,863 [INFO] __main__: === Iteration 9/30  |  ELO: 1232  |  Pool: 9 ===
+2026-04-06 22:34:52,873 [INFO] __main__: Opponent: pool_step_786432 (elo=980) [random_ratio=28%]
+2026-04-06 22:36:11,675 [INFO] __main__:   rollout 3/16: win_rate=0.83 (166/200), policy_loss=-0.0054
+2026-04-06 22:37:28,002 [INFO] __main__:   rollout 6/16: win_rate=0.82 (291/355), policy_loss=-0.0072
+2026-04-06 22:38:47,167 [INFO] __main__:   rollout 9/16: win_rate=0.82 (470/573), policy_loss=-0.0058
+2026-04-06 22:40:06,042 [INFO] __main__:   rollout 12/16: win_rate=0.82 (655/795), policy_loss=-0.0037
+2026-04-06 22:41:26,086 [INFO] __main__:   rollout 15/16: win_rate=0.83 (849/1027), policy_loss=-0.0044
+2026-04-06 22:41:55,943 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-06 22:41:59,344 [INFO] __main__:   vs random: 96% (48/50)
+2026-04-06 22:42:10,602 [INFO] __main__:   vs pool_step_786432: 72% (36/50) -> learner_elo=1229
+2026-04-06 22:42:14,902 [INFO] __main__:   vs pool_step_1769472: 90% (45/50) -> learner_elo=1233
+2026-04-06 22:42:20,230 [INFO] __main__:   vs pool_step_1572864: 92% (46/50) -> learner_elo=1237
+2026-04-06 22:42:28,205 [INFO] __main__:   vs pool_step_196608: 80% (40/50) -> learner_elo=1236
+2026-04-06 22:42:40,912 [INFO] __main__:   vs pool_step_393216: 82% (41/50) -> learner_elo=1235
+2026-04-06 22:42:40,919 [INFO] __main__: Iteration 9 complete in 468.0s: ELO=1235, vs_random=96%, vs_pool=83%, features=0, episodes=1108
+2026-04-06 22:42:40,919 [INFO] __main__: === Iteration 10/30  |  ELO: 1235  |  Pool: 10 ===
+2026-04-06 22:42:40,920 [INFO] __main__: Opponent: random
+2026-04-06 22:44:26,348 [INFO] __main__:   rollout 3/16: win_rate=0.94 (1974/2106), policy_loss=-0.0070
+2026-04-06 22:46:08,982 [INFO] __main__:   rollout 6/16: win_rate=0.94 (3872/4136), policy_loss=-0.0072
+2026-04-06 22:47:45,908 [INFO] __main__:   rollout 9/16: win_rate=0.94 (5833/6185), policy_loss=-0.0051
+2026-04-06 22:49:27,177 [INFO] __main__:   rollout 12/16: win_rate=0.95 (7793/8188), policy_loss=-0.0060
+2026-04-06 22:51:05,035 [INFO] __main__:   rollout 15/16: win_rate=0.96 (9775/10203), policy_loss=-0.0042
+2026-04-06 22:51:36,740 [INFO] __main__: Running contrastive analysis on recent self-play...
+2026-04-06 22:51:42,553 [INFO] knockout.reward.contrastive:   ... collected 127/500 episodes so far
+2026-04-06 22:51:47,588 [INFO] knockout.reward.contrastive:   ... collected 253/500 episodes so far
+2026-04-06 22:51:52,942 [INFO] knockout.reward.contrastive:   ... collected 380/500 episodes so far
+2026-04-06 22:51:58,118 [INFO] __main__: Discovered features (by |Cohen's d|):
+  ally2.position_y (idx=29): d=+1.673, higher in wins
+  global.team_a_alive (idx=84): d=+1.609, higher in wins
+  global.ego_team_alive (idx=86): d=+1.609, higher in wins
+  ally1.dist_from_center (idx=18): d=-1.585, lower in wins
+  ally2.dist_from_center (idx=32): d=-1.518, lower in wins
+  ally1.alive (idx=22): d=+1.461, higher in wins
+  ally2.rel_position_y (idx=38): d=+1.445, higher in wins
+  ally2.alive (idx=36): d=+1.411, higher in wins
+  ally1.dist_to_ego (idx=27): d=-1.324, lower in wins
+  ally2.rel_position_x (idx=37): d=+1.188, higher in wins
+2026-04-06 22:51:58,131 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-06 22:52:00,885 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-06 22:52:13,407 [INFO] __main__:   vs pool_step_393216: 90% (45/50) -> learner_elo=1237
+2026-04-06 22:52:36,228 [INFO] __main__:   vs pool_step_1179648: 88% (44/50) -> learner_elo=1240
+2026-04-06 22:52:45,246 [INFO] __main__:   vs pool_step_196608: 82% (41/50) -> learner_elo=1239
+2026-04-06 22:52:53,007 [INFO] __main__:   vs pool_step_1572864: 88% (44/50) -> learner_elo=1242
+2026-04-06 22:52:58,521 [INFO] __main__:   vs pool_step_1769472: 98% (49/50) -> learner_elo=1247
+2026-04-06 22:52:58,524 [INFO] __main__: Iteration 10 complete in 617.6s: ELO=1247, vs_random=100%, vs_pool=89%, features=10, episodes=10887
+2026-04-06 22:52:58,524 [INFO] __main__: === Iteration 11/30  |  ELO: 1247  |  Pool: 11 ===
+2026-04-06 22:52:58,543 [INFO] __main__: Opponent: pool_step_0 (elo=948) [random_ratio=20%]
+2026-04-06 22:54:32,431 [INFO] __main__:   rollout 3/16: win_rate=0.95 (653/691), policy_loss=-0.0060
+2026-04-06 22:56:04,236 [INFO] __main__:   rollout 6/16: win_rate=0.96 (1341/1404), policy_loss=-0.0050
+2026-04-06 22:57:30,851 [INFO] __main__:   rollout 9/16: win_rate=0.97 (2038/2105), policy_loss=-0.0040
+2026-04-06 22:58:59,223 [INFO] __main__:   rollout 12/16: win_rate=0.97 (2744/2815), policy_loss=-0.0056
+2026-04-06 23:00:30,281 [INFO] __main__:   rollout 15/16: win_rate=0.98 (3418/3493), policy_loss=-0.0021
+2026-04-06 23:01:01,186 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-06 23:01:03,957 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-06 23:01:18,256 [INFO] __main__:   vs pool_step_1966080: 98% (49/50) -> learner_elo=1253
+2026-04-06 23:01:23,740 [INFO] __main__:   vs pool_step_1572864: 100% (50/50) -> learner_elo=1259
+2026-04-06 23:01:36,008 [INFO] __main__:   vs pool_step_1179648: 100% (50/50) -> learner_elo=1264
+2026-04-06 23:01:48,227 [INFO] __main__:   vs pool_step_393216: 100% (50/50) -> learner_elo=1269
+2026-04-06 23:01:52,595 [INFO] __main__:   vs pool_step_1769472: 98% (49/50) -> learner_elo=1274
+2026-04-06 23:01:52,600 [INFO] __main__: Iteration 11 complete in 534.1s: ELO=1274, vs_random=100%, vs_pool=99%, features=10, episodes=3709
+2026-04-06 23:01:52,600 [INFO] __main__: === Iteration 12/30  |  ELO: 1274  |  Pool: 12 ===
+2026-04-06 23:01:52,613 [INFO] __main__: Opponent: pool_step_1769472 (elo=986) [random_ratio=19%]
+2026-04-06 23:03:28,023 [INFO] __main__:   rollout 3/16: win_rate=1.00 (772/775), policy_loss=-0.0025
+2026-04-06 23:04:59,705 [INFO] __main__:   rollout 6/16: win_rate=1.00 (1588/1593), policy_loss=-0.0007
+2026-04-06 23:06:31,450 [INFO] __main__:   rollout 9/16: win_rate=1.00 (2397/2405), policy_loss=-0.0015
+2026-04-06 23:08:13,671 [INFO] __main__:   rollout 12/16: win_rate=1.00 (3219/3230), policy_loss=-0.0009
+2026-04-06 23:09:52,628 [INFO] __main__:   rollout 15/16: win_rate=1.00 (4054/4068), policy_loss=-0.0014
+2026-04-06 23:10:22,852 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-06 23:10:25,478 [INFO] __main__:   vs random: 98% (49/50)
+2026-04-06 23:10:29,815 [INFO] __main__:   vs pool_step_1769472: 100% (50/50) -> learner_elo=1279
+2026-04-06 23:10:53,703 [INFO] __main__:   vs pool_step_1376256: 100% (50/50) -> learner_elo=1284
+2026-04-06 23:11:01,882 [INFO] __main__:   vs pool_step_196608: 100% (50/50) -> learner_elo=1288
+2026-04-06 23:11:11,294 [INFO] __main__:   vs pool_step_1572864: 98% (49/50) -> learner_elo=1292
+2026-04-06 23:11:21,882 [INFO] __main__:   vs pool_step_983040: 100% (50/50) -> learner_elo=1297
+2026-04-06 23:11:21,888 [INFO] __main__: Iteration 12 complete in 569.3s: ELO=1297, vs_random=98%, vs_pool=100%, features=10, episodes=4383
+2026-04-06 23:11:21,888 [INFO] __main__: === Iteration 13/30  |  ELO: 1297  |  Pool: 13 ===
+2026-04-06 23:11:21,902 [INFO] __main__: Opponent: pool_step_1179648 (elo=979) [random_ratio=18%]
+2026-04-06 23:12:34,439 [INFO] __main__:   rollout 3/16: win_rate=0.99 (238/240), policy_loss=0.0008
+2026-04-06 23:13:46,314 [INFO] __main__:   rollout 6/16: win_rate=0.99 (459/463), policy_loss=0.0004
+2026-04-06 23:14:56,100 [INFO] __main__:   rollout 9/16: win_rate=0.99 (666/670), policy_loss=-0.0000
+2026-04-06 23:16:02,288 [INFO] __main__:   rollout 12/16: win_rate=1.00 (846/850), policy_loss=-0.0003
+2026-04-06 23:17:09,664 [INFO] __main__:   rollout 15/16: win_rate=1.00 (1017/1021), policy_loss=0.0012
+2026-04-06 23:17:31,625 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-06 23:17:34,440 [INFO] __main__:   vs random: 98% (49/50)
+2026-04-06 23:18:01,039 [INFO] __main__:   vs pool_step_2162688: 100% (50/50) -> learner_elo=1302
+2026-04-06 23:18:13,371 [INFO] __main__:   vs pool_step_393216: 100% (50/50) -> learner_elo=1306
+2026-04-06 23:18:17,989 [INFO] __main__:   vs pool_step_2359296: 100% (50/50) -> learner_elo=1310
+2026-04-06 23:18:25,576 [INFO] __main__:   vs pool_step_0: 100% (50/50) -> learner_elo=1314
+2026-04-06 23:18:39,612 [INFO] __main__:   vs pool_step_1179648: 100% (50/50) -> learner_elo=1318
+2026-04-06 23:18:39,615 [INFO] __main__: Iteration 13 complete in 437.7s: ELO=1318, vs_random=98%, vs_pool=100%, features=10, episodes=1079
+2026-04-06 23:18:39,615 [INFO] __main__: === Iteration 14/30  |  ELO: 1318  |  Pool: 14 ===
+2026-04-06 23:18:39,631 [INFO] __main__: Opponent: pool_step_2555904 (elo=1297) [random_ratio=18%]
+2026-04-06 23:20:07,140 [INFO] __main__:   rollout 3/16: win_rate=1.00 (1682/1683), policy_loss=0.0010
+2026-04-06 23:21:33,999 [INFO] __main__:   rollout 6/16: win_rate=1.00 (3336/3339), policy_loss=-0.0008
+2026-04-06 23:23:03,358 [INFO] __main__:   rollout 9/16: win_rate=1.00 (5010/5013), policy_loss=-0.0009
+2026-04-06 23:24:32,467 [INFO] __main__:   rollout 12/16: win_rate=1.00 (6666/6669), policy_loss=0.0000
+2026-04-06 23:26:01,362 [INFO] __main__:   rollout 15/16: win_rate=1.00 (8216/8219), policy_loss=-0.0010
+2026-04-06 23:26:31,065 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-06 23:26:33,544 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-06 23:26:56,918 [INFO] __main__:   vs pool_step_1966080: 100% (50/50) -> learner_elo=1322
+2026-04-06 23:27:07,960 [INFO] __main__:   vs pool_step_2359296: 100% (50/50) -> learner_elo=1326
+2026-04-06 23:27:12,049 [INFO] __main__:   vs pool_step_1769472: 100% (50/50) -> learner_elo=1330
+2026-04-06 23:27:33,270 [INFO] __main__:   vs pool_step_2162688: 100% (50/50) -> learner_elo=1334
+2026-04-06 23:27:40,046 [INFO] __main__:   vs pool_step_196608: 100% (50/50) -> learner_elo=1338
+2026-04-06 23:27:40,050 [INFO] __main__: Iteration 14 complete in 540.4s: ELO=1338, vs_random=100%, vs_pool=100%, features=10, episodes=8721
+2026-04-06 23:27:40,050 [INFO] __main__: === Iteration 15/30  |  ELO: 1338  |  Pool: 15 ===
+2026-04-06 23:27:40,058 [INFO] __main__: Opponent: pool_step_983040 (elo=984) [random_ratio=17%]
+2026-04-06 23:28:54,020 [INFO] __main__:   rollout 3/16: win_rate=1.00 (278/278), policy_loss=-0.0004
+2026-04-06 23:30:06,323 [INFO] __main__:   rollout 6/16: win_rate=1.00 (548/548), policy_loss=-0.0001
+2026-04-06 23:31:19,685 [INFO] __main__:   rollout 9/16: win_rate=1.00 (805/805), policy_loss=0.0009
+2026-04-06 23:32:32,054 [INFO] __main__:   rollout 12/16: win_rate=1.00 (1085/1085), policy_loss=-0.0002
+2026-04-06 23:33:39,619 [INFO] __main__:   rollout 15/16: win_rate=1.00 (1336/1336), policy_loss=0.0011
+2026-04-06 23:34:05,701 [INFO] __main__: Running contrastive analysis on recent self-play...
+2026-04-06 23:34:12,698 [INFO] knockout.reward.contrastive:   ... collected 128/500 episodes so far
+2026-04-06 23:34:18,307 [INFO] knockout.reward.contrastive:   ... collected 257/500 episodes so far
+2026-04-06 23:34:23,648 [INFO] knockout.reward.contrastive:   ... collected 385/500 episodes so far
+2026-04-06 23:34:28,985 [INFO] __main__: Discovered features (by |Cohen's d|):
+  ally2.rel_position_x (idx=37): d=+2.600, higher in wins
+  global.ego_team_alive (idx=86): d=+2.437, higher in wins
+  global.team_a_alive (idx=84): d=+2.437, higher in wins
+  ally2.alive (idx=36): d=+2.229, higher in wins
+  ally2.dist_from_center (idx=32): d=-2.067, lower in wins
+  ally2.position_y (idx=29): d=-2.013, lower in wins
+  ally1.alive (idx=22): d=+1.908, higher in wins
+  enemy2.dist_from_center (idx=60): d=+1.765, higher in wins
+  ally2.dist_to_edge (idx=33): d=+1.720, higher in wins
+  ally2.position_x (idx=28): d=+1.698, higher in wins
+2026-04-06 23:34:28,991 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-06 23:34:31,405 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-06 23:34:33,462 [INFO] __main__:   vs pool_step_2949120: 100% (50/50) -> learner_elo=1342
+2026-04-06 23:34:42,459 [INFO] __main__:   vs pool_step_196608: 100% (50/50) -> learner_elo=1344
+2026-04-06 23:34:45,999 [INFO] __main__:   vs pool_step_1769472: 100% (50/50) -> learner_elo=1348
+2026-04-06 23:35:00,872 [INFO] __main__:   vs pool_step_1966080: 100% (50/50) -> learner_elo=1352
+2026-04-06 23:35:15,166 [INFO] __main__:   vs pool_step_983040: 100% (50/50) -> learner_elo=1355
+2026-04-06 23:35:15,171 [INFO] __main__: Iteration 15 complete in 455.1s: ELO=1355, vs_random=100%, vs_pool=100%, features=10, episodes=1423
+2026-04-06 23:35:15,171 [INFO] __main__: === Iteration 16/30  |  ELO: 1355  |  Pool: 16 ===
+2026-04-06 23:35:15,180 [INFO] __main__: Opponent: pool_step_2949120 (elo=996) [random_ratio=16%]
+2026-04-06 23:36:45,003 [INFO] __main__:   rollout 3/16: win_rate=1.00 (1570/1570), policy_loss=-0.0008
+2026-04-06 23:38:14,887 [INFO] __main__:   rollout 6/16: win_rate=1.00 (3041/3042), policy_loss=-0.0005
+2026-04-06 23:39:50,868 [INFO] __main__:   rollout 9/16: win_rate=1.00 (4406/4407), policy_loss=-0.0004
+2026-04-06 23:41:21,228 [INFO] __main__:   rollout 12/16: win_rate=1.00 (5665/5666), policy_loss=-0.0003
+2026-04-06 23:42:47,872 [INFO] __main__:   rollout 15/16: win_rate=1.00 (6889/6892), policy_loss=-0.0005
+2026-04-06 23:43:18,278 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-06 23:43:20,798 [INFO] __main__:   vs random: 96% (48/50)
+2026-04-06 23:43:33,874 [INFO] __main__:   vs pool_step_786432: 100% (50/50) -> learner_elo=1358
+2026-04-06 23:43:52,332 [INFO] __main__:   vs pool_step_1966080: 100% (50/50) -> learner_elo=1362
+2026-04-06 23:43:55,374 [INFO] __main__:   vs pool_step_2555904: 100% (50/50) -> learner_elo=1365
+2026-04-06 23:44:16,373 [INFO] __main__:   vs pool_step_2359296: 98% (49/50) -> learner_elo=1368
+2026-04-06 23:44:21,636 [INFO] __main__:   vs pool_step_1769472: 100% (50/50) -> learner_elo=1371
+2026-04-06 23:44:21,641 [INFO] __main__: Iteration 16 complete in 546.5s: ELO=1371, vs_random=96%, vs_pool=100%, features=10, episodes=7299
+2026-04-06 23:44:21,643 [INFO] __main__: === Iteration 17/30  |  ELO: 1371  |  Pool: 17 ===
+2026-04-06 23:44:21,643 [INFO] __main__: Opponent: random
+2026-04-06 23:45:57,636 [INFO] __main__:   rollout 3/16: win_rate=0.99 (1983/1996), policy_loss=-0.0039
+2026-04-06 23:47:33,251 [INFO] __main__:   rollout 6/16: win_rate=0.99 (3970/3995), policy_loss=-0.0047
+2026-04-06 23:49:10,113 [INFO] __main__:   rollout 9/16: win_rate=0.99 (5959/5996), policy_loss=-0.0042
+2026-04-06 23:50:48,377 [INFO] __main__:   rollout 12/16: win_rate=0.99 (7868/7909), policy_loss=-0.0021
+2026-04-06 23:52:26,025 [INFO] __main__:   rollout 15/16: win_rate=1.00 (9808/9856), policy_loss=-0.0031
+2026-04-06 23:52:57,959 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-06 23:53:00,501 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-06 23:53:03,145 [INFO] __main__:   vs pool_step_3145728: 100% (50/50) -> learner_elo=1374
+2026-04-06 23:53:13,905 [INFO] __main__:   vs pool_step_3342336: 100% (50/50) -> learner_elo=1378
+2026-04-06 23:53:24,597 [INFO] __main__:   vs pool_step_1572864: 100% (50/50) -> learner_elo=1381
+2026-04-06 23:53:26,849 [INFO] __main__:   vs pool_step_2555904: 100% (50/50) -> learner_elo=1384
+2026-04-06 23:53:48,689 [INFO] __main__:   vs pool_step_1376256: 100% (50/50) -> learner_elo=1387
+2026-04-06 23:53:48,696 [INFO] __main__: Iteration 17 complete in 567.0s: ELO=1387, vs_random=100%, vs_pool=100%, features=10, episodes=10504
+2026-04-06 23:53:48,696 [INFO] __main__: === Iteration 18/30  |  ELO: 1387  |  Pool: 18 ===
+2026-04-06 23:53:48,696 [INFO] __main__: Opponent: random
+2026-04-06 23:55:25,498 [INFO] __main__:   rollout 3/16: win_rate=1.00 (1970/1973), policy_loss=-0.0016
+2026-04-06 23:57:00,310 [INFO] __main__:   rollout 6/16: win_rate=1.00 (3912/3920), policy_loss=-0.0022
+2026-04-06 23:58:33,786 [INFO] __main__:   rollout 9/16: win_rate=1.00 (5869/5880), policy_loss=-0.0017
+2026-04-07 00:00:08,889 [INFO] __main__:   rollout 12/16: win_rate=1.00 (7807/7824), policy_loss=-0.0012
+2026-04-07 00:01:44,525 [INFO] __main__:   rollout 15/16: win_rate=1.00 (9800/9819), policy_loss=-0.0014
+2026-04-07 00:02:16,230 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-07 00:02:18,969 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-07 00:02:27,845 [INFO] __main__:   vs pool_step_1572864: 100% (50/50) -> learner_elo=1390
+2026-04-07 00:02:49,780 [INFO] __main__:   vs pool_step_2162688: 100% (50/50) -> learner_elo=1393
+2026-04-07 00:02:51,777 [INFO] __main__:   vs pool_step_2555904: 100% (50/50) -> learner_elo=1395
+2026-04-07 00:03:03,629 [INFO] __main__:   vs pool_step_393216: 100% (50/50) -> learner_elo=1398
+2026-04-07 00:03:10,293 [INFO] __main__:   vs pool_step_196608: 100% (50/50) -> learner_elo=1400
+2026-04-07 00:03:10,304 [INFO] __main__: Iteration 18 complete in 561.6s: ELO=1400, vs_random=100%, vs_pool=100%, features=10, episodes=10469
+2026-04-07 00:03:10,305 [INFO] __main__: === Iteration 19/30  |  ELO: 1400  |  Pool: 19 ===
+2026-04-07 00:03:11,004 [INFO] __main__: Opponent: pool_step_3538944 (elo=1387) [random_ratio=14%]
+2026-04-07 00:04:06,318 [INFO] __main__:   rollout 3/16: win_rate=1.00 (338/338), policy_loss=-0.0006
+2026-04-07 00:05:00,727 [INFO] __main__:   rollout 6/16: win_rate=1.00 (674/674), policy_loss=0.0005
+2026-04-07 00:05:55,995 [INFO] __main__:   rollout 9/16: win_rate=1.00 (1010/1010), policy_loss=0.0006
+2026-04-07 00:06:56,575 [INFO] __main__:   rollout 12/16: win_rate=1.00 (1339/1339), policy_loss=0.0006
+2026-04-07 00:07:56,168 [INFO] __main__:   rollout 15/16: win_rate=1.00 (1663/1663), policy_loss=-0.0003
+2026-04-07 00:08:14,930 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-07 00:08:17,643 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-07 00:08:22,682 [INFO] __main__:   vs pool_step_589824: 100% (50/50) -> learner_elo=1402
+2026-04-07 00:08:25,373 [INFO] __main__:   vs pool_step_2555904: 100% (50/50) -> learner_elo=1405
+2026-04-07 00:08:27,279 [INFO] __main__:   vs pool_step_2752512: 100% (50/50) -> learner_elo=1408
+2026-04-07 00:08:37,330 [INFO] __main__:   vs pool_step_3342336: 100% (50/50) -> learner_elo=1411
+2026-04-07 00:08:57,338 [INFO] __main__:   vs pool_step_1179648: 100% (50/50) -> learner_elo=1413
+2026-04-07 00:08:57,342 [INFO] __main__: Iteration 19 complete in 347.0s: ELO=1413, vs_random=100%, vs_pool=100%, features=10, episodes=1772
+2026-04-07 00:08:57,343 [INFO] __main__: === Iteration 20/30  |  ELO: 1413  |  Pool: 20 ===
+2026-04-07 00:08:57,352 [INFO] __main__: Opponent: pool_step_2555904 (elo=988) [random_ratio=14%]
+2026-04-07 00:10:26,684 [INFO] __main__:   rollout 3/16: win_rate=1.00 (1817/1817), policy_loss=-0.0003
+2026-04-07 00:11:54,760 [INFO] __main__:   rollout 6/16: win_rate=1.00 (3513/3513), policy_loss=-0.0003
+2026-04-07 00:13:25,781 [INFO] __main__:   rollout 9/16: win_rate=1.00 (5215/5215), policy_loss=-0.0009
+2026-04-07 00:14:58,645 [INFO] __main__:   rollout 12/16: win_rate=1.00 (6917/6917), policy_loss=0.0008
+2026-04-07 00:16:28,456 [INFO] __main__:   rollout 15/16: win_rate=1.00 (8764/8764), policy_loss=0.0004
+2026-04-07 00:16:57,169 [INFO] __main__: Running contrastive analysis on recent self-play...
+2026-04-07 00:17:03,623 [INFO] knockout.reward.contrastive:   ... collected 127/500 episodes so far
+2026-04-07 00:17:09,526 [INFO] knockout.reward.contrastive:   ... collected 257/500 episodes so far
+2026-04-07 00:17:16,526 [INFO] knockout.reward.contrastive:   ... collected 387/500 episodes so far
+2026-04-07 00:17:21,105 [INFO] __main__: Discovered features (by |Cohen's d|):
+  enemy2.dist_from_center (idx=60): d=+1.002, higher in wins
+  enemy2.dist_to_edge (idx=61): d=-0.782, lower in wins
+  enemy1.dist_from_center (idx=46): d=+0.766, higher in wins
+  enemy2.velocity_y (idx=59): d=+0.718, higher in wins
+  enemy2.rel_velocity_y (idx=68): d=+0.706, higher in wins
+  enemy2.alive (idx=64): d=-0.700, lower in wins
+  enemy1.dist_to_edge (idx=47): d=-0.699, lower in wins
+  enemy3.rel_position_x (idx=79): d=-0.660, lower in wins
+  enemy3.position_x (idx=70): d=-0.658, lower in wins
+  enemy2.dist_to_ego (idx=69): d=+0.562, higher in wins
+2026-04-07 00:17:21,110 [INFO] __main__: Pool full (20/20). Evicted step=196608 elo=940
+2026-04-07 00:17:21,110 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-07 00:17:23,866 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-07 00:18:44,092 [INFO] __main__:   vs pool_step_3932160: 62% (31/50) -> learner_elo=1404
+2026-04-07 00:19:21,810 [INFO] __main__:   vs pool_step_1376256: 100% (50/50) -> learner_elo=1406
+2026-04-07 00:19:32,807 [INFO] __main__:   vs pool_step_1966080: 100% (50/50) -> learner_elo=1409
+2026-04-07 00:19:39,646 [INFO] __main__:   vs pool_step_3538944: 100% (50/50) -> learner_elo=1412
+2026-04-07 00:19:47,943 [INFO] __main__:   vs pool_step_1572864: 100% (50/50) -> learner_elo=1414
+2026-04-07 00:19:47,946 [INFO] __main__: Iteration 20 complete in 650.6s: ELO=1414, vs_random=100%, vs_pool=92%, features=10, episodes=9373
+2026-04-07 00:19:47,946 [INFO] __main__: === Iteration 21/30  |  ELO: 1414  |  Pool: 20 ===
+2026-04-07 00:19:48,005 [INFO] __main__: Opponent: pool_step_3932160 (elo=1009) [random_ratio=13%]
+2026-04-07 00:20:19,033 [INFO] __main__:   rollout 3/16: win_rate=0.00 (0/0), policy_loss=0.0001
+2026-04-07 00:20:47,699 [INFO] __main__:   rollout 6/16: win_rate=0.00 (0/0), policy_loss=0.0002
+2026-04-07 00:21:17,439 [INFO] __main__:   rollout 9/16: win_rate=0.00 (0/0), policy_loss=-0.0012
+2026-04-07 00:21:49,959 [INFO] __main__:   rollout 12/16: win_rate=0.00 (0/0), policy_loss=-0.0002
+2026-04-07 00:22:22,729 [INFO] __main__:   rollout 15/16: win_rate=0.50 (1/2), policy_loss=-0.0007
+2026-04-07 00:22:34,120 [INFO] __main__: Pool full (20/20). Evicted step=0 elo=944
+2026-04-07 00:22:34,121 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-07 00:22:36,484 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-07 00:23:59,849 [INFO] __main__:   vs pool_step_3735552: 50% (25/50) -> learner_elo=1401
+2026-04-07 00:24:18,735 [INFO] __main__:   vs pool_step_1966080: 100% (50/50) -> learner_elo=1403
+2026-04-07 00:24:36,209 [INFO] __main__:   vs pool_step_1179648: 100% (50/50) -> learner_elo=1406
+2026-04-07 00:25:07,835 [INFO] __main__:   vs pool_step_4128768: 100% (50/50) -> learner_elo=1409
+2026-04-07 00:25:10,329 [INFO] __main__:   vs pool_step_3145728: 100% (50/50) -> learner_elo=1411
+2026-04-07 00:25:10,333 [INFO] __main__: Iteration 21 complete in 322.4s: ELO=1411, vs_random=100%, vs_pool=90%, features=10, episodes=2
+2026-04-07 00:25:10,333 [INFO] __main__: === Iteration 22/30  |  ELO: 1411  |  Pool: 20 ===
+2026-04-07 00:25:10,352 [INFO] __main__: Opponent: pool_step_4128768 (elo=997) [random_ratio=12%]
+2026-04-07 00:25:51,643 [INFO] __main__:   rollout 3/16: win_rate=1.00 (50/50), policy_loss=-0.0010
+2026-04-07 00:26:33,738 [INFO] __main__:   rollout 6/16: win_rate=1.00 (90/90), policy_loss=-0.0013
+2026-04-07 00:27:17,462 [INFO] __main__:   rollout 9/16: win_rate=1.00 (137/137), policy_loss=-0.0001
+2026-04-07 00:27:57,791 [INFO] __main__:   rollout 12/16: win_rate=0.99 (179/180), policy_loss=-0.0007
+2026-04-07 00:28:42,849 [INFO] __main__:   rollout 15/16: win_rate=1.00 (227/228), policy_loss=-0.0025
+2026-04-07 00:28:58,424 [INFO] __main__: Pool full (20/20). Evicted step=393216 elo=947
+2026-04-07 00:28:58,424 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-07 00:29:00,804 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-07 00:29:16,485 [INFO] __main__:   vs pool_step_2359296: 100% (50/50) -> learner_elo=1414
+2026-04-07 00:29:20,844 [INFO] __main__:   vs pool_step_1769472: 100% (50/50) -> learner_elo=1416
+2026-04-07 00:30:18,889 [INFO] __main__:   vs pool_step_1376256: 98% (49/50) -> learner_elo=1418
+2026-04-07 00:30:21,059 [INFO] __main__:   vs pool_step_3145728: 100% (50/50) -> learner_elo=1421
+2026-04-07 00:30:23,469 [INFO] __main__:   vs pool_step_2752512: 100% (50/50) -> learner_elo=1423
+2026-04-07 00:30:23,472 [INFO] __main__: Iteration 22 complete in 313.1s: ELO=1423, vs_random=100%, vs_pool=100%, features=10, episodes=244
+2026-04-07 00:30:23,473 [INFO] __main__: === Iteration 23/30  |  ELO: 1423  |  Pool: 20 ===
+2026-04-07 00:30:23,490 [INFO] __main__: Opponent: pool_step_4325376 (elo=1411) [random_ratio=12%]
+2026-04-07 00:31:13,225 [INFO] __main__:   rollout 3/16: win_rate=1.00 (102/102), policy_loss=-0.0001
+2026-04-07 00:32:01,221 [INFO] __main__:   rollout 6/16: win_rate=1.00 (253/253), policy_loss=-0.0006
+2026-04-07 00:32:50,132 [INFO] __main__:   rollout 9/16: win_rate=1.00 (385/385), policy_loss=-0.0001
+2026-04-07 00:33:39,798 [INFO] __main__:   rollout 12/16: win_rate=1.00 (524/524), policy_loss=0.0000
+2026-04-07 00:34:32,350 [INFO] __main__:   rollout 15/16: win_rate=1.00 (649/649), policy_loss=-0.0005
+2026-04-07 00:34:50,601 [INFO] __main__: Pool full (20/20). Evicted step=589824 elo=957
+2026-04-07 00:34:50,601 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-07 00:34:53,403 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-07 00:34:56,867 [INFO] __main__:   vs pool_step_2949120: 100% (50/50) -> learner_elo=1426
+2026-04-07 00:35:15,273 [INFO] __main__:   vs pool_step_4325376: 100% (50/50) -> learner_elo=1428
+2026-04-07 00:36:11,554 [INFO] __main__:   vs pool_step_1376256: 100% (50/50) -> learner_elo=1431
+2026-04-07 00:36:28,408 [INFO] __main__:   vs pool_step_1966080: 100% (50/50) -> learner_elo=1433
+2026-04-07 00:36:31,206 [INFO] __main__:   vs pool_step_3145728: 100% (50/50) -> learner_elo=1435
+2026-04-07 00:36:31,209 [INFO] __main__: Iteration 23 complete in 367.7s: ELO=1435, vs_random=100%, vs_pool=100%, features=10, episodes=690
+2026-04-07 00:36:31,209 [INFO] __main__: === Iteration 24/30  |  ELO: 1435  |  Pool: 20 ===
+2026-04-07 00:36:31,227 [INFO] __main__: Opponent: pool_step_4521984 (elo=1423) [random_ratio=11%]
+2026-04-07 00:37:25,978 [INFO] __main__:   rollout 3/16: win_rate=0.99 (158/160), policy_loss=0.0005
+2026-04-07 00:38:17,495 [INFO] __main__:   rollout 6/16: win_rate=0.99 (317/319), policy_loss=-0.0005
+2026-04-07 08:17:16,018 [INFO] __main__:   rollout 9/16: win_rate=1.00 (490/492), policy_loss=-0.0008
+2026-04-07 08:18:11,625 [INFO] __main__:   rollout 12/16: win_rate=1.00 (651/653), policy_loss=-0.0001
+2026-04-07 08:19:08,354 [INFO] __main__:   rollout 15/16: win_rate=1.00 (815/818), policy_loss=-0.0019
+2026-04-07 08:19:26,167 [INFO] __main__: Pool full (20/20). Evicted step=1769472 elo=968
+2026-04-07 08:19:26,167 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-07 08:19:29,505 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-07 08:19:30,994 [INFO] __main__:   vs pool_step_3145728: 100% (50/50) -> learner_elo=1437
+2026-04-07 08:19:46,393 [INFO] __main__:   vs pool_step_3342336: 98% (49/50) -> learner_elo=1439
+2026-04-07 08:20:07,546 [INFO] __main__:   vs pool_step_1966080: 100% (50/50) -> learner_elo=1441
+2026-04-07 08:20:16,536 [INFO] __main__:   vs pool_step_2359296: 100% (50/50) -> learner_elo=1443
+2026-04-07 08:20:28,394 [INFO] __main__:   vs pool_step_786432: 100% (50/50) -> learner_elo=1445
+2026-04-07 08:20:28,398 [INFO] __main__: Iteration 24 complete in 27837.2s: ELO=1445, vs_random=100%, vs_pool=100%, features=10, episodes=875
+2026-04-07 08:20:28,398 [INFO] __main__: === Iteration 25/30  |  ELO: 1445  |  Pool: 20 ===
+2026-04-07 08:20:28,412 [INFO] __main__: Opponent: pool_step_2949120 (elo=993) [random_ratio=10%]
+2026-04-07 08:22:03,905 [INFO] __main__:   rollout 3/16: win_rate=1.00 (1737/1739), policy_loss=-0.0003
+2026-04-07 08:23:38,946 [INFO] __main__:   rollout 6/16: win_rate=1.00 (3517/3519), policy_loss=-0.0010
+2026-04-07 08:25:12,869 [INFO] __main__:   rollout 9/16: win_rate=1.00 (5143/5146), policy_loss=0.0000
+2026-04-07 08:26:47,321 [INFO] __main__:   rollout 12/16: win_rate=1.00 (6634/6637), policy_loss=-0.0006
+2026-04-07 08:28:23,480 [INFO] __main__:   rollout 15/16: win_rate=1.00 (8065/8069), policy_loss=0.0001
+2026-04-07 08:28:55,152 [INFO] __main__: Running contrastive analysis on recent self-play...
+2026-04-07 08:29:02,033 [INFO] knockout.reward.contrastive:   ... collected 128/500 episodes so far
+2026-04-07 08:29:07,778 [INFO] knockout.reward.contrastive:   ... collected 254/500 episodes so far
+2026-04-07 08:29:14,374 [INFO] knockout.reward.contrastive:   ... collected 382/500 episodes so far
+2026-04-07 08:29:20,125 [INFO] __main__: Discovered features (by |Cohen's d|):
+  ally1.dist_to_ego (idx=27): d=-2.056, lower in wins
+  ally1.rel_position_x (idx=23): d=+1.757, higher in wins
+  ally1.alive (idx=22): d=+1.491, higher in wins
+  enemy2.rel_position_x (idx=65): d=+1.340, higher in wins
+  enemy2.position_x (idx=56): d=+1.195, higher in wins
+  ally1.dist_to_edge (idx=19): d=+1.171, higher in wins
+  global.ego_team_alive (idx=86): d=+1.040, higher in wins
+  global.team_a_alive (idx=84): d=+1.040, higher in wins
+  enemy3.rel_position_y (idx=80): d=+0.860, higher in wins
+  ally2.dist_to_ego (idx=41): d=-0.857, lower in wins
+2026-04-07 08:29:20,131 [INFO] __main__: Pool full (20/20). Evicted step=1179648 elo=970
+2026-04-07 08:29:20,132 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-07 08:29:22,825 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-07 08:30:41,536 [INFO] __main__:   vs pool_step_4128768: 68% (34/50) -> learner_elo=1437
+2026-04-07 08:30:43,677 [INFO] __main__:   vs pool_step_2555904: 100% (50/50) -> learner_elo=1440
+2026-04-07 08:32:04,682 [INFO] __main__:   vs pool_step_2162688: 84% (42/50) -> learner_elo=1437
+2026-04-07 08:32:12,435 [INFO] __main__:   vs pool_step_2359296: 100% (50/50) -> learner_elo=1439
+2026-04-07 08:33:32,247 [INFO] __main__:   vs pool_step_3735552: 46% (23/50) -> learner_elo=1424
+2026-04-07 08:33:32,254 [INFO] __main__: Iteration 25 complete in 783.8s: ELO=1424, vs_random=100%, vs_pool=80%, features=10, episodes=8558
+2026-04-07 08:33:32,255 [INFO] __main__: === Iteration 26/30  |  ELO: 1424  |  Pool: 20 ===
+2026-04-07 08:33:32,278 [INFO] __main__: Opponent: pool_step_4521984 (elo=1423) [random_ratio=10%]
+2026-04-07 08:34:38,718 [INFO] __main__:   rollout 3/16: win_rate=1.00 (167/167), policy_loss=0.0002
+2026-04-07 08:35:38,022 [INFO] __main__:   rollout 6/16: win_rate=1.00 (322/322), policy_loss=-0.0004
+2026-04-07 08:36:35,145 [INFO] __main__:   rollout 9/16: win_rate=1.00 (464/464), policy_loss=-0.0011
+2026-04-07 08:37:36,131 [INFO] __main__:   rollout 12/16: win_rate=1.00 (640/641), policy_loss=-0.0010
+2026-04-07 08:38:29,189 [INFO] __main__:   rollout 15/16: win_rate=1.00 (820/821), policy_loss=-0.0002
+2026-04-07 08:38:46,842 [INFO] __main__: Pool full (20/20). Evicted step=1966080 elo=974
+2026-04-07 08:38:46,843 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-07 08:38:49,160 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-07 08:39:00,111 [INFO] __main__:   vs pool_step_786432: 100% (50/50) -> learner_elo=1426
+2026-04-07 08:39:01,763 [INFO] __main__:   vs pool_step_2949120: 100% (50/50) -> learner_elo=1429
+2026-04-07 08:39:27,836 [INFO] __main__:   vs pool_step_2162688: 92% (46/50) -> learner_elo=1429
+2026-04-07 08:39:45,680 [INFO] __main__:   vs pool_step_4325376: 100% (50/50) -> learner_elo=1431
+2026-04-07 08:40:18,172 [INFO] __main__:   vs pool_step_1376256: 100% (50/50) -> learner_elo=1433
+2026-04-07 08:40:18,175 [INFO] __main__: Iteration 26 complete in 405.9s: ELO=1433, vs_random=100%, vs_pool=98%, features=10, episodes=888
+2026-04-07 08:40:18,175 [INFO] __main__: === Iteration 27/30  |  ELO: 1433  |  Pool: 20 ===
+2026-04-07 08:40:18,185 [INFO] __main__: Opponent: pool_step_4915200 (elo=1445) [random_ratio=5%]
+2026-04-07 08:41:17,055 [INFO] __main__:   rollout 3/16: win_rate=1.00 (380/380), policy_loss=-0.0002
+2026-04-07 08:42:18,947 [INFO] __main__:   rollout 6/16: win_rate=1.00 (762/762), policy_loss=0.0005
+2026-04-07 08:43:24,404 [INFO] __main__:   rollout 9/16: win_rate=1.00 (1143/1143), policy_loss=-0.0003
+2026-04-07 08:44:26,428 [INFO] __main__:   rollout 12/16: win_rate=1.00 (1528/1528), policy_loss=-0.0008
+2026-04-07 08:45:27,019 [INFO] __main__:   rollout 15/16: win_rate=1.00 (1905/1905), policy_loss=-0.0001
+2026-04-07 08:45:45,413 [INFO] __main__: Pool full (20/20). Evicted step=1572864 elo=975
+2026-04-07 08:45:45,413 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-07 08:45:47,553 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-07 08:45:49,249 [INFO] __main__:   vs pool_step_2949120: 100% (50/50) -> learner_elo=1436
+2026-04-07 08:46:02,794 [INFO] __main__:   vs pool_step_2359296: 100% (50/50) -> learner_elo=1438
+2026-04-07 08:46:13,393 [INFO] __main__:   vs pool_step_3342336: 100% (50/50) -> learner_elo=1440
+2026-04-07 08:46:15,219 [INFO] __main__:   vs pool_step_3145728: 100% (50/50) -> learner_elo=1442
+2026-04-07 08:46:41,733 [INFO] __main__:   vs pool_step_4128768: 100% (50/50) -> learner_elo=1445
+2026-04-07 08:46:41,739 [INFO] __main__: Iteration 27 complete in 383.6s: ELO=1445, vs_random=100%, vs_pool=100%, features=10, episodes=2017
+2026-04-07 08:46:41,739 [INFO] __main__: === Iteration 28/30  |  ELO: 1445  |  Pool: 20 ===
+2026-04-07 08:46:41,748 [INFO] __main__: Opponent: pool_step_5308416 (elo=1433) [random_ratio=5%]
+2026-04-07 08:47:32,364 [INFO] __main__:   rollout 3/16: win_rate=1.00 (326/326), policy_loss=-0.0004
+2026-04-07 08:48:25,461 [INFO] __main__:   rollout 6/16: win_rate=1.00 (644/644), policy_loss=-0.0003
+2026-04-07 08:49:12,970 [INFO] __main__:   rollout 9/16: win_rate=1.00 (933/933), policy_loss=0.0005
+2026-04-07 08:49:58,568 [INFO] __main__:   rollout 12/16: win_rate=1.00 (1228/1228), policy_loss=0.0001
+2026-04-07 08:50:41,183 [INFO] __main__:   rollout 15/16: win_rate=1.00 (1533/1533), policy_loss=0.0000
+2026-04-07 08:50:56,818 [INFO] __main__: Pool full (20/20). Evicted step=786432 elo=976
+2026-04-07 08:50:56,819 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-07 08:50:59,024 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-07 08:52:00,984 [INFO] __main__:   vs pool_step_3932160: 70% (35/50) -> learner_elo=1438
+2026-04-07 08:52:02,510 [INFO] __main__:   vs pool_step_2752512: 100% (50/50) -> learner_elo=1440
+2026-04-07 08:52:13,397 [INFO] __main__:   vs pool_step_5505024: 100% (50/50) -> learner_elo=1442
+2026-04-07 08:52:19,285 [INFO] __main__:   vs pool_step_2359296: 100% (50/50) -> learner_elo=1444
+2026-04-07 08:52:29,438 [INFO] __main__:   vs pool_step_983040: 100% (50/50) -> learner_elo=1446
+2026-04-07 08:52:29,441 [INFO] __main__: Iteration 28 complete in 347.7s: ELO=1446, vs_random=100%, vs_pool=94%, features=10, episodes=1634
+2026-04-07 08:52:29,441 [INFO] __main__: === Iteration 29/30  |  ELO: 1446  |  Pool: 20 ===
+2026-04-07 08:52:29,456 [INFO] __main__: Opponent: pool_step_5111808 (elo=1424) [random_ratio=5%]
+2026-04-07 08:53:23,797 [INFO] __main__:   rollout 3/16: win_rate=1.00 (293/293), policy_loss=0.0004
+2026-04-07 08:54:17,574 [INFO] __main__:   rollout 6/16: win_rate=1.00 (615/615), policy_loss=-0.0007
+2026-04-07 08:55:10,279 [INFO] __main__:   rollout 9/16: win_rate=1.00 (927/927), policy_loss=-0.0008
+2026-04-07 08:56:00,895 [INFO] __main__:   rollout 12/16: win_rate=1.00 (1228/1228), policy_loss=-0.0011
+2026-04-07 08:56:49,692 [INFO] __main__:   rollout 15/16: win_rate=1.00 (1518/1518), policy_loss=0.0004
+2026-04-07 08:57:07,132 [INFO] __main__: Pool full (20/20). Evicted step=2359296 elo=977
+2026-04-07 08:57:07,132 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-07 08:57:09,735 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-07 08:57:17,214 [INFO] __main__:   vs pool_step_4718592: 100% (50/50) -> learner_elo=1449
+2026-04-07 08:57:19,229 [INFO] __main__:   vs pool_step_2555904: 100% (50/50) -> learner_elo=1451
+2026-04-07 08:58:22,545 [INFO] __main__:   vs pool_step_3932160: 74% (37/50) -> learner_elo=1445
+2026-04-07 08:58:39,604 [INFO] __main__:   vs pool_step_5701632: 100% (50/50) -> learner_elo=1447
+2026-04-07 08:58:47,564 [INFO] __main__:   vs pool_step_5111808: 100% (50/50) -> learner_elo=1449
+2026-04-07 08:58:47,568 [INFO] __main__: Iteration 29 complete in 378.1s: ELO=1449, vs_random=100%, vs_pool=95%, features=10, episodes=1618
+2026-04-07 08:58:47,568 [INFO] __main__: === Iteration 30/30  |  ELO: 1449  |  Pool: 20 ===
+2026-04-07 08:58:47,579 [INFO] __main__: Opponent: pool_step_5701632 (elo=998) [random_ratio=5%]
+2026-04-07 08:59:17,541 [INFO] __main__:   rollout 3/16: win_rate=1.00 (46/46), policy_loss=0.0003
+2026-04-07 08:59:48,008 [INFO] __main__:   rollout 6/16: win_rate=1.00 (85/85), policy_loss=-0.0007
+2026-04-07 09:00:15,511 [INFO] __main__:   rollout 9/16: win_rate=1.00 (126/126), policy_loss=-0.0006
+2026-04-07 09:00:44,387 [INFO] __main__:   rollout 12/16: win_rate=1.00 (162/162), policy_loss=0.0002
+2026-04-07 09:01:14,111 [INFO] __main__:   rollout 15/16: win_rate=1.00 (202/202), policy_loss=-0.0001
+2026-04-07 09:01:24,551 [INFO] __main__: Running contrastive analysis on recent self-play...
+2026-04-07 09:01:30,951 [INFO] knockout.reward.contrastive:   ... collected 132/500 episodes so far
+2026-04-07 09:01:36,767 [INFO] knockout.reward.contrastive:   ... collected 257/500 episodes so far
+2026-04-07 09:01:43,062 [INFO] knockout.reward.contrastive:   ... collected 384/500 episodes so far
+2026-04-07 09:01:48,445 [INFO] __main__: Discovered features (by |Cohen's d|):
+  enemy2.rel_position_y (idx=66): d=-1.101, lower in wins
+  enemy2.position_y (idx=57): d=-1.094, lower in wins
+  enemy2.dist_to_edge (idx=61): d=+0.665, higher in wins
+  ego.dist_from_center (idx=4): d=+0.653, higher in wins
+  enemy1.dist_from_center (idx=46): d=+0.645, higher in wins
+  ally1.dist_from_center (idx=18): d=+0.644, higher in wins
+  ego.position_x (idx=0): d=-0.632, lower in wins
+  ally1.position_x (idx=14): d=-0.627, lower in wins
+  enemy2.alive (idx=64): d=+0.624, higher in wins
+  enemy2.speed (idx=62): d=+0.624, higher in wins
+2026-04-07 09:01:48,453 [INFO] __main__: Pool full (20/20). Evicted step=983040 elo=978
+2026-04-07 09:01:48,453 [INFO] __main__: Evaluating vs pool members for ELO update...
+2026-04-07 09:01:51,763 [INFO] __main__:   vs random: 100% (50/50)
+2026-04-07 09:03:24,306 [INFO] __main__:   vs pool_step_3932160: 44% (22/50) -> learner_elo=1434
+2026-04-07 09:04:10,355 [INFO] __main__:   vs pool_step_1376256: 100% (50/50) -> learner_elo=1436
+2026-04-07 09:04:18,038 [INFO] __main__:   vs pool_step_4915200: 100% (50/50) -> learner_elo=1439
+2026-04-07 09:04:19,957 [INFO] __main__:   vs pool_step_2949120: 100% (50/50) -> learner_elo=1441
+2026-04-07 09:04:34,253 [INFO] __main__:   vs pool_step_4128768: 100% (50/50) -> learner_elo=1443
+2026-04-07 09:04:34,259 [INFO] __main__: Iteration 30 complete in 346.7s: ELO=1443, vs_random=100%, vs_pool=89%, features=10, episodes=212
+2026-04-07 09:04:34,266 [INFO] __main__: Saved final agent to runs/self_play_v4/final_agent.pt
+2026-04-07 09:04:34,271 [INFO] __main__: Final ELO leaderboard:
+2026-04-07 09:04:34,271 [INFO] __main__:   learner: 1443
+2026-04-07 09:04:34,271 [INFO] __main__:   pool_step_3932160: 1038
+2026-04-07 09:04:34,271 [INFO] __main__:   pool_step_3735552: 1028
+2026-04-07 09:04:34,271 [INFO] __main__:   pool_step_4128768: 1000
+2026-04-07 09:04:34,272 [INFO] __main__:   pool_step_5111808: 998
+2026-04-07 09:04:34,272 [INFO] __main__:   pool_step_4718592: 998
+2026-04-07 09:04:34,272 [INFO] __main__:   pool_step_5701632: 998
+2026-04-07 09:04:34,272 [INFO] __main__:   pool_step_5505024: 998
+2026-04-07 09:04:34,273 [INFO] __main__:   pool_step_4915200: 998
+2026-04-07 09:04:34,273 [INFO] __main__:   pool_step_3538944: 997
+2026-04-07 09:04:34,274 [INFO] __main__: Training complete. 30 iterations, final ELO=1443

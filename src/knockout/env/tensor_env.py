@@ -98,12 +98,16 @@ class TensorVecEnv:
     # ------------------------------------------------------------------
 
     def step(
-        self, team_a_actions: np.ndarray
+        self,
+        team_a_actions: np.ndarray,
+        team_b_actions: np.ndarray | None = None,
     ) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, list[dict[str, Any]]]:
         """Step all environments.
 
         Args:
-            team_a_actions: ndarray (num_envs, 3, 2) — [angle_deg, power]
+            team_a_actions:  ndarray (num_envs, 3, 2) — [angle_deg, power]
+            team_b_actions:  ndarray (num_envs, 3, 2) — [angle_deg, power]
+                             If None, random actions are sampled for Team B.
 
         Returns:
             obs     : ndarray (num_envs, 3, 89) float32
@@ -115,14 +119,19 @@ class TensorVecEnv:
         # 1. Build combined actions tensor (B, 6, 2)
         ta = torch.as_tensor(team_a_actions, dtype=torch.float32, device=self.device)
 
-        # Random opponent actions: angle ~ U[0, 360], power ~ U[0, MAX]
-        opp_angle = torch.rand(
-            self.num_envs, 3, device=self.device, generator=self._rng
-        ) * 360.0
-        opp_power = torch.rand(
-            self.num_envs, 3, device=self.device, generator=self._rng
-        ) * self.config.MAX_LAUNCH_FORCE
-        tb = torch.stack([opp_angle, opp_power], dim=-1)  # (B, 3, 2)
+        if team_b_actions is not None:
+            tb = torch.as_tensor(
+                team_b_actions, dtype=torch.float32, device=self.device
+            )
+        else:
+            # Random opponent actions: angle ~ U[0, 360], power ~ U[0, MAX]
+            opp_angle = torch.rand(
+                self.num_envs, 3, device=self.device, generator=self._rng
+            ) * 360.0
+            opp_power = torch.rand(
+                self.num_envs, 3, device=self.device, generator=self._rng
+            ) * self.config.MAX_LAUNCH_FORCE
+            tb = torch.stack([opp_angle, opp_power], dim=-1)  # (B, 3, 2)
 
         actions = torch.cat([ta, tb], dim=1)  # (B, 6, 2)
 
@@ -228,6 +237,19 @@ class TensorVecEnv:
         obs_a = obs_tensor[:, :3].cpu().numpy()
         masks = self.alive[:, :3].cpu().numpy()
         return obs_a, masks
+
+    def get_team_b_obs(self) -> np.ndarray:
+        """Get observations from Team B's perspective. Shape (B, 3, 89).
+
+        Each Team B agent's observation uses the same layout as Team A
+        (ego + allies + enemies + global) but with ally/enemy roles swapped:
+        Team B members are allies, Team A members are enemies.
+        """
+        obs_tensor = build_observations(
+            self.positions, self.velocities, self.alive,
+            self.arena_hw, self.round_number, self.step_count, self.config,
+        )  # (B, 6, 89)
+        return obs_tensor[:, 3:].cpu().numpy()  # (B, 3, 89)
 
     def _apply_shrink(self, mask: torch.Tensor) -> None:
         """Apply arena shrink to environments where *mask* is True."""

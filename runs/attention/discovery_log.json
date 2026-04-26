@@ -1,0 +1,2442 @@
+[
+  {
+    "step": 56846,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.07694607637755756,
+        "sign": 1.0,
+        "attribution": 0.2859169840812683
+      },
+      {
+        "index": 30,
+        "name": "ally2.velocity_x",
+        "weight": 0.07490630936633161,
+        "sign": 1.0,
+        "attribution": 0.27833759784698486
+      },
+      {
+        "index": 72,
+        "name": "enemy3.velocity_x",
+        "weight": 0.06459167962384144,
+        "sign": 1.0,
+        "attribution": 0.24001039564609528
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.06359957481233822,
+        "sign": 1.0,
+        "attribution": 0.23632392287254333
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.05994545542930386,
+        "sign": 1.0,
+        "attribution": 0.22274591028690338
+      },
+      {
+        "index": 47,
+        "name": "enemy1.dist_to_edge",
+        "weight": 0.05843321091218326,
+        "sign": -1.0,
+        "attribution": 0.21712669730186462
+      },
+      {
+        "index": 5,
+        "name": "ego.dist_to_edge",
+        "weight": 0.05292394235258887,
+        "sign": 1.0,
+        "attribution": 0.1966553032398224
+      },
+      {
+        "index": 19,
+        "name": "ally1.dist_to_edge",
+        "weight": 0.048653751125855196,
+        "sign": 1.0,
+        "attribution": 0.1807880848646164
+      }
+    ]
+  },
+  {
+    "step": 109354,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.0871183287080784,
+        "sign": 1.0,
+        "attribution": 0.201545849442482
+      },
+      {
+        "index": 5,
+        "name": "ego.dist_to_edge",
+        "weight": 0.07825617684974745,
+        "sign": 1.0,
+        "attribution": 0.18104350566864014
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.07409960181187657,
+        "sign": 1.0,
+        "attribution": 0.171427384018898
+      },
+      {
+        "index": 47,
+        "name": "enemy1.dist_to_edge",
+        "weight": 0.06140496857079928,
+        "sign": -1.0,
+        "attribution": 0.14205870032310486
+      },
+      {
+        "index": 46,
+        "name": "enemy1.dist_from_center",
+        "weight": 0.05631381195669652,
+        "sign": 1.0,
+        "attribution": 0.13028044998645782
+      },
+      {
+        "index": 72,
+        "name": "enemy3.velocity_x",
+        "weight": 0.04986789594285847,
+        "sign": 1.0,
+        "attribution": 0.11536800116300583
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.04705739778694344,
+        "sign": -1.0,
+        "attribution": 0.10886599123477936
+      },
+      {
+        "index": 59,
+        "name": "enemy2.velocity_y",
+        "weight": 0.04588181837299987,
+        "sign": 1.0,
+        "attribution": 0.10614632070064545
+      }
+    ]
+  },
+  {
+    "step": 150765,
+    "features": [
+      {
+        "index": 5,
+        "name": "ego.dist_to_edge",
+        "weight": 0.0913855315509196,
+        "sign": 1.0,
+        "attribution": 0.2420567274093628
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.07066302103090849,
+        "sign": -1.0,
+        "attribution": 0.18716813623905182
+      },
+      {
+        "index": 2,
+        "name": "ego.velocity_x",
+        "weight": 0.06527871735609572,
+        "sign": 1.0,
+        "attribution": 0.17290650308132172
+      },
+      {
+        "index": 67,
+        "name": "enemy2.rel_velocity_x",
+        "weight": 0.0572160336788875,
+        "sign": -1.0,
+        "attribution": 0.1515505313873291
+      },
+      {
+        "index": 46,
+        "name": "enemy1.dist_from_center",
+        "weight": 0.05518037306483356,
+        "sign": 1.0,
+        "attribution": 0.1461585909128189
+      },
+      {
+        "index": 47,
+        "name": "enemy1.dist_to_edge",
+        "weight": 0.054029693493972485,
+        "sign": -1.0,
+        "attribution": 0.1431107372045517
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.054013907640606186,
+        "sign": -1.0,
+        "attribution": 0.14306892454624176
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.052232722183776475,
+        "sign": 1.0,
+        "attribution": 0.13835102319717407
+      }
+    ]
+  },
+  {
+    "step": 164889,
+    "features": [
+      {
+        "index": 5,
+        "name": "ego.dist_to_edge",
+        "weight": 0.09477995544677535,
+        "sign": 1.0,
+        "attribution": 0.22723861038684845
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.07711299499631122,
+        "sign": 1.0,
+        "attribution": 0.18488138914108276
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.06731622540653534,
+        "sign": -1.0,
+        "attribution": 0.16139325499534607
+      },
+      {
+        "index": 2,
+        "name": "ego.velocity_x",
+        "weight": 0.06136669641298573,
+        "sign": 1.0,
+        "attribution": 0.14712902903556824
+      },
+      {
+        "index": 67,
+        "name": "enemy2.rel_velocity_x",
+        "weight": 0.052211744749707974,
+        "sign": -1.0,
+        "attribution": 0.12517967820167542
+      },
+      {
+        "index": 46,
+        "name": "enemy1.dist_from_center",
+        "weight": 0.05104687809147491,
+        "sign": 1.0,
+        "attribution": 0.1223868653178215
+      },
+      {
+        "index": 76,
+        "name": "enemy3.speed",
+        "weight": 0.04912599869264698,
+        "sign": -1.0,
+        "attribution": 0.11778148263692856
+      },
+      {
+        "index": 25,
+        "name": "ally1.rel_velocity_x",
+        "weight": 0.0470395062035625,
+        "sign": -1.0,
+        "attribution": 0.11277903616428375
+      }
+    ]
+  },
+  {
+    "step": 207742,
+    "features": [
+      {
+        "index": 76,
+        "name": "enemy3.speed",
+        "weight": 0.09340077989018689,
+        "sign": -1.0,
+        "attribution": 0.36055320501327515
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.0846929423453888,
+        "sign": -1.0,
+        "attribution": 0.3269385099411011
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.0652512348575249,
+        "sign": -1.0,
+        "attribution": 0.25188806653022766
+      },
+      {
+        "index": 5,
+        "name": "ego.dist_to_edge",
+        "weight": 0.06396672841784218,
+        "sign": 1.0,
+        "attribution": 0.24692951142787933
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.05468143948470495,
+        "sign": 1.0,
+        "attribution": 0.21108569204807281
+      },
+      {
+        "index": 67,
+        "name": "enemy2.rel_velocity_x",
+        "weight": 0.048637940581234926,
+        "sign": -1.0,
+        "attribution": 0.18775609135627747
+      },
+      {
+        "index": 2,
+        "name": "ego.velocity_x",
+        "weight": 0.04495646698847439,
+        "sign": 1.0,
+        "attribution": 0.17354457080364227
+      },
+      {
+        "index": 72,
+        "name": "enemy3.velocity_x",
+        "weight": 0.044412467434642965,
+        "sign": -1.0,
+        "attribution": 0.1714445799589157
+      }
+    ]
+  },
+  {
+    "step": 252255,
+    "features": [
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.09854213816124552,
+        "sign": -1.0,
+        "attribution": 0.31765443086624146
+      },
+      {
+        "index": 76,
+        "name": "enemy3.speed",
+        "weight": 0.09836952068960601,
+        "sign": -1.0,
+        "attribution": 0.3170979917049408
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.0640157500800035,
+        "sign": -1.0,
+        "attribution": 0.20635727047920227
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.05616503887031864,
+        "sign": -1.0,
+        "attribution": 0.18105019629001617
+      },
+      {
+        "index": 5,
+        "name": "ego.dist_to_edge",
+        "weight": 0.05485976658671217,
+        "sign": 1.0,
+        "attribution": 0.176842600107193
+      },
+      {
+        "index": 20,
+        "name": "ally1.speed",
+        "weight": 0.04457550589233821,
+        "sign": -1.0,
+        "attribution": 0.14369088411331177
+      },
+      {
+        "index": 67,
+        "name": "enemy2.rel_velocity_x",
+        "weight": 0.04251984546210754,
+        "sign": -1.0,
+        "attribution": 0.1370643824338913
+      },
+      {
+        "index": 72,
+        "name": "enemy3.velocity_x",
+        "weight": 0.04095243425766842,
+        "sign": -1.0,
+        "attribution": 0.1320117712020874
+      }
+    ]
+  },
+  {
+    "step": 267417,
+    "features": [
+      {
+        "index": 76,
+        "name": "enemy3.speed",
+        "weight": 0.10248478790164588,
+        "sign": -1.0,
+        "attribution": 0.3413625955581665
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.09126256016488431,
+        "sign": -1.0,
+        "attribution": 0.3039829134941101
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.06365556087056938,
+        "sign": -1.0,
+        "attribution": 0.21202783286571503
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.05687636825406574,
+        "sign": -1.0,
+        "attribution": 0.189447283744812
+      },
+      {
+        "index": 5,
+        "name": "ego.dist_to_edge",
+        "weight": 0.051183788922116,
+        "sign": 1.0,
+        "attribution": 0.17048609256744385
+      },
+      {
+        "index": 20,
+        "name": "ally1.speed",
+        "weight": 0.04953114053357937,
+        "sign": -1.0,
+        "attribution": 0.16498135030269623
+      },
+      {
+        "index": 72,
+        "name": "enemy3.velocity_x",
+        "weight": 0.04299228669243624,
+        "sign": -1.0,
+        "attribution": 0.1432013362646103
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.04201350666070309,
+        "sign": 1.0,
+        "attribution": 0.13994115591049194
+      }
+    ]
+  },
+  {
+    "step": 314012,
+    "features": [
+      {
+        "index": 76,
+        "name": "enemy3.speed",
+        "weight": 0.09855161137018202,
+        "sign": -1.0,
+        "attribution": 0.32315897941589355
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.08637078868893032,
+        "sign": -1.0,
+        "attribution": 0.28321704268455505
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.06680039651800695,
+        "sign": -1.0,
+        "attribution": 0.21904408931732178
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.06028391554533632,
+        "sign": 1.0,
+        "attribution": 0.19767600297927856
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.0511790521285577,
+        "sign": -1.0,
+        "attribution": 0.16782039403915405
+      },
+      {
+        "index": 5,
+        "name": "ego.dist_to_edge",
+        "weight": 0.0473485380375267,
+        "sign": 1.0,
+        "attribution": 0.15525981783866882
+      },
+      {
+        "index": 67,
+        "name": "enemy2.rel_velocity_x",
+        "weight": 0.04482656154413353,
+        "sign": -1.0,
+        "attribution": 0.14699004590511322
+      },
+      {
+        "index": 20,
+        "name": "ally1.speed",
+        "weight": 0.044639136167326454,
+        "sign": -1.0,
+        "attribution": 0.14637546241283417
+      }
+    ]
+  },
+  {
+    "step": 361579,
+    "features": [
+      {
+        "index": 76,
+        "name": "enemy3.speed",
+        "weight": 0.09668281135461511,
+        "sign": -1.0,
+        "attribution": 0.29658570885658264
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.09040186510521275,
+        "sign": -1.0,
+        "attribution": 0.27731817960739136
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.07898208471444604,
+        "sign": 1.0,
+        "attribution": 0.24228668212890625
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.05808741280732808,
+        "sign": -1.0,
+        "attribution": 0.17818985879421234
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.051258906575132414,
+        "sign": -1.0,
+        "attribution": 0.15724262595176697
+      },
+      {
+        "index": 26,
+        "name": "ally1.rel_velocity_y",
+        "weight": 0.043362069881755644,
+        "sign": -1.0,
+        "attribution": 0.13301816582679749
+      },
+      {
+        "index": 5,
+        "name": "ego.dist_to_edge",
+        "weight": 0.04184972828010449,
+        "sign": 1.0,
+        "attribution": 0.12837888300418854
+      },
+      {
+        "index": 67,
+        "name": "enemy2.rel_velocity_x",
+        "weight": 0.03937512128140548,
+        "sign": -1.0,
+        "attribution": 0.12078773975372314
+      }
+    ]
+  },
+  {
+    "step": 409788,
+    "features": [
+      {
+        "index": 76,
+        "name": "enemy3.speed",
+        "weight": 0.0976268350766486,
+        "sign": -1.0,
+        "attribution": 0.28024372458457947
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.091612291247065,
+        "sign": -1.0,
+        "attribution": 0.26297861337661743
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.07895140868062293,
+        "sign": 1.0,
+        "attribution": 0.22663478553295135
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.05982880112061435,
+        "sign": -1.0,
+        "attribution": 0.17174218595027924
+      },
+      {
+        "index": 26,
+        "name": "ally1.rel_velocity_y",
+        "weight": 0.05005094838899696,
+        "sign": -1.0,
+        "attribution": 0.14367426931858063
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.04593901000210517,
+        "sign": -1.0,
+        "attribution": 0.13187070190906525
+      },
+      {
+        "index": 5,
+        "name": "ego.dist_to_edge",
+        "weight": 0.03953789805469627,
+        "sign": 1.0,
+        "attribution": 0.11349592357873917
+      },
+      {
+        "index": 67,
+        "name": "enemy2.rel_velocity_x",
+        "weight": 0.036452807429250715,
+        "sign": -1.0,
+        "attribution": 0.10463998466730118
+      }
+    ]
+  },
+  {
+    "step": 458486,
+    "features": [
+      {
+        "index": 76,
+        "name": "enemy3.speed",
+        "weight": 0.0925536173191566,
+        "sign": -1.0,
+        "attribution": 0.2775815725326538
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.0856292660670012,
+        "sign": -1.0,
+        "attribution": 0.25681445002555847
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.07283940961272606,
+        "sign": -1.0,
+        "attribution": 0.21845583617687225
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.06700271161334903,
+        "sign": 1.0,
+        "attribution": 0.2009507417678833
+      },
+      {
+        "index": 67,
+        "name": "enemy2.rel_velocity_x",
+        "weight": 0.04897629396757698,
+        "sign": -1.0,
+        "attribution": 0.1468869298696518
+      },
+      {
+        "index": 2,
+        "name": "ego.velocity_x",
+        "weight": 0.04784276184102729,
+        "sign": 1.0,
+        "attribution": 0.14348730444908142
+      },
+      {
+        "index": 26,
+        "name": "ally1.rel_velocity_y",
+        "weight": 0.042734496542807754,
+        "sign": -1.0,
+        "attribution": 0.12816688418388367
+      },
+      {
+        "index": 62,
+        "name": "enemy2.speed",
+        "weight": 0.04242144303635509,
+        "sign": -1.0,
+        "attribution": 0.1272279918193817
+      }
+    ]
+  },
+  {
+    "step": 508099,
+    "features": [
+      {
+        "index": 76,
+        "name": "enemy3.speed",
+        "weight": 0.08756128307676388,
+        "sign": -1.0,
+        "attribution": 0.2099284678697586
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.08479229379517442,
+        "sign": -1.0,
+        "attribution": 0.20328980684280396
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.0806922209054455,
+        "sign": 1.0,
+        "attribution": 0.1934598684310913
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.07163717540879858,
+        "sign": -1.0,
+        "attribution": 0.17175036668777466
+      },
+      {
+        "index": 67,
+        "name": "enemy2.rel_velocity_x",
+        "weight": 0.0475886645050949,
+        "sign": -1.0,
+        "attribution": 0.11409398168325424
+      },
+      {
+        "index": 2,
+        "name": "ego.velocity_x",
+        "weight": 0.04289396618792933,
+        "sign": 1.0,
+        "attribution": 0.1028384268283844
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.04257308978333369,
+        "sign": -1.0,
+        "attribution": 0.10206912457942963
+      },
+      {
+        "index": 25,
+        "name": "ally1.rel_velocity_x",
+        "weight": 0.04226130633745971,
+        "sign": -1.0,
+        "attribution": 0.10132162272930145
+      }
+    ]
+  },
+  {
+    "step": 558335,
+    "features": [
+      {
+        "index": 76,
+        "name": "enemy3.speed",
+        "weight": 0.08529266685850924,
+        "sign": -1.0,
+        "attribution": 0.1755187064409256
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.0846771606584072,
+        "sign": -1.0,
+        "attribution": 0.17425209283828735
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.08147638504282496,
+        "sign": 1.0,
+        "attribution": 0.16766540706157684
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.07655135788483855,
+        "sign": -1.0,
+        "attribution": 0.15753048658370972
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.04532123759606672,
+        "sign": -1.0,
+        "attribution": 0.09326387941837311
+      },
+      {
+        "index": 26,
+        "name": "ally1.rel_velocity_y",
+        "weight": 0.04264235078893208,
+        "sign": -1.0,
+        "attribution": 0.08775115758180618
+      },
+      {
+        "index": 72,
+        "name": "enemy3.velocity_x",
+        "weight": 0.04245723042557625,
+        "sign": -1.0,
+        "attribution": 0.08737020939588547
+      },
+      {
+        "index": 25,
+        "name": "ally1.rel_velocity_x",
+        "weight": 0.04158161074484498,
+        "sign": -1.0,
+        "attribution": 0.08556832373142242
+      }
+    ]
+  },
+  {
+    "step": 608809,
+    "features": [
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.08117044793504333,
+        "sign": -1.0,
+        "attribution": 0.14251185953617096
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.08096245087366914,
+        "sign": 1.0,
+        "attribution": 0.14214667677879333
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.07937065845281827,
+        "sign": -1.0,
+        "attribution": 0.139351949095726
+      },
+      {
+        "index": 76,
+        "name": "enemy3.speed",
+        "weight": 0.07114744154363406,
+        "sign": -1.0,
+        "attribution": 0.12491435557603836
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.053361503085370375,
+        "sign": -1.0,
+        "attribution": 0.09368738532066345
+      },
+      {
+        "index": 26,
+        "name": "ally1.rel_velocity_y",
+        "weight": 0.047310865429712065,
+        "sign": -1.0,
+        "attribution": 0.08306421339511871
+      },
+      {
+        "index": 67,
+        "name": "enemy2.rel_velocity_x",
+        "weight": 0.04402129604057856,
+        "sign": -1.0,
+        "attribution": 0.0772886797785759
+      },
+      {
+        "index": 2,
+        "name": "ego.velocity_x",
+        "weight": 0.042655336639174195,
+        "sign": 1.0,
+        "attribution": 0.07489044964313507
+      }
+    ]
+  },
+  {
+    "step": 659827,
+    "features": [
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.08714323670116667,
+        "sign": -1.0,
+        "attribution": 0.1491827815771103
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.07838619829691873,
+        "sign": 1.0,
+        "attribution": 0.1341913789510727
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.0719364022671076,
+        "sign": -1.0,
+        "attribution": 0.1231498047709465
+      },
+      {
+        "index": 76,
+        "name": "enemy3.speed",
+        "weight": 0.060804567222004925,
+        "sign": -1.0,
+        "attribution": 0.10409292578697205
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.05741955532458532,
+        "sign": -1.0,
+        "attribution": 0.09829803556203842
+      },
+      {
+        "index": 30,
+        "name": "ally2.velocity_x",
+        "weight": 0.04880678240308587,
+        "sign": 1.0,
+        "attribution": 0.08355360478162766
+      },
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.04807647212593111,
+        "sign": 1.0,
+        "attribution": 0.08230336755514145
+      },
+      {
+        "index": 67,
+        "name": "enemy2.rel_velocity_x",
+        "weight": 0.04742678565919977,
+        "sign": -1.0,
+        "attribution": 0.08119115233421326
+      }
+    ]
+  },
+  {
+    "step": 710457,
+    "features": [
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.09689429054726516,
+        "sign": 1.0,
+        "attribution": 0.17546683549880981
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.0822662016219951,
+        "sign": -1.0,
+        "attribution": 0.14897668361663818
+      },
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.06489028752277971,
+        "sign": 1.0,
+        "attribution": 0.11751046776771545
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.06466936332672334,
+        "sign": -1.0,
+        "attribution": 0.11711039394140244
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.060586484888146455,
+        "sign": -1.0,
+        "attribution": 0.10971666872501373
+      },
+      {
+        "index": 2,
+        "name": "ego.velocity_x",
+        "weight": 0.04508213778688733,
+        "sign": 1.0,
+        "attribution": 0.08163969218730927
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.043101011774148386,
+        "sign": -1.0,
+        "attribution": 0.07805205136537552
+      },
+      {
+        "index": 76,
+        "name": "enemy3.speed",
+        "weight": 0.04251022253205452,
+        "sign": -1.0,
+        "attribution": 0.07698218524456024
+      }
+    ]
+  },
+  {
+    "step": 762078,
+    "features": [
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.08317197316447485,
+        "sign": 1.0,
+        "attribution": 0.13494861125946045
+      },
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.07801585613347208,
+        "sign": 1.0,
+        "attribution": 0.12658268213272095
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.07465536787005146,
+        "sign": -1.0,
+        "attribution": 0.12113020569086075
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.06966986994283755,
+        "sign": -1.0,
+        "attribution": 0.11304111033678055
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.05953470210545517,
+        "sign": -1.0,
+        "attribution": 0.09659654647111893
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.04951239561840443,
+        "sign": -1.0,
+        "attribution": 0.0803351029753685
+      },
+      {
+        "index": 2,
+        "name": "ego.velocity_x",
+        "weight": 0.046560211231924116,
+        "sign": 1.0,
+        "attribution": 0.07554510980844498
+      },
+      {
+        "index": 67,
+        "name": "enemy2.rel_velocity_x",
+        "weight": 0.03887962393338034,
+        "sign": -1.0,
+        "attribution": 0.06308316439390182
+      }
+    ]
+  },
+  {
+    "step": 813831,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.09215091318868396,
+        "sign": 1.0,
+        "attribution": 0.1478719860315323
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.0726537722335488,
+        "sign": -1.0,
+        "attribution": 0.11658547073602676
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.07061204438998574,
+        "sign": -1.0,
+        "attribution": 0.11330916732549667
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.06988526230365076,
+        "sign": 1.0,
+        "attribution": 0.11214292049407959
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.05782982463217345,
+        "sign": -1.0,
+        "attribution": 0.0927978977560997
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.05482167733306471,
+        "sign": -1.0,
+        "attribution": 0.0879708081483841
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.043108024247000436,
+        "sign": 1.0,
+        "attribution": 0.06917423754930496
+      },
+      {
+        "index": 2,
+        "name": "ego.velocity_x",
+        "weight": 0.03893848167189215,
+        "sign": 1.0,
+        "attribution": 0.06248348951339722
+      }
+    ]
+  },
+  {
+    "step": 865317,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.0929154926467719,
+        "sign": 1.0,
+        "attribution": 0.15445053577423096
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.0772138949332765,
+        "sign": -1.0,
+        "attribution": 0.12835025787353516
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.07278449282829103,
+        "sign": 1.0,
+        "attribution": 0.12098740041255951
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.07029365392384546,
+        "sign": -1.0,
+        "attribution": 0.1168469563126564
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.05432490511974584,
+        "sign": -1.0,
+        "attribution": 0.09030260145664215
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.04809183536012965,
+        "sign": -1.0,
+        "attribution": 0.07994156330823898
+      },
+      {
+        "index": 2,
+        "name": "ego.velocity_x",
+        "weight": 0.04247865491785746,
+        "sign": 1.0,
+        "attribution": 0.07061094790697098
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.041897070270082166,
+        "sign": 1.0,
+        "attribution": 0.06964419782161713
+      }
+    ]
+  },
+  {
+    "step": 900378,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.09343796625042455,
+        "sign": 1.0,
+        "attribution": 0.14781032502651215
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.07814063573099235,
+        "sign": -1.0,
+        "attribution": 0.12361134588718414
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.06955225763700598,
+        "sign": 1.0,
+        "attribution": 0.1100253164768219
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.06251483902740815,
+        "sign": -1.0,
+        "attribution": 0.09889276325702667
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.05491666826095694,
+        "sign": -1.0,
+        "attribution": 0.08687315136194229
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.05014375411565915,
+        "sign": -1.0,
+        "attribution": 0.07932283729314804
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.04870167264645619,
+        "sign": 1.0,
+        "attribution": 0.07704159617424011
+      },
+      {
+        "index": 2,
+        "name": "ego.velocity_x",
+        "weight": 0.042592206331096685,
+        "sign": 1.0,
+        "attribution": 0.06737697869539261
+      }
+    ]
+  },
+  {
+    "step": 917715,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.09154482473299386,
+        "sign": 1.0,
+        "attribution": 0.16067492961883545
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.07590354536180804,
+        "sign": 1.0,
+        "attribution": 0.13322213292121887
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.07537510460164903,
+        "sign": -1.0,
+        "attribution": 0.1322946399450302
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.0655313916590105,
+        "sign": -1.0,
+        "attribution": 0.11501744389533997
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.054952464910028254,
+        "sign": -1.0,
+        "attribution": 0.0964498370885849
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.05431302213006462,
+        "sign": -1.0,
+        "attribution": 0.09532751888036728
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.04430211634823433,
+        "sign": 1.0,
+        "attribution": 0.07775687426328659
+      },
+      {
+        "index": 2,
+        "name": "ego.velocity_x",
+        "weight": 0.03807753025621138,
+        "sign": 1.0,
+        "attribution": 0.0668317899107933
+      }
+    ]
+  },
+  {
+    "step": 952834,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.0993772995243173,
+        "sign": 1.0,
+        "attribution": 0.16058795154094696
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.07282347761112146,
+        "sign": -1.0,
+        "attribution": 0.11767851561307907
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.07255674555035332,
+        "sign": 1.0,
+        "attribution": 0.11724749207496643
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.06292099164535395,
+        "sign": -1.0,
+        "attribution": 0.10167667269706726
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.05675092409304241,
+        "sign": -1.0,
+        "attribution": 0.09170620143413544
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.0533252906592651,
+        "sign": 1.0,
+        "attribution": 0.08617057651281357
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.04840507520231761,
+        "sign": -1.0,
+        "attribution": 0.07821979373693466
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.03384019571422887,
+        "sign": -1.0,
+        "attribution": 0.05468379333615303
+      }
+    ]
+  },
+  {
+    "step": 970390,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.0966769308502615,
+        "sign": 1.0,
+        "attribution": 0.17987416684627533
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.07845574778770693,
+        "sign": 1.0,
+        "attribution": 0.1459723860025406
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.07396601707832563,
+        "sign": -1.0,
+        "attribution": 0.13761892914772034
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.05930632643006266,
+        "sign": -1.0,
+        "attribution": 0.1103435531258583
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.055316204412664036,
+        "sign": -1.0,
+        "attribution": 0.10291965305805206
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.05496163733416942,
+        "sign": -1.0,
+        "attribution": 0.10225995630025864
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.04336536411715973,
+        "sign": 1.0,
+        "attribution": 0.08068428188562393
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.0379517719896501,
+        "sign": -1.0,
+        "attribution": 0.07061191648244858
+      }
+    ]
+  },
+  {
+    "step": 1005775,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.10528155458728113,
+        "sign": 1.0,
+        "attribution": 0.18222828209400177
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.06774655750321874,
+        "sign": -1.0,
+        "attribution": 0.11726022511720657
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.06675835592548991,
+        "sign": 1.0,
+        "attribution": 0.11554978042840958
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.059378723506758296,
+        "sign": -1.0,
+        "attribution": 0.10277662426233292
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.0583662443302875,
+        "sign": -1.0,
+        "attribution": 0.10102415829896927
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.05710063675062144,
+        "sign": -1.0,
+        "attribution": 0.09883356094360352
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.045705549763511655,
+        "sign": 1.0,
+        "attribution": 0.07911019027233124
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.03966237763283133,
+        "sign": -1.0,
+        "attribution": 0.0686502680182457
+      }
+    ]
+  },
+  {
+    "step": 1059850,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.10518000385814129,
+        "sign": 1.0,
+        "attribution": 0.191563218832016
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.06484233320579223,
+        "sign": -1.0,
+        "attribution": 0.11809664964675903
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.06362391703317345,
+        "sign": 1.0,
+        "attribution": 0.11587756127119064
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.058227677757134735,
+        "sign": -1.0,
+        "attribution": 0.10604944825172424
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.05741597575179961,
+        "sign": -1.0,
+        "attribution": 0.10457110404968262
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.055427882645415136,
+        "sign": -1.0,
+        "attribution": 0.1009502112865448
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.05073564206659511,
+        "sign": 1.0,
+        "attribution": 0.09240428358316422
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.04454656768194843,
+        "sign": -1.0,
+        "attribution": 0.0811321884393692
+      }
+    ]
+  },
+  {
+    "step": 1114166,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.11644519363550111,
+        "sign": 1.0,
+        "attribution": 0.18707969784736633
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.06685708722820169,
+        "sign": -1.0,
+        "attribution": 0.1074119359254837
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.056613468347006604,
+        "sign": -1.0,
+        "attribution": 0.09095463901758194
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.05510193167390672,
+        "sign": -1.0,
+        "attribution": 0.08852621912956238
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.052615339601555004,
+        "sign": 1.0,
+        "attribution": 0.0845312848687172
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.05206694919748694,
+        "sign": -1.0,
+        "attribution": 0.08365024626255035
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.05034606133064793,
+        "sign": 1.0,
+        "attribution": 0.08088548481464386
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.049953968985694,
+        "sign": -1.0,
+        "attribution": 0.08025555312633514
+      }
+    ]
+  },
+  {
+    "step": 1150257,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.11021101295827164,
+        "sign": 1.0,
+        "attribution": 0.18776258826255798
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.06804801686835768,
+        "sign": -1.0,
+        "attribution": 0.11593098938465118
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.05879599326124952,
+        "sign": 1.0,
+        "attribution": 0.10016864538192749
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.05643347541088336,
+        "sign": -1.0,
+        "attribution": 0.0961437076330185
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.05569432322232709,
+        "sign": -1.0,
+        "attribution": 0.09488444030284882
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.05262120187398363,
+        "sign": -1.0,
+        "attribution": 0.08964887261390686
+      },
+      {
+        "index": 58,
+        "name": "enemy2.velocity_x",
+        "weight": 0.049801800015932686,
+        "sign": 1.0,
+        "attribution": 0.08484555780887604
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.04839417638899438,
+        "sign": 1.0,
+        "attribution": 0.08244743943214417
+      }
+    ]
+  },
+  {
+    "step": 1168467,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.11149037281922598,
+        "sign": 1.0,
+        "attribution": 0.193589985370636
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.06235829372960215,
+        "sign": -1.0,
+        "attribution": 0.10827787965536118
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.05748154828290024,
+        "sign": -1.0,
+        "attribution": 0.09980998188257217
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.057431538280470665,
+        "sign": -1.0,
+        "attribution": 0.09972314536571503
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.05679003717337236,
+        "sign": 1.0,
+        "attribution": 0.09860925376415253
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.05290988315989996,
+        "sign": -1.0,
+        "attribution": 0.09187182039022446
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.05092414923073975,
+        "sign": 1.0,
+        "attribution": 0.08842382580041885
+      },
+      {
+        "index": 58,
+        "name": "enemy2.velocity_x",
+        "weight": 0.05061417732378889,
+        "sign": 1.0,
+        "attribution": 0.08788559585809708
+      }
+    ]
+  },
+  {
+    "step": 1204834,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.11075692771038838,
+        "sign": 1.0,
+        "attribution": 0.20649535953998566
+      },
+      {
+        "index": 58,
+        "name": "enemy2.velocity_x",
+        "weight": 0.06361892255296292,
+        "sign": 1.0,
+        "attribution": 0.11861120164394379
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.062216844465833344,
+        "sign": -1.0,
+        "attribution": 0.11599716544151306
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.05600556860578482,
+        "sign": -1.0,
+        "attribution": 0.1044168546795845
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.05385462057121457,
+        "sign": 1.0,
+        "attribution": 0.10040662437677383
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.05290183887666295,
+        "sign": -1.0,
+        "attribution": 0.09863025695085526
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.052729221624351244,
+        "sign": -1.0,
+        "attribution": 0.09830842912197113
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.04791605559280177,
+        "sign": 1.0,
+        "attribution": 0.08933475613594055
+      }
+    ]
+  },
+  {
+    "step": 1223288,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.1123967951701607,
+        "sign": 1.0,
+        "attribution": 0.21429823338985443
+      },
+      {
+        "index": 58,
+        "name": "enemy2.velocity_x",
+        "weight": 0.06451477556824277,
+        "sign": 1.0,
+        "attribution": 0.12300530821084976
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.06384575125894623,
+        "sign": -1.0,
+        "attribution": 0.12172973155975342
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.060380099437086415,
+        "sign": -1.0,
+        "attribution": 0.11512204259634018
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.05595045941518901,
+        "sign": -1.0,
+        "attribution": 0.10667639225721359
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.052042467266147564,
+        "sign": -1.0,
+        "attribution": 0.09922532737255096
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.049884625985106595,
+        "sign": 1.0,
+        "attribution": 0.09511113911867142
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.040985025899120724,
+        "sign": 1.0,
+        "attribution": 0.07814296334981918
+      }
+    ]
+  },
+  {
+    "step": 1260045,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.11615088543322535,
+        "sign": 1.0,
+        "attribution": 0.20524843037128448
+      },
+      {
+        "index": 58,
+        "name": "enemy2.velocity_x",
+        "weight": 0.06861145966430023,
+        "sign": 1.0,
+        "attribution": 0.12124224752187729
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.06107880225758914,
+        "sign": -1.0,
+        "attribution": 0.10793140530586243
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.05561358841304691,
+        "sign": -1.0,
+        "attribution": 0.09827391058206558
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.05349287174177912,
+        "sign": -1.0,
+        "attribution": 0.09452642500400543
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.05039854104117319,
+        "sign": 1.0,
+        "attribution": 0.08905848115682602
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.048924750070062466,
+        "sign": 1.0,
+        "attribution": 0.08645416796207428
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.04572910137882359,
+        "sign": -1.0,
+        "attribution": 0.08080718666315079
+      }
+    ]
+  },
+  {
+    "step": 1316021,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.1216468717208632,
+        "sign": 1.0,
+        "attribution": 0.19579191505908966
+      },
+      {
+        "index": 58,
+        "name": "enemy2.velocity_x",
+        "weight": 0.06808827632970356,
+        "sign": 1.0,
+        "attribution": 0.10958879441022873
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.06208238367402563,
+        "sign": -1.0,
+        "attribution": 0.09992224723100662
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.05258339272465148,
+        "sign": -1.0,
+        "attribution": 0.08463352173566818
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.052533879900107786,
+        "sign": -1.0,
+        "attribution": 0.08455383032560349
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.04858014013573624,
+        "sign": 1.0,
+        "attribution": 0.07819024473428726
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.047720840807010896,
+        "sign": -1.0,
+        "attribution": 0.07680719345808029
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.04676421470790118,
+        "sign": -1.0,
+        "attribution": 0.075267493724823
+      }
+    ]
+  },
+  {
+    "step": 1352863,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.11873981308478966,
+        "sign": 1.0,
+        "attribution": 0.20013925433158875
+      },
+      {
+        "index": 58,
+        "name": "enemy2.velocity_x",
+        "weight": 0.06770206885796616,
+        "sign": 1.0,
+        "attribution": 0.1141137182712555
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.05897417694764271,
+        "sign": -1.0,
+        "attribution": 0.09940261393785477
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.05848879874176333,
+        "sign": -1.0,
+        "attribution": 0.09858449548482895
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.05766218912793663,
+        "sign": -1.0,
+        "attribution": 0.097191222012043
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.04805563385670129,
+        "sign": 1.0,
+        "attribution": 0.08099910616874695
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.04614584128531381,
+        "sign": -1.0,
+        "attribution": 0.0777800977230072
+      },
+      {
+        "index": 81,
+        "name": "enemy3.rel_velocity_x",
+        "weight": 0.04423147809788642,
+        "sign": -1.0,
+        "attribution": 0.07455338537693024
+      }
+    ]
+  },
+  {
+    "step": 1371047,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.11328900896084133,
+        "sign": 1.0,
+        "attribution": 0.19622589647769928
+      },
+      {
+        "index": 58,
+        "name": "enemy2.velocity_x",
+        "weight": 0.0783195397040321,
+        "sign": 1.0,
+        "attribution": 0.13565589487552643
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.06214363174147722,
+        "sign": -1.0,
+        "attribution": 0.10763788968324661
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.058639169206518474,
+        "sign": -1.0,
+        "attribution": 0.10156787186861038
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.05156611283009739,
+        "sign": -1.0,
+        "attribution": 0.08931675553321838
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.04595621292130588,
+        "sign": 1.0,
+        "attribution": 0.07959994673728943
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.04514792359657073,
+        "sign": -1.0,
+        "attribution": 0.07819992303848267
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.04493840103915687,
+        "sign": 1.0,
+        "attribution": 0.0778370127081871
+      }
+    ]
+  },
+  {
+    "step": 1406843,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.11647630893567786,
+        "sign": 1.0,
+        "attribution": 0.19096042215824127
+      },
+      {
+        "index": 58,
+        "name": "enemy2.velocity_x",
+        "weight": 0.08430060655196092,
+        "sign": 1.0,
+        "attribution": 0.1382090449333191
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.058573818968757144,
+        "sign": -1.0,
+        "attribution": 0.09603052586317062
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.058009189850718325,
+        "sign": -1.0,
+        "attribution": 0.09510482847690582
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.05116790905219837,
+        "sign": -1.0,
+        "attribution": 0.0838886946439743
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.045863653735950166,
+        "sign": 1.0,
+        "attribution": 0.07519248127937317
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.04336145761521056,
+        "sign": -1.0,
+        "attribution": 0.07109018415212631
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.04224705528952665,
+        "sign": 1.0,
+        "attribution": 0.06926314532756805
+      }
+    ]
+  },
+  {
+    "step": 1461370,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.12539507935610178,
+        "sign": 1.0,
+        "attribution": 0.20446564257144928
+      },
+      {
+        "index": 58,
+        "name": "enemy2.velocity_x",
+        "weight": 0.07969656991590128,
+        "sign": 1.0,
+        "attribution": 0.12995095551013947
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.06837254497227761,
+        "sign": -1.0,
+        "attribution": 0.11148632317781448
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.05796568032433228,
+        "sign": -1.0,
+        "attribution": 0.09451718628406525
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.048927738714930676,
+        "sign": -1.0,
+        "attribution": 0.07978017628192902
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.04095177242522538,
+        "sign": 1.0,
+        "attribution": 0.06677479296922684
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.03956855202732306,
+        "sign": -1.0,
+        "attribution": 0.06451935321092606
+      },
+      {
+        "index": 16,
+        "name": "ally1.velocity_x",
+        "weight": 0.03912206226390794,
+        "sign": 1.0,
+        "attribution": 0.06379131972789764
+      }
+    ]
+  },
+  {
+    "step": 1516961,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.1291958081574072,
+        "sign": 1.0,
+        "attribution": 0.20925024151802063
+      },
+      {
+        "index": 58,
+        "name": "enemy2.velocity_x",
+        "weight": 0.0790361565187667,
+        "sign": 1.0,
+        "attribution": 0.1280098408460617
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.07007525018202128,
+        "sign": -1.0,
+        "attribution": 0.11349643021821976
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.06001143801221071,
+        "sign": -1.0,
+        "attribution": 0.09719671308994293
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.043454220253617094,
+        "sign": -1.0,
+        "attribution": 0.07038003951311111
+      },
+      {
+        "index": 72,
+        "name": "enemy3.velocity_x",
+        "weight": 0.04169700661308325,
+        "sign": 1.0,
+        "attribution": 0.06753399223089218
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.03856979517427613,
+        "sign": 1.0,
+        "attribution": 0.06246904656291008
+      },
+      {
+        "index": 31,
+        "name": "ally2.velocity_y",
+        "weight": 0.03796032508861764,
+        "sign": -1.0,
+        "attribution": 0.06148192659020424
+      }
+    ]
+  },
+  {
+    "step": 1555002,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.12350568127640575,
+        "sign": 1.0,
+        "attribution": 0.23012304306030273
+      },
+      {
+        "index": 58,
+        "name": "enemy2.velocity_x",
+        "weight": 0.07686437441540758,
+        "sign": 1.0,
+        "attribution": 0.14321821928024292
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.06343373889652784,
+        "sign": -1.0,
+        "attribution": 0.11819346994161606
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.06338451111373478,
+        "sign": -1.0,
+        "attribution": 0.11810174584388733
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.04593419580600724,
+        "sign": -1.0,
+        "attribution": 0.08558729290962219
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.044419014955065325,
+        "sign": 1.0,
+        "attribution": 0.08276411890983582
+      },
+      {
+        "index": 72,
+        "name": "enemy3.velocity_x",
+        "weight": 0.04414334576931652,
+        "sign": 1.0,
+        "attribution": 0.08225047588348389
+      },
+      {
+        "index": 20,
+        "name": "ally1.speed",
+        "weight": 0.038315137767534965,
+        "sign": -1.0,
+        "attribution": 0.0713910162448883
+      }
+    ]
+  },
+  {
+    "step": 1612124,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.11778046282100625,
+        "sign": 1.0,
+        "attribution": 0.19730934500694275
+      },
+      {
+        "index": 58,
+        "name": "enemy2.velocity_x",
+        "weight": 0.0809888861394459,
+        "sign": 1.0,
+        "attribution": 0.13567499816417694
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.06349987139171298,
+        "sign": -1.0,
+        "attribution": 0.10637687891721725
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.06021669311104243,
+        "sign": -1.0,
+        "attribution": 0.10087680071592331
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.05149376277160078,
+        "sign": -1.0,
+        "attribution": 0.08626388758420944
+      },
+      {
+        "index": 72,
+        "name": "enemy3.velocity_x",
+        "weight": 0.04552774722124577,
+        "sign": 1.0,
+        "attribution": 0.07626944035291672
+      },
+      {
+        "index": 20,
+        "name": "ally1.speed",
+        "weight": 0.040362894986817215,
+        "sign": -1.0,
+        "attribution": 0.06761712580919266
+      },
+      {
+        "index": 44,
+        "name": "enemy1.velocity_x",
+        "weight": 0.04012968155712867,
+        "sign": 1.0,
+        "attribution": 0.06722643971443176
+      }
+    ]
+  },
+  {
+    "step": 1668215,
+    "features": [
+      {
+        "index": 48,
+        "name": "enemy1.speed",
+        "weight": 0.1285749150933705,
+        "sign": 1.0,
+        "attribution": 0.19927971065044403
+      },
+      {
+        "index": 58,
+        "name": "enemy2.velocity_x",
+        "weight": 0.07641329861516544,
+        "sign": 1.0,
+        "attribution": 0.11843383312225342
+      },
+      {
+        "index": 6,
+        "name": "ego.speed",
+        "weight": 0.06576043512343219,
+        "sign": -1.0,
+        "attribution": 0.10192283987998962
+      },
+      {
+        "index": 75,
+        "name": "enemy3.dist_to_edge",
+        "weight": 0.05612025002503298,
+        "sign": -1.0,
+        "attribution": 0.0869814082980156
+      },
+      {
+        "index": 34,
+        "name": "ally2.speed",
+        "weight": 0.05244654298988341,
+        "sign": -1.0,
+        "attribution": 0.08128748834133148
+      },
+      {
+        "index": 72,
+        "name": "enemy3.velocity_x",
+        "weight": 0.04422331831610893,
+        "sign": 1.0,
+        "attribution": 0.06854221969842911
+      },
+      {
+        "index": 20,
+        "name": "ally1.speed",
+        "weight": 0.042381472623774084,
+        "sign": -1.0,
+        "attribution": 0.06568752229213715
+      },
+      {
+        "index": 67,
+        "name": "enemy2.rel_velocity_x",
+        "weight": 0.03407976721323249,
+        "sign": 1.0,
+        "attribution": 0.05282061547040939
+      }
+    ]
+  }
+]

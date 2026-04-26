@@ -1,0 +1,37 @@
+2026-04-02 05:19:48,676 [INFO] root: LLM Reward Architect starting
+2026-04-02 05:19:48,677 [INFO] root:   model=claude-sonnet-4-20250514, device=cuda, num_envs=64
+2026-04-02 05:19:48,677 [INFO] root:   iterations=3, steps_per_iter=500000
+2026-04-02 05:19:48,677 [INFO] root:   output_dir=runs/llm_architect
+2026-04-02 05:19:48,677 [INFO] root:   fallback_reward=True
+2026-04-02 05:19:48,677 [INFO] knockout.reward.llm_architect: Using FallbackRewardGenerator (no LLM calls).
+2026-04-02 05:19:48,678 [INFO] knockout.reward.llm_architect: === LLM Architect Iteration 0 ===
+2026-04-02 05:19:48,679 [INFO] knockout.reward.llm_architect: Generating initial reward function candidates...
+2026-04-02 05:19:48,679 [INFO] knockout.reward.llm_architect: FallbackRewardGenerator: returning template 0 (basic survival)
+2026-04-02 05:19:48,680 [INFO] knockout.reward.llm_architect: Full training with best candidate (win_rate=0.00 from quick eval)...
+2026-04-02 07:49:35,207 [INFO] knockout.reward.llm_architect: Collecting game statistics...
+2026-04-02 07:50:06,006 [INFO] knockout.reward.llm_architect: Checkpoint saved: runs/llm_architect/iteration_000/agent_checkpoint.pt
+2026-04-02 07:50:06,007 [INFO] knockout.reward.llm_architect: Iteration 0 complete. Win rate: 45.5%
+2026-04-02 07:50:06,007 [INFO] knockout.reward.llm_architect: === LLM Architect Iteration 1 ===
+2026-04-02 07:50:06,009 [INFO] knockout.reward.llm_architect: Evolving reward function...
+2026-04-02 07:50:06,009 [INFO] knockout.reward.llm_architect: FallbackRewardGenerator: returning template 1 (of 3)
+2026-04-02 07:50:06,010 [INFO] knockout.reward.llm_architect: FallbackRewardGenerator: returning template 2 (of 3)
+2026-04-02 07:54:17,789 [INFO] knockout.reward.llm_architect: Candidate win_rate=0.50
+2026-04-02 09:18:45,738 [INFO] knockout.reward.llm_architect: Candidate win_rate=0.58
+2026-04-02 09:23:00,891 [INFO] knockout.reward.llm_architect: Candidate win_rate=0.44
+2026-04-02 09:23:00,892 [INFO] knockout.reward.llm_architect: Full training with best candidate (win_rate=0.58 from quick eval)...
+2026-04-02 09:49:10,165 [INFO] knockout.reward.llm_architect: Collecting game statistics...
+2026-04-02 09:49:41,108 [INFO] knockout.reward.llm_architect: Checkpoint saved: runs/llm_architect/iteration_001/agent_checkpoint.pt
+2026-04-02 09:49:41,108 [INFO] knockout.reward.llm_architect: Iteration 1 complete. Win rate: 45.0%
+2026-04-02 09:49:41,108 [INFO] knockout.reward.llm_architect: === LLM Architect Iteration 2 ===
+2026-04-02 09:49:41,111 [INFO] knockout.reward.llm_architect: Evolving reward function...
+2026-04-02 09:49:41,111 [INFO] knockout.reward.llm_architect: FallbackRewardGenerator: returning template 2 (of 3)
+2026-04-02 09:49:41,114 [INFO] knockout.reward.llm_architect: FallbackRewardGenerator: returning template 2 (of 3)
+2026-04-02 09:53:52,443 [INFO] knockout.reward.llm_architect: Candidate win_rate=0.53
+2026-04-02 09:56:44,056 [INFO] knockout.reward.llm_architect: Candidate win_rate=0.39
+2026-04-02 09:59:05,778 [INFO] knockout.reward.llm_architect: Candidate win_rate=0.43
+2026-04-02 09:59:05,778 [INFO] knockout.reward.llm_architect: Full training with best candidate (win_rate=0.53 from quick eval)...
+2026-04-02 10:08:50,417 [INFO] knockout.reward.llm_architect: Collecting game statistics...
+2026-04-02 10:09:07,092 [INFO] knockout.reward.llm_architect: Checkpoint saved: runs/llm_architect/iteration_002/agent_checkpoint.pt
+2026-04-02 10:09:07,093 [INFO] knockout.reward.llm_architect: Iteration 2 complete. Win rate: 42.3%
+2026-04-02 10:09:07,097 [INFO] root: Summary saved to runs/llm_architect/summary.json
+2026-04-02 10:09:07,097 [INFO] root: Done. 3 iterations completed.

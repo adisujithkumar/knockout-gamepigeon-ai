@@ -1,0 +1,6 @@
+=== Experiment Summary ===
+
+Contrastive: 5 iters, 23 unique features, 99.7% vs random, 0% vs heuristic
+Attention: 40 cycles, 23 unique features, ~90% vs random, 0% vs heuristic
+LLM Architect: 3 iters, 42% vs random
+Self-Play v3: 4 iters, ELO 1090, 100% vs random, 0% vs heuristic

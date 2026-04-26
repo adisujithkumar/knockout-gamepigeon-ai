@@ -1,0 +1,313 @@
+[
+  {
+    "iteration": 0,
+    "elapsed_seconds": 1141.2968454360962,
+    "total_trajectory_steps": 3470,
+    "win_steps": 874,
+    "loss_steps": 2596,
+    "num_features_discovered": 7,
+    "discovery": {
+      "features": [
+        {
+          "index": 61,
+          "name": "enemy2.dist_to_edge",
+          "effect_size": -0.4084167778491974,
+          "direction": -1.0
+        },
+        {
+          "index": 78,
+          "name": "enemy3.alive",
+          "effect_size": -0.35446682572364807,
+          "direction": -1.0
+        },
+        {
+          "index": 64,
+          "name": "enemy2.alive",
+          "effect_size": -0.35037535429000854,
+          "direction": -1.0
+        },
+        {
+          "index": 42,
+          "name": "enemy1.position_x",
+          "effect_size": 0.34611785411834717,
+          "direction": 1.0
+        },
+        {
+          "index": 60,
+          "name": "enemy2.dist_from_center",
+          "effect_size": 0.3367789387702942,
+          "direction": 1.0
+        },
+        {
+          "index": 5,
+          "name": "ego.dist_to_edge",
+          "effect_size": 0.3329288363456726,
+          "direction": 1.0
+        },
+        {
+          "index": 46,
+          "name": "enemy1.dist_from_center",
+          "effect_size": 0.311111181974411,
+          "direction": 1.0
+        }
+      ]
+    },
+    "ppo_final_metrics": {
+      "policy_loss": -0.004816550316526734,
+      "value_loss": 0.09726065825615686,
+      "entropy": 3.131166984490188,
+      "rollout": 19
+    }
+  },
+  {
+    "iteration": 1,
+    "elapsed_seconds": 22486.3163254261,
+    "total_trajectory_steps": 5918,
+    "win_steps": 5863,
+    "loss_steps": 55,
+    "num_features_discovered": 10,
+    "discovery": {
+      "features": [
+        {
+          "index": 86,
+          "name": "global.ego_team_alive",
+          "effect_size": 1.4620697498321533,
+          "direction": 1.0
+        },
+        {
+          "index": 84,
+          "name": "global.team_a_alive",
+          "effect_size": 1.4620697498321533,
+          "direction": 1.0
+        },
+        {
+          "index": 37,
+          "name": "ally2.rel_position_x",
+          "effect_size": 1.3817039728164673,
+          "direction": 1.0
+        },
+        {
+          "index": 27,
+          "name": "ally1.dist_to_ego",
+          "effect_size": -1.363770604133606,
+          "direction": -1.0
+        },
+        {
+          "index": 22,
+          "name": "ally1.alive",
+          "effect_size": 1.3371800184249878,
+          "direction": 1.0
+        },
+        {
+          "index": 23,
+          "name": "ally1.rel_position_x",
+          "effect_size": 1.2274138927459717,
+          "direction": 1.0
+        },
+        {
+          "index": 36,
+          "name": "ally2.alive",
+          "effect_size": 1.2099533081054688,
+          "direction": 1.0
+        },
+        {
+          "index": 33,
+          "name": "ally2.dist_to_edge",
+          "effect_size": 1.1533384323120117,
+          "direction": 1.0
+        },
+        {
+          "index": 60,
+          "name": "enemy2.dist_from_center",
+          "effect_size": 1.1445928812026978,
+          "direction": 1.0
+        },
+        {
+          "index": 32,
+          "name": "ally2.dist_from_center",
+          "effect_size": -1.1083223819732666,
+          "direction": -1.0
+        }
+      ]
+    },
+    "ppo_final_metrics": {
+      "policy_loss": -0.0015252076874171252,
+      "value_loss": 0.2067327810346521,
+      "entropy": 2.558621103897811,
+      "rollout": 19
+    }
+  },
+  {
+    "iteration": 2,
+    "elapsed_seconds": 8979.936866998672,
+    "total_trajectory_steps": 5983,
+    "win_steps": 5983,
+    "loss_steps": 0,
+    "num_features_discovered": 0,
+    "discovery": {
+      "features": []
+    },
+    "ppo_final_metrics": {
+      "policy_loss": -0.0023586283351427744,
+      "value_loss": 0.04315267520392289,
+      "entropy": 3.717291850362505,
+      "rollout": 19
+    }
+  },
+  {
+    "iteration": 3,
+    "elapsed_seconds": 6461.307205200195,
+    "total_trajectory_steps": 6088,
+    "win_steps": 6031,
+    "loss_steps": 57,
+    "num_features_discovered": 10,
+    "discovery": {
+      "features": [
+        {
+          "index": 22,
+          "name": "ally1.alive",
+          "effect_size": 1.0840829610824585,
+          "direction": 1.0
+        },
+        {
+          "index": 86,
+          "name": "global.ego_team_alive",
+          "effect_size": 0.7229912281036377,
+          "direction": 1.0
+        },
+        {
+          "index": 84,
+          "name": "global.team_a_alive",
+          "effect_size": 0.7229912281036377,
+          "direction": 1.0
+        },
+        {
+          "index": 19,
+          "name": "ally1.dist_to_edge",
+          "effect_size": 0.6747481822967529,
+          "direction": 1.0
+        },
+        {
+          "index": 5,
+          "name": "ego.dist_to_edge",
+          "effect_size": 0.5995123386383057,
+          "direction": 1.0
+        },
+        {
+          "index": 0,
+          "name": "ego.position_x",
+          "effect_size": -0.4978884160518646,
+          "direction": -1.0
+        },
+        {
+          "index": 51,
+          "name": "enemy1.rel_position_x",
+          "effect_size": 0.48937106132507324,
+          "direction": 1.0
+        },
+        {
+          "index": 41,
+          "name": "ally2.dist_to_ego",
+          "effect_size": -0.4842362403869629,
+          "direction": -1.0
+        },
+        {
+          "index": 75,
+          "name": "enemy3.dist_to_edge",
+          "effect_size": 0.4784562587738037,
+          "direction": 1.0
+        },
+        {
+          "index": 70,
+          "name": "enemy3.position_x",
+          "effect_size": -0.46779316663742065,
+          "direction": -1.0
+        }
+      ]
+    },
+    "ppo_final_metrics": {
+      "policy_loss": -0.003278122018487688,
+      "value_loss": 0.1767750635911572,
+      "entropy": 3.2688780588672515,
+      "rollout": 19
+    }
+  },
+  {
+    "iteration": 4,
+    "elapsed_seconds": 1413.4801602363586,
+    "total_trajectory_steps": 6199,
+    "win_steps": 6183,
+    "loss_steps": 16,
+    "num_features_discovered": 10,
+    "discovery": {
+      "features": [
+        {
+          "index": 22,
+          "name": "ally1.alive",
+          "effect_size": 2.0438599586486816,
+          "direction": 1.0
+        },
+        {
+          "index": 84,
+          "name": "global.team_a_alive",
+          "effect_size": 1.3921270370483398,
+          "direction": 1.0
+        },
+        {
+          "index": 86,
+          "name": "global.ego_team_alive",
+          "effect_size": 1.3921270370483398,
+          "direction": 1.0
+        },
+        {
+          "index": 19,
+          "name": "ally1.dist_to_edge",
+          "effect_size": 1.3162848949432373,
+          "direction": 1.0
+        },
+        {
+          "index": 27,
+          "name": "ally1.dist_to_ego",
+          "effect_size": -1.2307225465774536,
+          "direction": -1.0
+        },
+        {
+          "index": 75,
+          "name": "enemy3.dist_to_edge",
+          "effect_size": 1.1088471412658691,
+          "direction": 1.0
+        },
+        {
+          "index": 46,
+          "name": "enemy1.dist_from_center",
+          "effect_size": 1.0635892152786255,
+          "direction": 1.0
+        },
+        {
+          "index": 61,
+          "name": "enemy2.dist_to_edge",
+          "effect_size": 1.0089695453643799,
+          "direction": 1.0
+        },
+        {
+          "index": 5,
+          "name": "ego.dist_to_edge",
+          "effect_size": 0.9948856830596924,
+          "direction": 1.0
+        },
+        {
+          "index": 55,
+          "name": "enemy1.dist_to_ego",
+          "effect_size": 0.9726605415344238,
+          "direction": 1.0
+        }
+      ]
+    },
+    "ppo_final_metrics": {
+      "policy_loss": -0.0024645328110327294,
+      "value_loss": 0.2058012004882256,
+      "entropy": 3.2288721428906664,
+      "rollout": 19
+    }
+  }
+]

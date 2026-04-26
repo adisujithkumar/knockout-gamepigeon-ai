@@ -1,0 +1,53 @@
+Looking at the statistics, I can identify several key patterns that differentiate wins from losses:
+
+**Key Insights:**
+1. **Ally survival is crucial** - ally alive flags are higher in wins (ally1: 0.605 vs 0.498, ally2: 0.316 vs 0.217)
+2. **Enemy elimination matters** - enemy alive flags are lower in wins (enemy3: 0.194 vs 0.298)
+3. **Team composition advantage** - ego_team_alive_count is higher in wins (0.597 vs 0.522)
+4. **Positional strategy** - enemies being further from center correlates with wins
+5. **Ego agent survival** - implicitly important for team success
+
+Here's a reward function based on these insights:
+
+```python
+def reward(obs: torch.Tensor) -> torch.Tensor:
+    # Extract key survival features
+    ego_alive = obs[:, 8]  # ego_agent.alive
+    ally_alive = obs[:, [22, 36]]  # ally_0.alive, ally_1.alive  
+    enemy_alive = obs[:, [50, 64, 78]]  # opponent_0.alive, opponent_1.alive, opponent_2.alive
+    
+    # Global team status
+    ego_team_alive = obs[:, 86]  # global.ego_team_alive_count
+    opponent_team_alive = obs[:, 87]  # global.opponent_team_alive_count
+    
+    # Core survival rewards
+    ego_survival_reward = ego_alive * 0.3  # Ego survival is critical
+    ally_survival_reward = ally_alive.sum(dim=1) * 0.15  # Reward keeping allies alive
+    enemy_elimination_reward = (3 - enemy_alive.sum(dim=1)) * 0.1  # Reward eliminating enemies
+    
+    # Team advantage reward
+    team_advantage_reward = (ego_team_alive - opponent_team_alive) * 0.2
+    
+    # Strategic positioning rewards based on statistics
+    # Enemies being further from center correlates with wins
+    enemy_distances_from_center = obs[:, [46, 60, 74]]  # opponent distance_from_center features
+    enemy_positioning_reward = enemy_distances_from_center.mean(dim=1) * 0.05
+    
+    # Combine all reward components
+    total_reward = (ego_survival_reward + 
+                   ally_survival_reward + 
+                   enemy_elimination_reward + 
+                   team_advantage_reward + 
+                   enemy_positioning_reward)
+    
+    return total_reward
+```
+
+This reward function prioritizes:
+1. **Ego survival** (highest weight) - staying alive is fundamental
+2. **Ally preservation** - keeping teammates alive provides team advantage
+3. **Enemy elimination** - reducing opponent numbers 
+4. **Overall team advantage** - maintaining numerical superiority
+5. **Strategic positioning** - encouraging tactics that push enemies away from center control
+
+The weights are designed to balance immediate survival with strategic objectives that the statistics show correlate with winning.

@@ -1,0 +1,50 @@
+def reward(obs: torch.Tensor) -> torch.Tensor:
+    import torch
+    
+    # Core survival metrics
+    ego_alive = obs[:, 8]                    # ego_agent.alive
+    ego_dist_to_edge = obs[:, 5]             # ego_agent.distance_to_edge
+    ego_dist_from_center = obs[:, 4]         # ego_agent.distance_from_center
+    
+    # Team status
+    ego_team_alive = obs[:, 86]              # global.ego_team_alive_count  
+    opp_team_alive = obs[:, 87]              # global.opponent_team_alive_count
+    
+    # Allies status and positioning
+    ally1_alive = obs[:, 22]                 # ally_0.alive
+    ally2_alive = obs[:, 36]                 # ally_1.alive
+    ally1_dist_center = obs[:, 18]           # ally_0.distance_from_center
+    ally2_dist_center = obs[:, 32]           # ally_1.distance_from_center
+    
+    # Enemy distances to ego
+    enemy1_dist_ego = obs[:, 55]             # opponent_0.distance_to_ego
+    enemy2_dist_ego = obs[:, 69]             # opponent_1.distance_to_ego
+    enemy3_dist_ego = obs[:, 83]             # opponent_2.distance_to_ego
+    enemy1_alive = obs[:, 50]                # opponent_0.alive
+    enemy2_alive = obs[:, 64]                # opponent_1.alive
+    enemy3_alive = obs[:, 78]                # opponent_2.alive
+    
+    # Primary rewards: Survival and positioning
+    survival_reward = ego_alive * 3.0
+    safety_reward = ego_dist_to_edge * 4.0   # Keep edge penalty strong
+    center_reward = (1.0 - ego_dist_from_center) * 1.2  # Reward center positioning
+    
+    # Enhanced team advantage (increase weight based on importance)
+    team_advantage = (ego_team_alive - opp_team_alive) * 2.5
+    
+    # Ally preservation with positioning quality
+    ally_survival = (ally1_alive + ally2_alive) * 0.8
+    ally_positioning = ally1_alive * (1.0 - ally1_dist_center) * 0.4 + \
+                      ally2_alive * (1.0 - ally2_dist_center) * 0.4
+    
+    # Enemy distance awareness - reward space from threats
+    enemy_spacing = (enemy1_alive * enemy1_dist_ego * 0.3 + 
+                    enemy2_alive * enemy2_dist_ego * 0.3 + 
+                    enemy3_alive * enemy3_dist_ego * 0.3)
+    
+    # Reduced duration bonus (shorter episodes correlate with wins)
+    timestep = obs[:, 88]
+    duration_bonus = timestep * 0.1
+    
+    return survival_reward + safety_reward + center_reward + team_advantage + \
+           ally_survival + ally_positioning + enemy_spacing + duration_bonus

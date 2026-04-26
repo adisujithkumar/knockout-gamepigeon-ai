@@ -1,0 +1,17 @@
+[
+  {
+    "path": "runs/self_play/pool/pool_step_0000000.pt",
+    "elo": 991.7921810564826,
+    "step": 0
+  },
+  {
+    "path": "runs/self_play/pool/pool_step_0196608.pt",
+    "elo": 985.9268973481803,
+    "step": 196608
+  },
+  {
+    "path": "runs/self_play/pool/pool_step_0393216.pt",
+    "elo": 988.864670053442,
+    "step": 393216
+  }
+]

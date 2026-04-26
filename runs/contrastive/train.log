@@ -1,0 +1,90 @@
+2026-04-01 22:43:11,326 [INFO] root: Device: cuda, num_envs: 64
+2026-04-01 22:43:24,552 [INFO] knockout.reward.contrastive: === Contrastive iteration 1/5 ===
+2026-04-01 22:43:24,553 [INFO] knockout.reward.contrastive: Collecting 1000 episodes...
+2026-04-01 22:44:23,812 [INFO] knockout.reward.contrastive: Collected 3470 steps (874 win-steps, 2596 loss-steps)
+2026-04-01 22:44:23,824 [INFO] knockout.reward.contrastive: Discovered features (by |Cohen's d|):
+  enemy2.dist_to_edge (idx=61): d=-0.408, lower in wins
+  enemy3.alive (idx=78): d=-0.354, lower in wins
+  enemy2.alive (idx=64): d=-0.350, lower in wins
+  enemy1.position_x (idx=42): d=+0.346, higher in wins
+  enemy2.dist_from_center (idx=60): d=+0.337, higher in wins
+  ego.dist_to_edge (idx=5): d=+0.333, higher in wins
+  enemy1.dist_from_center (idx=46): d=+0.311, higher in wins
+2026-04-01 22:44:23,826 [INFO] knockout.reward.contrastive: Training PPO for 500000 steps...
+2026-04-01 22:52:32,115 [INFO] knockout.reward.contrastive:   PPO rollout 10/20: policy_loss=-0.0120
+2026-04-01 23:02:25,849 [INFO] knockout.reward.contrastive:   PPO rollout 20/20: policy_loss=-0.0048
+2026-04-01 23:02:25,902 [INFO] knockout.reward.contrastive: Checkpoint saved: runs/contrastive/checkpoints/agent_iter_000.pt
+2026-04-01 23:02:25,903 [INFO] knockout.reward.contrastive: Iteration 0 complete in 1141.3s, 7 features discovered
+2026-04-01 23:02:25,903 [INFO] knockout.reward.contrastive: === Contrastive iteration 2/5 ===
+2026-04-01 23:02:25,903 [INFO] knockout.reward.contrastive: Collecting 1000 episodes...
+2026-04-01 23:02:54,987 [INFO] knockout.reward.contrastive: Collected 5918 steps (5863 win-steps, 55 loss-steps)
+2026-04-01 23:02:54,989 [INFO] knockout.reward.contrastive: Discovered features (by |Cohen's d|):
+  global.ego_team_alive (idx=86): d=+1.462, higher in wins
+  global.team_a_alive (idx=84): d=+1.462, higher in wins
+  ally2.rel_position_x (idx=37): d=+1.382, higher in wins
+  ally1.dist_to_ego (idx=27): d=-1.364, lower in wins
+  ally1.alive (idx=22): d=+1.337, higher in wins
+  ally1.rel_position_x (idx=23): d=+1.227, higher in wins
+  ally2.alive (idx=36): d=+1.210, higher in wins
+  ally2.dist_to_edge (idx=33): d=+1.153, higher in wins
+  enemy2.dist_from_center (idx=60): d=+1.145, higher in wins
+  ally2.dist_from_center (idx=32): d=-1.108, lower in wins
+2026-04-01 23:02:54,989 [INFO] knockout.reward.contrastive: Training PPO for 500000 steps...
+2026-04-01 23:12:18,679 [INFO] knockout.reward.contrastive:   PPO rollout 10/20: policy_loss=-0.0020
+2026-04-02 05:17:12,219 [INFO] knockout.reward.contrastive:   PPO rollout 20/20: policy_loss=-0.0015
+2026-04-02 05:17:12,256 [INFO] knockout.reward.contrastive: Checkpoint saved: runs/contrastive/checkpoints/agent_iter_001.pt
+2026-04-02 05:17:12,256 [INFO] knockout.reward.contrastive: Iteration 1 complete in 22486.3s, 10 features discovered
+2026-04-02 05:17:12,257 [INFO] knockout.reward.contrastive: === Contrastive iteration 3/5 ===
+2026-04-02 05:17:12,257 [INFO] knockout.reward.contrastive: Collecting 1000 episodes...
+2026-04-02 05:17:39,845 [INFO] knockout.reward.contrastive: Collected 5983 steps (5983 win-steps, 0 loss-steps)
+2026-04-02 05:17:39,847 [INFO] knockout.reward.contrastive: Discovered features (by |Cohen's d|):
+2026-04-02 05:17:39,847 [INFO] knockout.reward.contrastive: Training PPO for 500000 steps...
+2026-04-02 06:31:35,653 [INFO] knockout.reward.contrastive:   PPO rollout 10/20: policy_loss=-0.0017
+2026-04-02 07:46:52,193 [INFO] knockout.reward.contrastive:   PPO rollout 20/20: policy_loss=-0.0024
+2026-04-02 07:46:52,206 [INFO] knockout.reward.contrastive: Checkpoint saved: runs/contrastive/checkpoints/agent_iter_002.pt
+2026-04-02 07:46:52,206 [INFO] knockout.reward.contrastive: Iteration 2 complete in 8979.9s, 0 features discovered
+2026-04-02 07:46:52,207 [INFO] knockout.reward.contrastive: === Contrastive iteration 4/5 ===
+2026-04-02 07:46:52,207 [INFO] knockout.reward.contrastive: Collecting 1000 episodes...
+2026-04-02 07:47:35,513 [INFO] knockout.reward.contrastive: Collected 6088 steps (6031 win-steps, 57 loss-steps)
+2026-04-02 07:47:35,517 [INFO] knockout.reward.contrastive: Discovered features (by |Cohen's d|):
+  ally1.alive (idx=22): d=+1.084, higher in wins
+  global.ego_team_alive (idx=86): d=+0.723, higher in wins
+  global.team_a_alive (idx=84): d=+0.723, higher in wins
+  ally1.dist_to_edge (idx=19): d=+0.675, higher in wins
+  ego.dist_to_edge (idx=5): d=+0.600, higher in wins
+  ego.position_x (idx=0): d=-0.498, lower in wins
+  enemy1.rel_position_x (idx=51): d=+0.489, higher in wins
+  ally2.dist_to_ego (idx=41): d=-0.484, lower in wins
+  enemy3.dist_to_edge (idx=75): d=+0.478, higher in wins
+  enemy3.position_x (idx=70): d=-0.468, lower in wins
+2026-04-02 07:47:35,518 [INFO] knockout.reward.contrastive: Training PPO for 500000 steps...
+2026-04-02 09:18:59,563 [INFO] knockout.reward.contrastive:   PPO rollout 10/20: policy_loss=-0.0031
+2026-04-02 09:34:33,511 [INFO] knockout.reward.contrastive:   PPO rollout 20/20: policy_loss=-0.0033
+2026-04-02 09:34:33,548 [INFO] knockout.reward.contrastive: Checkpoint saved: runs/contrastive/checkpoints/agent_iter_003.pt
+2026-04-02 09:34:33,549 [INFO] knockout.reward.contrastive: Iteration 3 complete in 6461.3s, 10 features discovered
+2026-04-02 09:34:33,549 [INFO] knockout.reward.contrastive: === Contrastive iteration 5/5 ===
+2026-04-02 09:34:33,550 [INFO] knockout.reward.contrastive: Collecting 1000 episodes...
+2026-04-02 09:35:39,573 [INFO] knockout.reward.contrastive: Collected 6199 steps (6183 win-steps, 16 loss-steps)
+2026-04-02 09:35:39,577 [INFO] knockout.reward.contrastive: Discovered features (by |Cohen's d|):
+  ally1.alive (idx=22): d=+2.044, higher in wins
+  global.team_a_alive (idx=84): d=+1.392, higher in wins
+  global.ego_team_alive (idx=86): d=+1.392, higher in wins
+  ally1.dist_to_edge (idx=19): d=+1.316, higher in wins
+  ally1.dist_to_ego (idx=27): d=-1.231, lower in wins
+  enemy3.dist_to_edge (idx=75): d=+1.109, higher in wins
+  enemy1.dist_from_center (idx=46): d=+1.064, higher in wins
+  enemy2.dist_to_edge (idx=61): d=+1.009, higher in wins
+  ego.dist_to_edge (idx=5): d=+0.995, higher in wins
+  enemy1.dist_to_ego (idx=55): d=+0.973, higher in wins
+2026-04-02 09:35:39,578 [INFO] knockout.reward.contrastive: Training PPO for 500000 steps...
+2026-04-02 09:48:19,554 [INFO] knockout.reward.contrastive:   PPO rollout 10/20: policy_loss=-0.0019
+2026-04-02 09:58:07,029 [INFO] knockout.reward.contrastive:   PPO rollout 20/20: policy_loss=-0.0025
+2026-04-02 09:58:07,042 [INFO] knockout.reward.contrastive: Checkpoint saved: runs/contrastive/checkpoints/agent_iter_004.pt
+2026-04-02 09:58:07,042 [INFO] knockout.reward.contrastive: Iteration 4 complete in 1413.5s, 10 features discovered
+2026-04-02 09:58:07,048 [INFO] root: Saved agent to runs/contrastive/final_agent.pt
+2026-04-02 09:58:07,048 [INFO] root: Iteration 0: 7 features, 1141.3s
+2026-04-02 09:58:07,048 [INFO] root: Iteration 1: 10 features, 22486.3s
+2026-04-02 09:58:07,048 [INFO] root: Iteration 2: 0 features, 8979.9s
+2026-04-02 09:58:07,048 [INFO] root: Iteration 3: 10 features, 6461.3s
+2026-04-02 09:58:07,049 [INFO] root: Iteration 4: 10 features, 1413.5s
+2026-04-02 09:58:07,049 [INFO] root: Done. Discovery log: runs/contrastive/discovery_log.json

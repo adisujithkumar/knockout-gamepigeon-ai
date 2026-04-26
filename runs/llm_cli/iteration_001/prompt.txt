@@ -1,0 +1,177 @@
+You are designing a reward function for a reinforcement learning agent.
+
+The agent receives an 89-dimensional observation vector each step and outputs
+a 2-dimensional continuous action. The only outcome signal is binary: +1 (win)
+or -1 (loss) at the end of each episode.
+
+The environment has a 89-dimensional observation vector and a 2-dimensional continuous action vector.
+Observation layout:
+  Feature 0: ego_agent.position_x -- normalised x position (range [-1.0, 1.0])
+  Feature 1: ego_agent.position_y -- normalised y position (range [-1.0, 1.0])
+  Feature 2: ego_agent.velocity_x -- normalised x velocity (range [-1.0, 1.0])
+  Feature 3: ego_agent.velocity_y -- normalised y velocity (range [-1.0, 1.0])
+  Feature 4: ego_agent.distance_from_center -- Chebyshev distance from center, normalised (range [0.0, 1.0])
+  Feature 5: ego_agent.distance_to_edge -- distance to nearest boundary, normalised (range [-1.0, 1.0])
+  Feature 6: ego_agent.speed -- scalar speed, normalised (range [0.0, 1.0])
+  Feature 7: ego_agent.heading -- velocity angle / pi (range [-1.0, 1.0])
+  Feature 8: ego_agent.alive -- binary alive flag (range [0.0, 1.0])
+  Feature 9: ego_agent.relative_position_x -- x offset from ego agent, normalised (range [-1.0, 1.0])
+  Feature 10: ego_agent.relative_position_y -- y offset from ego agent, normalised (range [-1.0, 1.0])
+  Feature 11: ego_agent.relative_velocity_x -- x velocity relative to ego, normalised (range [-1.0, 1.0])
+  Feature 12: ego_agent.relative_velocity_y -- y velocity relative to ego, normalised (range [-1.0, 1.0])
+  Feature 13: ego_agent.distance_to_ego -- Euclidean distance to ego, normalised (range [0.0, 1.0])
+  Feature 14: ally_0.position_x -- normalised x position (range [-1.0, 1.0])
+  Feature 15: ally_0.position_y -- normalised y position (range [-1.0, 1.0])
+  Feature 16: ally_0.velocity_x -- normalised x velocity (range [-1.0, 1.0])
+  Feature 17: ally_0.velocity_y -- normalised y velocity (range [-1.0, 1.0])
+  Feature 18: ally_0.distance_from_center -- Chebyshev distance from center, normalised (range [0.0, 1.0])
+  Feature 19: ally_0.distance_to_edge -- distance to nearest boundary, normalised (range [-1.0, 1.0])
+  Feature 20: ally_0.speed -- scalar speed, normalised (range [0.0, 1.0])
+  Feature 21: ally_0.heading -- velocity angle / pi (range [-1.0, 1.0])
+  Feature 22: ally_0.alive -- binary alive flag (range [0.0, 1.0])
+  Feature 23: ally_0.relative_position_x -- x offset from ego agent, normalised (range [-1.0, 1.0])
+  Feature 24: ally_0.relative_position_y -- y offset from ego agent, normalised (range [-1.0, 1.0])
+  Feature 25: ally_0.relative_velocity_x -- x velocity relative to ego, normalised (range [-1.0, 1.0])
+  Feature 26: ally_0.relative_velocity_y -- y velocity relative to ego, normalised (range [-1.0, 1.0])
+  Feature 27: ally_0.distance_to_ego -- Euclidean distance to ego, normalised (range [0.0, 1.0])
+  Feature 28: ally_1.position_x -- normalised x position (range [-1.0, 1.0])
+  Feature 29: ally_1.position_y -- normalised y position (range [-1.0, 1.0])
+  Feature 30: ally_1.velocity_x -- normalised x velocity (range [-1.0, 1.0])
+  Feature 31: ally_1.velocity_y -- normalised y velocity (range [-1.0, 1.0])
+  Feature 32: ally_1.distance_from_center -- Chebyshev distance from center, normalised (range [0.0, 1.0])
+  Feature 33: ally_1.distance_to_edge -- distance to nearest boundary, normalised (range [-1.0, 1.0])
+  Feature 34: ally_1.speed -- scalar speed, normalised (range [0.0, 1.0])
+  Feature 35: ally_1.heading -- velocity angle / pi (range [-1.0, 1.0])
+  Feature 36: ally_1.alive -- binary alive flag (range [0.0, 1.0])
+  Feature 37: ally_1.relative_position_x -- x offset from ego agent, normalised (range [-1.0, 1.0])
+  Feature 38: ally_1.relative_position_y -- y offset from ego agent, normalised (range [-1.0, 1.0])
+  Feature 39: ally_1.relative_velocity_x -- x velocity relative to ego, normalised (range [-1.0, 1.0])
+  Feature 40: ally_1.relative_velocity_y -- y velocity relative to ego, normalised (range [-1.0, 1.0])
+  Feature 41: ally_1.distance_to_ego -- Euclidean distance to ego, normalised (range [0.0, 1.0])
+  Feature 42: opponent_0.position_x -- normalised x position (range [-1.0, 1.0])
+  Feature 43: opponent_0.position_y -- normalised y position (range [-1.0, 1.0])
+  Feature 44: opponent_0.velocity_x -- normalised x velocity (range [-1.0, 1.0])
+  Feature 45: opponent_0.velocity_y -- normalised y velocity (range [-1.0, 1.0])
+  Feature 46: opponent_0.distance_from_center -- Chebyshev distance from center, normalised (range [0.0, 1.0])
+  Feature 47: opponent_0.distance_to_edge -- distance to nearest boundary, normalised (range [-1.0, 1.0])
+  Feature 48: opponent_0.speed -- scalar speed, normalised (range [0.0, 1.0])
+  Feature 49: opponent_0.heading -- velocity angle / pi (range [-1.0, 1.0])
+  Feature 50: opponent_0.alive -- binary alive flag (range [0.0, 1.0])
+  Feature 51: opponent_0.relative_position_x -- x offset from ego agent, normalised (range [-1.0, 1.0])
+  Feature 52: opponent_0.relative_position_y -- y offset from ego agent, normalised (range [-1.0, 1.0])
+  Feature 53: opponent_0.relative_velocity_x -- x velocity relative to ego, normalised (range [-1.0, 1.0])
+  Feature 54: opponent_0.relative_velocity_y -- y velocity relative to ego, normalised (range [-1.0, 1.0])
+  Feature 55: opponent_0.distance_to_ego -- Euclidean distance to ego, normalised (range [0.0, 1.0])
+  Feature 56: opponent_1.position_x -- normalised x position (range [-1.0, 1.0])
+  Feature 57: opponent_1.position_y -- normalised y position (range [-1.0, 1.0])
+  Feature 58: opponent_1.velocity_x -- normalised x velocity (range [-1.0, 1.0])
+  Feature 59: opponent_1.velocity_y -- normalised y velocity (range [-1.0, 1.0])
+  Feature 60: opponent_1.distance_from_center -- Chebyshev distance from center, normalised (range [0.0, 1.0])
+  Feature 61: opponent_1.distance_to_edge -- distance to nearest boundary, normalised (range [-1.0, 1.0])
+  Feature 62: opponent_1.speed -- scalar speed, normalised (range [0.0, 1.0])
+  Feature 63: opponent_1.heading -- velocity angle / pi (range [-1.0, 1.0])
+  Feature 64: opponent_1.alive -- binary alive flag (range [0.0, 1.0])
+  Feature 65: opponent_1.relative_position_x -- x offset from ego agent, normalised (range [-1.0, 1.0])
+  Feature 66: opponent_1.relative_position_y -- y offset from ego agent, normalised (range [-1.0, 1.0])
+  Feature 67: opponent_1.relative_velocity_x -- x velocity relative to ego, normalised (range [-1.0, 1.0])
+  Feature 68: opponent_1.relative_velocity_y -- y velocity relative to ego, normalised (range [-1.0, 1.0])
+  Feature 69: opponent_1.distance_to_ego -- Euclidean distance to ego, normalised (range [0.0, 1.0])
+  Feature 70: opponent_2.position_x -- normalised x position (range [-1.0, 1.0])
+  Feature 71: opponent_2.position_y -- normalised y position (range [-1.0, 1.0])
+  Feature 72: opponent_2.velocity_x -- normalised x velocity (range [-1.0, 1.0])
+  Feature 73: opponent_2.velocity_y -- normalised y velocity (range [-1.0, 1.0])
+  Feature 74: opponent_2.distance_from_center -- Chebyshev distance from center, normalised (range [0.0, 1.0])
+  Feature 75: opponent_2.distance_to_edge -- distance to nearest boundary, normalised (range [-1.0, 1.0])
+  Feature 76: opponent_2.speed -- scalar speed, normalised (range [0.0, 1.0])
+  Feature 77: opponent_2.heading -- velocity angle / pi (range [-1.0, 1.0])
+  Feature 78: opponent_2.alive -- binary alive flag (range [0.0, 1.0])
+  Feature 79: opponent_2.relative_position_x -- x offset from ego agent, normalised (range [-1.0, 1.0])
+  Feature 80: opponent_2.relative_position_y -- y offset from ego agent, normalised (range [-1.0, 1.0])
+  Feature 81: opponent_2.relative_velocity_x -- x velocity relative to ego, normalised (range [-1.0, 1.0])
+  Feature 82: opponent_2.relative_velocity_y -- y velocity relative to ego, normalised (range [-1.0, 1.0])
+  Feature 83: opponent_2.distance_to_ego -- Euclidean distance to ego, normalised (range [0.0, 1.0])
+
+  Global state features:
+  Feature 84: global.team_a_alive_count -- fraction of team A agents alive (range [0.0, 1.0])
+  Feature 85: global.team_b_alive_count -- fraction of team B agents alive (range [0.0, 1.0])
+  Feature 86: global.ego_team_alive_count -- fraction of ego team alive (range [0.0, 1.0])
+  Feature 87: global.opponent_team_alive_count -- fraction of opponent team alive (range [0.0, 1.0])
+  Feature 88: global.timestep -- normalised simulation timestep (range [0.0, 1.0])
+
+Previous reward function:
+```python
+def reward(obs: torch.Tensor) -> torch.Tensor:
+    # Extract key survival features
+    ego_alive = obs[:, 8]  # ego_agent.alive
+    ally_alive = obs[:, [22, 36]]  # ally_0.alive, ally_1.alive  
+    enemy_alive = obs[:, [50, 64, 78]]  # opponent_0.alive, opponent_1.alive, opponent_2.alive
+    
+    # Global team status
+    ego_team_alive = obs[:, 86]  # global.ego_team_alive_count
+    opponent_team_alive = obs[:, 87]  # global.opponent_team_alive_count
+    
+    # Core survival rewards
+    ego_survival_reward = ego_alive * 0.3  # Ego survival is critical
+    ally_survival_reward = ally_alive.sum(dim=1) * 0.15  # Reward keeping allies alive
+    enemy_elimination_reward = (3 - enemy_alive.sum(dim=1)) * 0.1  # Reward eliminating enemies
+    
+    # Team advantage reward
+    team_advantage_reward = (ego_team_alive - opponent_team_alive) * 0.2
+    
+    # Strategic positioning rewards based on statistics
+    # Enemies being further from center correlates with wins
+    enemy_distances_from_center = obs[:, [46, 60, 74]]  # opponent distance_from_center features
+    enemy_positioning_reward = enemy_distances_from_center.mean(dim=1) * 0.05
+    
+    # Combine all reward components
+    total_reward = (ego_survival_reward + 
+                   ally_survival_reward + 
+                   enemy_elimination_reward + 
+                   team_advantage_reward + 
+                   enemy_positioning_reward)
+    
+    return total_reward
+```
+
+Results after training with it for 200000 steps:
+- Win rate vs random opponent: 77.3%
+- Average episode length: 5.1 rounds
+- Win-steps collected: 394, Loss-steps collected: 116
+
+Updated statistics from 100 recent games:
+
+ Idx  Feature                                  WIN mean+/-std     LOSS mean+/-std   |diff|
+------------------------------------------------------------------------------------------
+  78  enemy3.alive                          +0.183 +/- 0.386   +0.379 +/- 0.485   0.1966
+  29  ally2.position_y                      -0.008 +/- 0.399   -0.144 +/- 0.405   0.1368
+  70  enemy3.position_x                     +0.620 +/- 0.462   +0.488 +/- 0.550   0.1312
+  38  ally2.rel_position_y                  +0.031 +/- 0.240   -0.085 +/- 0.229   0.1160
+  87  global.opp_team_alive                 +0.511 +/- 0.315   +0.615 +/- 0.355   0.1039
+  85  global.team_b_alive                   +0.511 +/- 0.315   +0.615 +/- 0.355   0.1039
+  71  enemy3.position_y                     +0.206 +/- 0.547   +0.104 +/- 0.456   0.1020
+  80  enemy3.rel_position_y                 +0.138 +/- 0.316   +0.040 +/- 0.259   0.0986
+  64  enemy2.alive                          +0.490 +/- 0.500   +0.586 +/- 0.493   0.0964
+   1  ego.position_y                        -0.070 +/- 0.277   +0.025 +/- 0.280   0.0952
+  47  enemy1.dist_to_edge                   +0.356 +/- 0.259   +0.446 +/- 0.266   0.0895
+  46  enemy1.dist_from_center               +0.486 +/- 0.230   +0.401 +/- 0.232   0.0855
+  75  enemy3.dist_to_edge                   -0.004 +/- 0.194   +0.071 +/- 0.230   0.0754
+  79  enemy3.rel_position_x                 +0.498 +/- 0.305   +0.425 +/- 0.386   0.0730
+  74  enemy3.dist_from_center               +0.846 +/- 0.262   +0.775 +/- 0.285   0.0710
+  61  enemy2.dist_to_edge                   +0.114 +/- 0.269   +0.177 +/- 0.254   0.0633
+  42  enemy1.position_x                     +0.203 +/- 0.385   +0.141 +/- 0.353   0.0615
+  60  enemy2.dist_from_center               +0.729 +/- 0.285   +0.669 +/- 0.286   0.0593
+  55  enemy1.dist_to_ego                    +0.424 +/- 0.201   +0.368 +/- 0.200   0.0562
+  88  global.timestep                       +0.721 +/- 0.332   +0.672 +/- 0.366   0.0489
+   4  ego.dist_from_center                  +0.499 +/- 0.225   +0.543 +/- 0.246   0.0440
+  66  enemy2.rel_position_y                 +0.003 +/- 0.290   -0.040 +/- 0.226   0.0430
+  63  enemy2.heading                        +0.012 +/- 0.330   -0.029 +/- 0.372   0.0413
+  83  enemy3.dist_to_ego                    +0.643 +/- 0.241   +0.603 +/- 0.253   0.0408
+  24  ally1.rel_position_y                  -0.046 +/- 0.164   -0.086 +/- 0.201   0.0406
+
+Analyze what improved and what did not. Then write an improved reward
+function. The function signature must be:
+    def reward(obs: torch.Tensor) -> torch.Tensor
+where obs has shape (B, 89) and the return has shape (B,).
+
+Only use torch operations (import torch). Write the function inside a
+single ```python ... ``` block.

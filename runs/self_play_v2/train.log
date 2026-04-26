@@ -1,0 +1,7 @@
+2026-04-05 15:09:45,271 [INFO] __main__: Device: cuda, num_envs: 64
+2026-04-05 15:10:07,736 [INFO] __main__: Loaded starting checkpoint: runs/contrastive/final_agent.pt
+2026-04-05 15:10:07,746 [INFO] __main__: Starting self-play training: 30 iterations, 8 rollouts/iter (24576 steps/rollout, ~196608 steps/iter)
+2026-04-05 15:10:07,747 [INFO] __main__: === Iteration 1/30  |  ELO: 1000  |  Pool: 1 ===
+2026-04-05 15:10:07,766 [INFO] __main__: Opponent: pool_step_0 (elo=1000) [random_ratio=50%]
+ === Iteration 1/30  |  ELO: 1000  |  Pool: 1 ===
+2026-04-05 15:10:07,766 [INFO] __main__: Opponent: pool_step_0 (elo=1000) [random_ratio=50%]

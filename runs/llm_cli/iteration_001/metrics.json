@@ -1,0 +1,20 @@
+{
+  "iteration": 1,
+  "elapsed_seconds": 2762.7,
+  "stats": {
+    "n_episodes": 100,
+    "win_rate": 0.7725,
+    "avg_episode_length": 5.1,
+    "n_win_steps": 394,
+    "n_loss_steps": 116
+  },
+  "training": {
+    "steps": 200000,
+    "n_rollouts": 16,
+    "policy_loss": -0.004572,
+    "value_loss": 7.586459,
+    "entropy": 3.004413
+  },
+  "reward_code_lines": 49,
+  "used_fallback": false
+}

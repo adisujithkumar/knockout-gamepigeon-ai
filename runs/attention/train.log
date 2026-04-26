@@ -1,0 +1,23 @@
+Attention Discovery: device=cuda, envs=64, rollouts=101, attr_interval=50000
+Rollout 10/101: ploss=-0.0080 vloss=0.3633 ent=3.1516 | 8 features: [enemy1.speed(+1), ego.dist_to_edge(+1), enemy1.velocity_x(+1), enemy1.dist_to_edge(-1)]
+  Checkpoint: runs/attention/checkpoints/agent_step_0245760.pt
+Rollout 20/101: ploss=-0.0035 vloss=0.1230 ent=3.3190 | 8 features: [enemy3.speed(-1), ally2.speed(-1), enemy3.rel_velocity_x(-1), ego.speed(-1)]
+  Checkpoint: runs/attention/checkpoints/agent_step_0491520.pt
+Rollout 30/101: ploss=-0.0027 vloss=0.0834 ent=3.7489 | 8 features: [enemy3.speed(-1), ally2.speed(-1), enemy1.velocity_x(+1), enemy3.rel_velocity_x(-1)]
+  Checkpoint: runs/attention/checkpoints/agent_step_0737280.pt
+Rollout 40/101: ploss=-0.0029 vloss=0.0795 ent=4.1097 | 8 features: [enemy3.speed(-1), ally2.speed(-1), enemy1.velocity_x(+1), enemy3.rel_velocity_x(-1)]
+  Checkpoint: runs/attention/checkpoints/agent_step_0983040.pt
+Rollout 50/101: ploss=-0.0055 vloss=0.0736 ent=4.4527 | 8 features: [enemy1.velocity_x(+1), enemy1.speed(+1), enemy3.rel_velocity_x(-1), ally2.speed(-1)]
+  Checkpoint: runs/attention/checkpoints/agent_step_1228800.pt
+Rollout 60/101: ploss=-0.0046 vloss=0.0676 ent=4.7659 | 8 features: [enemy1.speed(+1), enemy1.velocity_x(+1), enemy3.rel_velocity_x(-1), ally2.speed(-1)]
+  Checkpoint: runs/attention/checkpoints/agent_step_1474560.pt
+Rollout 70/101: ploss=-0.0049 vloss=0.0365 ent=5.0668 | 8 features: [enemy1.speed(+1), ally2.velocity_y(-1), ally2.speed(-1), enemy3.dist_to_edge(-1)]
+  Checkpoint: runs/attention/checkpoints/agent_step_1720320.pt
+Rollout 80/101: ploss=-0.0041 vloss=0.0337 ent=5.3072 | 8 features: [enemy1.speed(+1), enemy2.velocity_x(+1), ally2.velocity_y(-1), ally2.speed(-1)]
+  Checkpoint: runs/attention/checkpoints/agent_step_1966080.pt
+Rollout 90/101: ploss=-0.0044 vloss=0.0368 ent=5.5732 | 8 features: [enemy1.speed(+1), enemy2.velocity_x(+1), enemy3.dist_to_edge(-1), ego.speed(-1)]
+  Checkpoint: runs/attention/checkpoints/agent_step_2211840.pt
+Rollout 100/101: ploss=-0.0040 vloss=0.0538 ent=5.8222 | 8 features: [enemy1.speed(+1), enemy2.velocity_x(+1), ego.speed(-1), enemy3.dist_to_edge(-1)]
+  Checkpoint: runs/attention/checkpoints/agent_step_2457600.pt
+Saved agent to runs/attention/final_agent.pt
+Saved discovery log to runs/attention/discovery_log.json (40 attribution cycles)

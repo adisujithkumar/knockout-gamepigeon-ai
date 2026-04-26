@@ -1,0 +1,19 @@
+{
+  "iteration": 2,
+  "metrics": {
+    "policy_loss": -0.007500099064801577,
+    "value_loss": 0.543169946333662,
+    "entropy": 3.125677240605789,
+    "quick_eval_win_rate": 0.5294117647058824
+  },
+  "game_stats": {
+    "total_episodes": 501,
+    "win_rate": 0.4231536926147705,
+    "loss_rate": 0.4630738522954092,
+    "draw_rate": 0.11377245508982035,
+    "avg_episode_length": 4.514970059880239,
+    "median_episode_length": 4.0,
+    "avg_team_a_alive_at_end": 0.6127744510978044,
+    "avg_team_b_alive_at_end": 0.6307385229540918
+  }
+}

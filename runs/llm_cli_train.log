@@ -1,0 +1,71 @@
+2026-04-05 13:40:01,591 [INFO] __main__: LLM Reward Discovery (Claude CLI backend)
+2026-04-05 13:40:01,592 [INFO] __main__:   model=claude-sonnet-4-20250514, device=cpu, num_envs=32
+2026-04-05 13:40:01,593 [INFO] __main__:   iterations=3, steps_per_iter=200000
+2026-04-05 13:40:01,593 [INFO] __main__:   collection_episodes=100
+2026-04-05 13:40:01,593 [INFO] __main__:   output_dir=runs/llm_cli
+2026-04-05 13:40:01,599 [INFO] __main__: ============================================================
+2026-04-05 13:40:01,599 [INFO] __main__: === Iteration 0 / 2 ===
+2026-04-05 13:40:01,600 [INFO] __main__: ============================================================
+2026-04-05 13:40:01,600 [INFO] __main__: Collecting 100 episodes for statistics...
+2026-04-05 13:40:04,993 [INFO] knockout.reward.contrastive:   ... collected 27/100 episodes so far
+2026-04-05 13:40:07,163 [INFO] knockout.reward.contrastive:   ... collected 58/100 episodes so far
+2026-04-05 13:40:09,516 [INFO] knockout.reward.contrastive:   ... collected 85/100 episodes so far
+2026-04-05 13:40:10,784 [INFO] __main__: Stats: 100 episodes, 206 win-steps, 235 loss-steps, win_rate=46.7%
+2026-04-05 13:40:10,790 [INFO] __main__: Prompt saved (11441 chars)
+2026-04-05 13:40:10,790 [INFO] __main__: Calling claude CLI (model=claude-sonnet-4-20250514, timeout=180s)...
+2026-04-05 13:40:48,619 [INFO] __main__: Claude CLI returned in 37.8s (exit code 0)
+2026-04-05 13:40:48,626 [INFO] __main__: Reward function validated successfully
+2026-04-05 13:40:48,631 [INFO] __main__: Training PPO for 200000 steps with shaped reward...
+2026-04-05 13:42:13,675 [INFO] __main__:   rollout 1/16  policy_loss=-0.0079  value_loss=3.0012
+2026-04-05 14:00:38,177 [INFO] __main__:   rollout 10/16  policy_loss=-0.0042  value_loss=7.0480
+2026-04-05 14:13:59,970 [INFO] __main__: Checkpoint saved: runs/llm_cli/iteration_000/agent_checkpoint.pt
+2026-04-05 14:13:59,989 [INFO] __main__: Iteration 0 complete in 2038.4s. Win rate before training: 46.7%
+2026-04-05 14:13:59,999 [INFO] __main__: ============================================================
+2026-04-05 14:14:00,000 [INFO] __main__: === Iteration 1 / 2 ===
+2026-04-05 14:14:00,007 [INFO] __main__: ============================================================
+2026-04-05 14:14:00,008 [INFO] __main__: Collecting 100 episodes for statistics...
+2026-04-05 14:14:10,413 [INFO] knockout.reward.contrastive:   ... collected 31/100 episodes so far
+2026-04-05 14:14:20,323 [INFO] knockout.reward.contrastive:   ... collected 59/100 episodes so far
+2026-04-05 14:14:29,038 [INFO] knockout.reward.contrastive:   ... collected 88/100 episodes so far
+2026-04-05 14:14:32,294 [INFO] __main__: Stats: 100 episodes, 394 win-steps, 116 loss-steps, win_rate=77.3%
+2026-04-05 14:14:32,314 [INFO] __main__: Prompt saved (12911 chars)
+2026-04-05 14:14:32,316 [INFO] __main__: Calling claude CLI (model=claude-sonnet-4-20250514, timeout=180s)...
+2026-04-05 14:15:18,479 [INFO] __main__: Claude CLI returned in 46.2s (exit code 0)
+2026-04-05 14:15:18,492 [INFO] __main__: Reward function validated successfully
+2026-04-05 14:15:18,500 [INFO] __main__: Training PPO for 200000 steps with shaped reward...
+2026-04-05 14:19:35,816 [INFO] __main__:   rollout 1/16  policy_loss=-0.0050  value_loss=3.6555
+2026-04-05 14:53:34,203 [INFO] __main__:   rollout 10/16  policy_loss=-0.0042  value_loss=8.5433
+2026-04-05 15:00:02,699 [INFO] __main__: Checkpoint saved: runs/llm_cli/iteration_001/agent_checkpoint.pt
+2026-04-05 15:00:02,703 [INFO] __main__: Iteration 1 complete in 2762.7s. Win rate before training: 77.3%
+2026-04-05 15:00:02,706 [INFO] __main__: ============================================================
+2026-04-05 15:00:02,706 [INFO] __main__: === Iteration 2 / 2 ===
+2026-04-05 15:00:02,706 [INFO] __main__: ============================================================
+2026-04-05 15:00:02,706 [INFO] __main__: Collecting 100 episodes for statistics...
+2026-04-05 15:00:07,473 [INFO] knockout.reward.contrastive:   ... collected 27/100 episodes so far
+2026-04-05 15:00:09,539 [INFO] knockout.reward.contrastive:   ... collected 56/100 episodes so far
+2026-04-05 15:00:11,207 [INFO] knockout.reward.contrastive:   ... collected 84/100 episodes so far
+2026-04-05 15:00:12,493 [INFO] __main__: Stats: 100 episodes, 441 win-steps, 94 loss-steps, win_rate=82.4%
+2026-04-05 15:00:12,499 [INFO] __main__: Prompt saved (14015 chars)
+2026-04-05 15:00:12,499 [INFO] __main__: Calling claude CLI (model=claude-sonnet-4-20250514, timeout=180s)...
+2026-04-05 15:00:51,341 [INFO] __main__: Claude CLI returned in 38.8s (exit code 0)
+2026-04-05 15:00:51,373 [INFO] __main__: Reward function validated successfully
+2026-04-05 15:00:51,388 [INFO] __main__: Training PPO for 200000 steps with shaped reward...
+2026-04-05 15:01:41,520 [INFO] __main__:   rollout 1/16  policy_loss=-0.0020  value_loss=302.0955
+2026-04-05 15:09:03,229 [INFO] __main__:   rollout 10/16  policy_loss=-0.0028  value_loss=242.8499
+2026-04-05 15:12:29,198 [INFO] __main__: Checkpoint saved: runs/llm_cli/iteration_002/agent_checkpoint.pt
+2026-04-05 15:12:29,202 [INFO] __main__: Iteration 2 complete in 746.5s. Win rate before training: 82.4%
+2026-04-05 15:12:29,206 [INFO] __main__: Summary saved to runs/llm_cli/summary.json
+2026-04-05 15:12:29,207 [INFO] __main__: Done. 3 iterations completed.
+2026-04-05 15:12:29,208 [INFO] __main__:   iter 0: win_rate=46.7%, elapsed=2038.4s
+2026-04-05 15:12:29,208 [INFO] __main__:   iter 1: win_rate=77.2%, elapsed=2762.7s
+2026-04-05 15:12:29,209 [INFO] __main__:   iter 2: win_rate=82.4%, elapsed=746.5s
+ 15:02:13,881 [INFO] __main__: Done. 3 iterations completed.
+2026-04-05 15:02:13,881 [INFO] __main__:   iter 0: win_rate=49.5%, elapsed=1306.8s
+2026-04-05 15:02:13,882 [INFO] __main__:   2026-04-05 15:06:18,351 [INFO] __main__:   rollout 20/20  policy_loss=0.0018  value_loss=1145.0871
+2026-04-05 15:06:18,372 [INFO] __main__: Checkpoint saved: runs/llm_cli/iteration_002/agent_checkpoint.pt
+2026-04-05 15:06:18,380 [INFO] __main__: Iteration 2 complete in 2351.6s. Win rate before training: 72.9%
+2026-04-05 15:06:18,387 [INFO] __main__: Summary saved to runs/llm_cli/summary.json
+2026-04-05 15:06:18,393 [INFO] __main__: Done. 3 iterations completed.
+2026-04-05 15:06:18,394 [INFO] __main__:   iter 0: win_rate=51.1%, elapsed=1369.1s
+2026-04-05 15:06:18,394 [INFO] __main__:   iter 1: win_rate=71.4%, elapsed=1630.5s
+2026-04-05 15:06:18,395 [INFO] __main__:   iter 2: win_rate=72.9%, elapsed=2351.6s
