@@ -4,14 +4,16 @@
 Play as Team A (cyan, penguins 0-2) against a CPU opponent (Team B, orange, penguins 3-5).
 Click-and-drag aiming with animated physics -- see penguins slide and collide in real-time.
 
-Supports heuristic, PPO, and MAPPO opponents. Use --opponent-type and --opponent-checkpoint
-to play against a trained RL agent.
+The opponent is chosen from the central lineup (``eval/lineup.py``) by name.
+Use ``--list`` to print the available bots.
 
 Usage:
     python scripts/play.py
     python scripts/play.py --seed 42
-    python scripts/play.py --opponent-type ppo --opponent-checkpoint checkpoints/ppo_agent.pt
-    python scripts/play.py --opponent-type mappo --opponent-checkpoint checkpoints/mappo_heuristic_200k.pt
+    python scripts/play.py --opponent ppo
+    python scripts/play.py --opponent self_play --seed 7
+    python scripts/play.py --opponent llm_anthropic
+    python scripts/play.py --list
 
 Controls:
     Click + drag on a Team A penguin  = aim (drag direction = launch direction)
@@ -27,17 +29,21 @@ import argparse
 import math
 import sys
 from enum import Enum, auto
-from pathlib import Path
 
 import numpy as np
 import pygame
 
+from eval.lineup import (
+    LINEUP_BY_NAME,
+    build_team,
+    lineup_summary,
+)
+from knockout.agents.base import Agent
+from knockout.agents.heuristic_agent import HeuristicAgent
 from knockout.core.config import GameConfig, DEFAULTS
 from knockout.core.physics_engine import PhysicsEngine
 from knockout.env.observations import ObservationBuilder
-from knockout.agents.heuristic_agent import HeuristicAgent
-from knockout.agents.base import Agent
-from knockout.visualization.renderer import Renderer, ScreenConfig
+from knockout.visualization.renderer import ScreenConfig
 
 
 # ---------------------------------------------------------------------------
@@ -82,14 +88,12 @@ class PlayMode:
         self,
         seed: int | None = None,
         config: GameConfig = DEFAULTS,
-        opponent_type: str = "heuristic",
-        opponent_checkpoint: str | None = None,
+        opponent_name: str = "heuristic",
     ):
         self.config = config
         self.seed = seed
         self.rng = np.random.default_rng(seed)
-        self.opponent_type = opponent_type
-        self.opponent_checkpoint = opponent_checkpoint
+        self.opponent_name = opponent_name
 
         # Physics engine (used directly for frame-by-frame control)
         self.engine = PhysicsEngine(seed=seed, config=config)
@@ -98,9 +102,8 @@ class PlayMode:
         # Observation builder (for heuristic agents and RL agents)
         self.obs_builder = ObservationBuilder(config=config)
 
-        # CPU agents (Team B) -- loaded based on opponent_type
-        self.cpu_agents: dict[str, Agent] = {}
-        self._load_opponent(opponent_type, opponent_checkpoint, seed, config)
+        # CPU agents (Team B) -- loaded from the lineup spec
+        self.cpu_agents: dict[str, Agent] = self._load_opponent(opponent_name, seed)
 
         # Auto-aim agents (Team A, used for right-click)
         self.auto_agents: dict[str, HeuristicAgent] = {
@@ -159,89 +162,30 @@ class PlayMode:
         # Build opponent label for HUD
         self._build_opponent_label()
 
-    def _load_opponent(
-        self,
-        opponent_type: str,
-        checkpoint_path: str | None,
-        seed: int | None,
-        config: GameConfig,
-    ) -> None:
-        """Load CPU opponent agents for Team B.
+    @staticmethod
+    def _load_opponent(opponent_name: str, seed: int | None) -> dict[str, Agent]:
+        """Load CPU opponent agents for Team B from the central lineup.
 
         Args:
-            opponent_type: One of "heuristic", "ppo", "mappo".
-            checkpoint_path: Path to checkpoint file (required for ppo/mappo).
-            seed: Random seed (used for heuristic agent RNG).
-            config: Game configuration.
+            opponent_name: Bot name from ``LINEUP_BY_NAME`` (e.g. "heuristic", "ppo",
+                "self_play", "llm_anthropic").
+            seed: Random seed forwarded to ``build_team``.
+
+        Returns:
+            Dict mapping ``penguin_3..5`` agent ids to Agent instances.
         """
-        if opponent_type == "heuristic":
-            self.cpu_agents = {
-                f"penguin_{i}": HeuristicAgent(
-                    agent_id=f"penguin_{i}",
-                    seed=(seed + 200 + i) if seed is not None else None,
-                    config=config,
-                )
-                for i in range(3, 6)
-            }
-
-        elif opponent_type == "ppo":
-            if checkpoint_path is None:
-                raise ValueError("--opponent-checkpoint is required for PPO opponent")
-            cp = Path(checkpoint_path)
-            if not cp.exists():
-                raise FileNotFoundError(f"Checkpoint not found: {cp}")
-
-            from knockout.agents.rl_agent import RLAgent
-
-            # Create one RLAgent per Team B penguin, all sharing the same weights
-            self.cpu_agents = {}
-            for i in range(3, 6):
-                agent_id = f"penguin_{i}"
-                agent = RLAgent(agent_id=agent_id, max_force=config.MAX_LAUNCH_FORCE)
-                agent.load(cp)
-                self.cpu_agents[agent_id] = agent
-
-        elif opponent_type == "mappo":
-            if checkpoint_path is None:
-                raise ValueError("--opponent-checkpoint is required for MAPPO opponent")
-            cp = Path(checkpoint_path)
-            if not cp.exists():
-                raise FileNotFoundError(f"Checkpoint not found: {cp}")
-
-            from knockout.agents.mappo_agent import MAPPOAgent, MAPPOEvalAgent
-
-            mappo = MAPPOAgent()
-            mappo.load(cp)
-            mappo.eval()
-
-            # Wrap each policy slot as an independent Agent for Team B penguins
-            self.cpu_agents = {}
-            for i in range(3):
-                agent_id = f"penguin_{i + 3}"
-                self.cpu_agents[agent_id] = MAPPOEvalAgent(
-                    agent_id=agent_id,
-                    mappo_agent=mappo,
-                    agent_index=i,
-                )
-
-        else:
-            raise ValueError(
-                f"Unknown opponent type: {opponent_type!r}. "
-                "Choose from: heuristic, ppo, mappo"
-            )
+        spec = LINEUP_BY_NAME[opponent_name]
+        # Seed=0 is acceptable when seed is None; build_team adds per-slot offsets.
+        team_b = build_team(spec, team=1, seed=seed if seed is not None else 0)
+        return team_b
 
     def _build_opponent_label(self) -> None:
         """Build the HUD label describing the current opponent."""
-        if self.opponent_type == "heuristic":
-            self.opponent_label = "vs Heuristic"
-        elif self.opponent_type == "ppo":
-            name = Path(self.opponent_checkpoint).name if self.opponent_checkpoint else "?"
-            self.opponent_label = f"vs PPO ({name})"
-        elif self.opponent_type == "mappo":
-            name = Path(self.opponent_checkpoint).name if self.opponent_checkpoint else "?"
-            self.opponent_label = f"vs MAPPO ({name})"
+        spec = LINEUP_BY_NAME.get(self.opponent_name)
+        if spec is not None:
+            self.opponent_label = f"vs {spec.display_name}"
         else:
-            self.opponent_label = f"vs {self.opponent_type}"
+            self.opponent_label = f"vs {self.opponent_name}"
 
     # -------------------------------------------------------------------
     # Coordinate conversion
@@ -698,7 +642,7 @@ class PlayMode:
         return (float(action[0]), float(action[1]))
 
     def _get_cpu_actions(self) -> dict[str, tuple[float, float]]:
-        """Get actions from CPU agents for Team B (heuristic, PPO, or MAPPO)."""
+        """Get actions from CPU agents for Team B."""
         actions: dict[str, tuple[float, float]] = {}
         for agent_id in ("penguin_3", "penguin_4", "penguin_5"):
             penguin = self.engine.penguins[agent_id]
@@ -994,30 +938,55 @@ class PlayMode:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Play Penguin Knockout (Pygame interactive mode)"
+        description="Play Penguin Knockout (Pygame interactive mode)."
     )
     parser.add_argument(
         "--seed", type=int, default=None,
-        help="Random seed for reproducibility",
+        help="Random seed for reproducibility.",
     )
     parser.add_argument(
-        "--opponent-type",
-        choices=["heuristic", "ppo", "mappo"],
-        default="heuristic",
-        help="Type of opponent agent (default: heuristic)",
-    )
-    parser.add_argument(
-        "--opponent-checkpoint",
+        "--opponent",
         type=str,
-        default=None,
-        help="Path to checkpoint file for PPO/MAPPO opponent",
+        default="heuristic",
+        help=(
+            "Opponent bot name from eval/lineup.py "
+            "(e.g. random, heuristic, ppo, mappo, self_play, "
+            "contrastive, attention_reward, llm_cli_v2, llm_anthropic). "
+            "Default: heuristic."
+        ),
+    )
+    parser.add_argument(
+        "-l", "--list",
+        action="store_true",
+        help="Print the bot lineup and exit.",
     )
     args = parser.parse_args()
 
+    if args.list:
+        print(lineup_summary())
+        return
+
+    if args.opponent not in LINEUP_BY_NAME:
+        valid = ", ".join(LINEUP_BY_NAME.keys())
+        print(
+            f"ERROR: unknown opponent {args.opponent!r}.\n"
+            f"Valid bot names: {valid}",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+    spec = LINEUP_BY_NAME[args.opponent]
+    ok, reason = spec.is_available()
+    if not ok:
+        print(
+            f"ERROR: opponent {args.opponent!r} is unavailable: {reason}",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
     play = PlayMode(
         seed=args.seed,
-        opponent_type=args.opponent_type,
-        opponent_checkpoint=args.opponent_checkpoint,
+        opponent_name=args.opponent,
     )
     play.run()
 
